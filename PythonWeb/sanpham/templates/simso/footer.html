@@ -1,8 +1,8 @@
 {% load static %}
 {% static "" as baseUrl %}
 {% load setting %}
-{% setting as stting %}
-{% for st in stting %}
+{% setting as st %}
+{% for st in st %}
 <footer>
             <div style="text-align: center;">
                 <div class='bch' style=" columns: 455px 2; ">
@@ -122,15 +122,9 @@
         fbq('init', '725227770901503');
         fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=725227770901503&amp;ev=PageView&amp;noscript=1" />
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=725227770901503&amp;ev=PageView&amp;noscript=1" />
     </noscript>
-    <br>
-    <br>
-
+{% endfor %}
 <script defer type="text/javascript" src="{% static 'home/script.min.js' %}"></script>
 <link rel="stylesheet" href="{% static 'home/css-main.css' %}">
-
-    </body>
-<!----- DwebTech.Net ----- By Minh Duc -->
-</html>
-{% endfor %}

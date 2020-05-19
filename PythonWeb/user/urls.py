@@ -14,7 +14,7 @@ urlpatterns = [
                                                         "stl": models.SimTheoLoai.objects.all(),
                                                         "sns": models.SimNamSinh.objects.all(),
                                                         "nm": models.NhaMang.objects.all(),
-                                                        "stg": sorted(models.SimTheoGia.objects.all(), key=operator.attrgetter('title')),
+                                                        # "stg": sorted(models.SimTheoGia.objects.all(), key=operator.attrgetter('title')),
                                                     }),
          name='dangnhap'),
     path("dang-xuat/", auth_views.LogoutView.as_view(next_page='/'), name='dangxuat'),

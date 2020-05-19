@@ -16,11 +16,12 @@ class Sim_Key(resources.ModelResource):
         model = SanPham
         exclude = ['NgayNhap', 'slug', ]
         import_preview = (
-            'id', 'LoaiSims__title', 'slug', 'TacVu', 'SoSim', 'Gia', 'Mang__title', 'LoaiGia', 'NamSinh',
+            'id', 'LoaiSims__title', 'slug', 'TacVu', 'SoSim', 'Gia', 'Mang__title', 'LoaiGia__title', 'NamSinh',
             'Anh',)
         fields = (
-        'id', 'LoaiSims', 'slug', 'TacVu', 'SoSim', 'Gia', 'Mang', 'LoaiGia', 'NamSinh',
+        'id', 'LoaiSims__title', 'slug', 'TacVu', 'SoSim', 'Gia', 'Mang__title', 'LoaiGia__title', 'NamSinh',
         'Anh',)
+
 class Sim(ImportExportModelAdmin,ExportActionMixin):
     list_per_page = 20
     resource_class = Sim_Key

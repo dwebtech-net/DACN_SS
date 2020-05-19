@@ -1,7 +1,6 @@
 from django.db.models import Max
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from django.utils.crypto import random
 from django.views.generic import ListView
 
 from .models import SanPham, SimTheoLoai, SimNamSinh, NhaMang, SimTheoGia

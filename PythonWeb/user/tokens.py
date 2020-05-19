@@ -1,8 +1,8 @@
+
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
-from django.utils import six
-
-
 #Tạo đường dẫn xác nhận tài khoản
+from urllib3.packages import six
+
 class TokenGenerator(PasswordResetTokenGenerator):
     def _make_hash_value(self, user, timestamp):
         return (
