@@ -19,7 +19,7 @@ class Sim_Key(resources.ModelResource):
             'id', 'LoaiSims__title', 'slug', 'TacVu', 'SoSim', 'Gia', 'Mang__title', 'LoaiGia__title', 'NamSinh',
             'Anh',)
         fields = (
-        'id', 'LoaiSims__title', 'slug', 'TacVu', 'SoSim', 'Gia', 'Mang__title', 'LoaiGia__title', 'NamSinh',
+        'id', 'LoaiSims', 'slug', 'TacVu', 'SoSim', 'Gia', 'Mang', 'LoaiGia', 'NamSinh',
         'Anh',)
 
 class Sim(ImportExportModelAdmin,ExportActionMixin):
