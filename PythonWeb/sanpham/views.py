@@ -13,10 +13,10 @@ import operator
 # Create your views here.
 def index(request):
     # Lấy dữ liệu từ database
-    km = SanPham.objects.filter(TacVu='khuyenmai')
-    vip = SanPham.objects.filter(TacVu='vip')
-    vipdn = SanPham.objects.filter(TacVu='vipdn')
-    thuong = SanPham.objects.filter(TacVu='thuong')
+    km = SanPham.objects.filter(TacVu='khuyenmai')[0:12]
+    vip = SanPham.objects.filter(TacVu='vip')[0:9]
+    vipdn = SanPham.objects.filter(TacVu='vipdn')[0:9]
+    thuong = SanPham.objects.filter(TacVu='thuong')[0:999]
 
     stl = SimTheoLoai.objects.all()
     sns = SimNamSinh.objects.all()
@@ -25,6 +25,7 @@ def index(request):
 
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
+
 
     Data = {
             "km": km,
@@ -66,9 +67,7 @@ def simtheogia(request, slug):
 
     stg1 = SimTheoGia.objects.get(slug=slug)
     sanpham = stg1.sanpham_set.all()
-
-    paginator = Paginator(sanpham, 10)  # Show 25 contacts per page
-
+    paginator = Paginator(sanpham, 25)  # Show 25 contacts per page
     page = request.GET.get('page')
     sanphams = paginator.get_page(page)
 
@@ -96,7 +95,7 @@ def simtheomang(request, slug):
     nm1 = NhaMang.objects.get(slug=slug)
     sanpham = nm1.sanpham_set.all()
 
-    paginator = Paginator(sanpham, 10)  # Show 25 contacts per page
+    paginator = Paginator(sanpham, 70)  # Show 25 contacts per page
 
     page = request.GET.get('page')
     sanphams = paginator.get_page(page)

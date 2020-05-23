@@ -53,16 +53,21 @@ admin.site.register(SimTheoLoai, LoaiSimAdmin)
 # Hiển thị bảng Sim theo giá
 class SimTheoGiaAdmin(admin.ModelAdmin):
     list_display = ('title', 'id', 'slug')
+    exclude = ('slug',)
     search_fields = ['title']
-    exclude = ['slug', ]
     list_per_page = 5
 
 
 # Hiển thị bảng Sim theo năm
-class SimTheoNamAdmin(admin.ModelAdmin):
-    list_display = ('title', 'id', 'slug')
+# Hiển thị bảng Sim theo loại
+class SimNamSinhResource(resources.ModelResource):
+    class Meta:
+        model = SimNamSinh
+        exclude = ('slug')
+        fields = ('id', 'title')
+class SimTheoNamAdmin(ImportExportModelAdmin):
     list_per_page = 5
-
+    resource_class = SimNamSinhResource
 
 admin.site.register(NhaMang, NhaMangAdmin)
 admin.site.register(SimTheoGia, SimTheoGiaAdmin)

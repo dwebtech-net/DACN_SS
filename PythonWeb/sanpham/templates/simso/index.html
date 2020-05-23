@@ -11,7 +11,7 @@
         <!--- end tim kiem-->
 
         <center>
-            <img alt="Loading" src="static/home/img/filter-loader.gif" name="loading_div" width="95" height="15" border="0" id="loading_div" style="display:none" />
+            <img alt="Loading" src="/static/home/img/filter-loader.gif" name="loading_div" width="95" height="15" border="0" id="loading_div" style="display:none" />
         </center>
         <!--<a class="desktop-hide" href="/sim-dep-tra-gop"><img style="width:100%;padding-top:5px" border="0" alt="Sim số đẹp" src="//static.simthanglong.vn/images/sim-dep-tra-gop-0-phan-tram.jpg"></a>-->
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
@@ -19,7 +19,7 @@
                 <td valign="middle">
                     <h1 style=" margin-bottom: 5px; ">Sim số đẹp</h1>
                 </td>
-                <td align="left" valign="middle"><img alt="Loading" src="images/filter-loader.gif" name="img_filter" width="95" height="15" border="0" id="img_filter" style="display:none" />
+                <td align="left" valign="middle"><img alt="Loading" src="/static/images/filter-loader.gif" name="img_filter" width="95" height="15" border="0" id="img_filter" style="display:none" />
                 </td>
                 <td width="127" align="right" valign="middle"></td>
             </tr>
@@ -34,21 +34,21 @@
         </div>
         <!-- /wrapper -->
         <div class="number_01 "> <i class="spritestlvn sprite-sale"></i>
-            <h2><a href="/sim-theo-loai/sim-gia-re" target="_blank">Sim khuyến mãi trong ngày</a></h2> </div>
+            <h2><a href="{% url 'sanpham:simtheoloai' 'sim-gia-re' %}" target="_blank">Sim khuyến mãi trong ngày</a></h2> </div>
         <div class="wrapper">
             {% include 'sub/sim-khuyen-mai.html' %}
             <!-- /container-home -->
             <br>
-            <a href="/sim-theo-loai/sim-gia-re" style=" font-size: 16px; color: #fff; background: #4CAF50; padding: 10px; border-radius: 5px; ">Xem thêm ...</a>
+            <a href="{% url 'sanpham:simtheoloai' 'sim-gia-re' %}" style=" font-size: 16px; color: #fff; background: #4CAF50; padding: 10px; border-radius: 5px; ">Xem thêm ...</a>
             <br>
             <br> </div>
         <!-- /wrapper -->
         <div class="number_01 "><i class="spritestlvn sprite-like"></i>
-            <h2><a href="/sim-theo-loai/sim-vip" target="_blank">Sim VIP</a></h2> </div>
+            <h2><a href="{% url 'sanpham:simtheoloai' 'sim-vip' %}" target="_blank">Sim VIP</a></h2> </div>
         <div id="wrapper" class="wrapper">
             {% include 'sub/sim-vip.html' %}
 
-            <br> <a href="/sim-theo-loai/sim-vip" style=" font-size: 16px; color: #fff; background: #4CAF50; padding: 10px; border-radius: 5px; ">Xem thêm ...</a>
+            <br> <a href="{% url 'sanpham:simtheoloai' 'sim-vip' %}" style=" font-size: 16px; color: #fff; background: #4CAF50; padding: 10px; border-radius: 5px; ">Xem thêm ...</a>
             <br>
             <br> </div>
 
@@ -56,23 +56,14 @@
             <h2><a href="/sim-theo-loai/sim-gia-re" target="_blank">Sim Giá Rẻ</a></h2> </div>
         <div id="wrapper" class="wrapper">
             {% include 'sub/sim-gia-re.html' %}
-
-            <br> <a href="/sim-theo-loai/sim-gia-re" style=" font-size: 16px; color: #fff; background: #4CAF50; padding: 10px; border-radius: 5px; ">Xem thêm ...</a>
             <br>
-            <br> </div>
 
-        <center> </center>
+        <div id="loadMore" style=" font-size: 16px; color: #fff; background: #4CAF50; padding: 10px; border-radius: 5px; ">XEM THÊM SẢN PHẨM</div>
+        <div id="showLess" style="text-align:center;">Show less</div>
+        </div>
 
-        <form action="#" method="get" id="chitietsim"></form>
-        <script type="text/javascript">
-            function ctsim(sosim) {
-                sosim = sosim.replace(/\D/g, "");
-                document.getElementById("chitietsim").action = sosim;
-                document.getElementById("chitietsim").submit();
-            }
-        </script>
-        <br />
     </article>
+
 <!------End index---->
 {% endblock %}
 

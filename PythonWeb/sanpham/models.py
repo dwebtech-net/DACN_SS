@@ -69,6 +69,7 @@ class SimNamSinh(models.Model):
 
     def __str__(self):
         return self.title
+
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = get_unique_slug(self, 'title', 'slug')

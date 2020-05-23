@@ -72,11 +72,7 @@
     </div>
     <br>
     <br>
-    
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="../connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=304273236421055&autoLogAppEvents=1"></script>
-    <a id="ads-left" style="position: fixed; top: 50px; left: 15px;" href="/" target="_blank" rel="nofollow"></a>
-    <a id="ads-right" style="position: fixed; top: 50px; right: 15px;" href="/" target="_blank" rel="nofollow"></a>
+
     <script type="text/javascript">
         document.body.style.backgroundImage = "url('static/home/img/bg_colorful.jpg')"; //var elem = document.createElement("img"); //elem.setAttribute("src", "//static.simthanglong.vn/images/km26062019.jpg"); //elem.setAttribute("alt", "sim thăng long"); //document.getElementById("ads-left").appendChild(elem); //elem = document.createElement("img"); //elem.setAttribute("src", "//static.simthanglong.vn/images/km26062019.jpg"); //elem.setAttribute("alt", "sim thăng long"); //document.getElementById("ads-right").appendChild(elem);
     </script>
@@ -87,44 +83,11 @@
             </div>
             <div></div> {{ st.sdt2 }} </a>
     </div>
-    <div id="btnclosehl" onclick="document.getElementById('btnclosehl').style.display='none';document.getElementById('chonkhoanggiabg').style.display='none';document.getElementById('chonkhoanggia').style.top='-500px';document.getElementById('contact-right').setAttribute('style','')" style="display:none;background: #FF5722;position: fixed;top: 0px;left: 0px;text-align: right;width: 166px;padding: 10px 25px;z-index: 8;cursor: pointer;border-bottom-right-radius: 10px;color: rgb(255, 255, 255);font-weight: bold;">X</div> <a class="chathead" id="chathead" target="_blank" rel="noreferrer" href="#" style="display:none;position: fixed;z-index: 999;width: 63px;bottom: 30%;right: 7px;"><span style=" position: absolute; top: 0; left: 0; color: #FFF; background: #FF5722; font-weight: bold; border-radius: 50px; padding: 3px 7px; border: 2px solid #fff; ">3</span><img alt="Chat Simthanglong.vn" src="../static.simthanglong.vn/images/hang.jpg" style="border: 4px solid #fff;width: 63px;border-radius: 100px;box-shadow: -1px 2px 7px 1px rgba(0,0,0,.9);"></a>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementsByClassName || (document.getElementsByClassName = function(e) {
-                for (var t, n = document.getElementsByTagName("a"), a = [], r = 0; t = n[r++];) t.className == e && (a[a.length] = t);
-                return a
-            });
-            var e = document.getElementsByClassName("dmca-badge");
-            if (e[0].getAttribute("href").indexOf("refurl") < 0)
-                for (var t = 0; t < e.length; t++) {
-                    var n = e[t];
-                    n.href = n.href + (-1 === n.href.indexOf("?") ? "?" : "&") + "refurl=" + document.location
-                }
-        }, !1); //function getCook(e){var t=RegExp(e+"[^;]+").exec(document.cookie);return decodeURIComponent(t?t.toString().replace(/^[^=]+./,""):"")}0<getCook("fbpage").length&&(chathead=document.getElementById("chathead"),chathead.href=getCook("fbpage"),chathead.style.display="block");
-    </script>
-    <script>
-        ! function(f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function() {
-                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script', '../connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '725227770901503');
-        fbq('track', 'PageView');
-    </script>
-    <noscript>
-        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=725227770901503&amp;ev=PageView&amp;noscript=1" />
-    </noscript>
 {% endfor %}
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
 <script defer type="text/javascript" src="{% static 'home/script.min.js' %}"></script>
+<style>.photo-grid.clearfix ul.clearfix.sim-moi li#sim-moi{display: none;}#loadMore{color:green;cursor:pointer}#loadMore:hover{color:#000}#showLess{color:red;cursor:pointer}#showLess:hover{color:#000}</style>
+<script defer type="text/javascript" src="/static/home/loadpage.js"></script>
 <link rel="stylesheet" href="{% static 'home/css-main.css' %}">
+
