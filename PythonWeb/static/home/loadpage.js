@@ -1,6 +1,6 @@
 $(document).ready(function() {
         size_li = $(".photo-grid.clearfix ul.clearfix.sim-moi li#sim-moi").size();  //chon phan tu - item
-        x = 24; // so luong item hien thi
+        x = 36; // so luong item hien thi
         hiddenBtn = document.querySelector('#showLess');
         hiddenBtn.style.display = 'none';
         $('.photo-grid.clearfix ul.clearfix.sim-moi li#sim-moi:lt(' + x + ')').show();
