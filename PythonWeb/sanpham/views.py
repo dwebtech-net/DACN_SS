@@ -119,10 +119,9 @@ def simtheomang(request, slug):
     return render(request, 'category/sim-theo-mang.html', Data)
 
 def simtheoloai(request, slug):
-
     stl1 = SimTheoLoai.objects.get(slug=slug)
-    sanpham = stl1.sanpham_set.all()
 
+    sanpham = stl1.sanpham_set.all()
     paginator = Paginator(sanpham, 10)  # Show 25 contacts per page
 
     page = request.GET.get('page')

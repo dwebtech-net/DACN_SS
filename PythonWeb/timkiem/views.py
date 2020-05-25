@@ -48,14 +48,15 @@ def timkiem_nangcao(request):
 # tim theo so simmmm
     sosim = request.GET.get('so')
     if sosim :
-        sosim = sosim.split('*')
-        if sosim[0] != '':
-            sp = sp.filter(Q(SoSim__startswith=sosim[0]))
-        if sosim[1] != '':
-            sp = sp.filter(Q(SoSim__endswith=sosim[1]))
-    else:
-        if sosim:
-            sp = sp.filter(Q(SoSim__icontains=sosim))
+        if '*' in sosim:
+            sosim = sosim.split('*')
+            if sosim[0] != '':
+                sp = sp.filter(Q(SoSim__startswith=sosim[0]))
+            if sosim[1] != '':
+                sp = sp.filter(Q(SoSim__endswith=sosim[1]))
+        else:
+            if sosim:
+                sp = sp.filter(Q(SoSim__icontains=sosim))
 
     context = {
         "sp": sp,

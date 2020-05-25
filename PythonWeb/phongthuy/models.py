@@ -192,150 +192,80 @@ ngay_c =(
     ('30', '30'),
     ('31', '31'),
 )
-menh_c = (
-    ('1950', 'Hoả'),
-
-    ('1951', 'Mộc'),
-
-    ('1952', 'Mộc'),
-
-    ('1953', 'Thuỷ'),
-
-    ('1954', 'Thuỷ'),
-
-    ('1955', 'Kim'),
-
-    ('1956', 'Kim'),
-
-    ('1957', 'Hoả'),
-
-    ('1958', 'Hoả'),
-
-    ('1959', 'Mộc'),
-
-    ('1960', 'Mộc'),
-
-    ('1961', 'Thổ'),
-
-    ('1962', 'Thổ'),
-
-    ('1963', 'Kim'),
-
-    ('1964', 'Kim'),
-
-    ('1965', 'Thuỷ'),
-
-    ('1966', 'Thuỷ'),
-
-    ('1967', 'Mộc'),
-
-    ('1968', 'Mộc'),
-
-    ('1969', 'Hoả'),
-
-    ('1970', 'Hoả'),
-
-    ('1971', 'Thổ'),
-
-    ('1972', 'Thổ'),
-
-    ('1973', 'Kim'),
-
-    ('1974', 'Kim'),
-
-    ('1975', 'Thuỷ'),
-
-    ('1976', 'Thuỷ'),
-
-    ('1977', 'Mộc'),
-
-    ('1978', 'Mộc'),
-
-    ('1979', 'Hoả'),
-
-    ('1980', 'Hoả'),
-
-    ('1981', 'Mộc'),
-
-    ('1982', 'Thuỷ'),
-
-    ('1983', 'Thuỷ'),
-
-    ('1984', 'Kim'),
-
-    ('1985', 'Kim'),
-
-    ('1986', 'Hoả'),
-
-    ('1987', 'Hoả'),
-
-    ('1988', 'Mộc'),
-
-    ('1989', 'Mộc'),
-
-    ('1990', 'Thổ'),
-
-    ('1991', 'Thổ'),
-
-    ('1992', 'Thuỷ'),
-
-    ('1993', 'Thuỷ'),
-
-    ('1994', 'Hoả'),
-
-    ('1995', 'Hoả'),
-
-    ('1996', 'Thuỷ'),
-
-    ('1997', 'Kim'),
-
-    ('1998', 'Thổ'),
-
-    ('1999', 'Thổ'),
-
-    ('2000', 'Kim'),
-
-    ('2001', 'Hoả'),
-
-    ('2002', 'Hoả'),
-
-    ('2003', 'Mộc'),
-
-    ('2004', 'Mộc'),
-
-    ('2005', 'Kim'),
-
-    ('2006', 'Kim'),
-
-    ('2007', 'Thổ'),
-
-    ('2008', 'Thổ'),
-
-    ('2009', 'Hoả'),
-
-    ('2010', 'Hoả'),
-
-    ('2011', 'Mộc'),
-
-    ('2012', 'Mộc'),
-
-    ('2013', 'Thuỷ'),
-
-    ('2014', 'Thuỷ'),
-
-    ('2015', 'Kim'),
-
-    ('2016', 'Kim'),
-
-    ('2017', 'Hoả'),
-
-    ('2018', 'Hoả'),
-
-    ('2019', 'Mộc'),
-    
-     ('2020', 'Mộc'),
-
-)
+menh_c = [
+    ('1950', 'Hoả   '),
+    ('1951', 'Mộc   '),
+    ('1952', 'Mộc   '),
+    ('1953', 'Thuỷ  '),
+    ('1954', 'Thuỷ  '),
+    ('1955', 'Kim   '),
+    ('1956', 'Kim   '),
+    ('1957', 'Hoả   '),
+    ('1958', 'Hoả   '),
+    ('1959', 'Mộc   '),
+    ('1960', 'Mộc   '),
+    ('1961', 'Thổ   '),
+    ('1962', 'Thổ   '),
+    ('1963', 'Kim   '),
+    ('1964', 'Kim   '),
+    ('1965', 'Thuỷ  '),
+    ('1966', 'Thuỷ  '),
+    ('1967', 'Mộc   '),
+    ('1968', 'Mộc   '),
+    ('1969', 'Hoả   '),
+    ('1970', 'Hoả   '),
+    ('1971', 'Thổ   '),
+    ('1972', 'Thổ   '),
+    ('1973', 'Kim   '),
+    ('1974', 'Kim   '),
+    ('1975', 'Thuỷ  '),
+    ('1976', 'Thuỷ  '),
+    ('1977', 'Mộc   '),
+    ('1978', 'Mộc   '),
+    ('1979', 'Hoả   '),
+    ('1980', 'Hoả   '),
+    ('1981', 'Mộc   '),
+    ('1982', 'Thuỷ  '),
+    ('1983', 'Thuỷ  '),
+    ('1984', 'Kim   '),
+    ('1985', 'Kim   '),
+    ('1986', 'Hoả   '),
+    ('1987', 'Hoả   '),
+    ('1988', 'Mộc   '),
+    ('1989', 'Mộc   '),
+    ('1990', 'Thổ   '),
+    ('1991', 'Thổ   '),
+    ('1992', 'Thuỷ  '),
+    ('1993', 'Thuỷ  '),
+    ('1994', 'Hoả   '),
+    ('1995', 'Hoả   '),
+    ('1996', 'Thuỷ  '),
+    ('1997', 'Kim   '),
+    ('1998', 'Thổ   '),
+    ('1999', 'Thổ   '),
+    ('2000', 'Kim   '),
+    ('2001', 'Hoả   '),
+    ('2002', 'Hoả   '),
+    ('2003', 'Mộc   '),
+    ('2004', 'Mộc   '),
+    ('2005', 'Kim   '),
+    ('2006', 'Kim   '),
+    ('2007', 'Thổ   '),
+    ('2008', 'Thổ   '),
+    ('2009', 'Hoả   '),
+    ('2010', 'Hoả   '),
+    ('2011', 'Mộc   '),
+    ('2012', 'Mộc   '),
+    ('2013', 'Thuỷ  '),
+    ('2014', 'Thuỷ  '),
+    ('2015', 'Kim   '),
+    ('2016', 'Kim   '),
+    ('2017', 'Hoả   '),
+    ('2018', 'Hoả   '),
+    ('2019', 'Mộc   '),
+    ('2020', 'Mộc   '),
+
+]
 nguhanh_c =(
     ('Kim', 'Kim'),('Mộc', 'Mộc'),('Thuỷ', 'Thuỷ'),('Hoả', 'Hoả'),('Thổ', 'Thổ'),
 )
@@ -357,6 +287,25 @@ class Datapt(models.Model):
     tuongsinh = models.CharField(max_length=100,choices=tuongsinh_c,verbose_name="Tương sinh")
     tuongkhac = models.CharField(max_length=100,choices=tuongkhac_c,verbose_name="Tương khắc")
 
-
     class Meta:
         verbose_name_plural = 'Data phong thuỷ'
+
+
+class nguhanh(models.Model):
+    name = models.CharField(max_length=100,verbose_name='Tên ngũ hành',unique=True)
+    tuongsinh = models.CharField(max_length=100,verbose_name='Tương sinh')
+    tuongkhac = models.CharField(max_length=100,verbose_name='Tương khắc')
+
+    def __str__(self):
+        return self.name
+    class Meta:
+        verbose_name_plural = 'Ngũ hành'
+
+class namsinh(models.Model):
+    namsinh = models.CharField(max_length=4, verbose_name='Năm sinh',unique=True)
+    nguhanh_ns = models.ForeignKey(nguhanh,null=False,on_delete=models.CASCADE,verbose_name='Thuộc mệnh')
+ 
+    def __str__(self):
+        return self.namsinh
+    class Meta:
+        verbose_name_plural = 'Năm sinh'

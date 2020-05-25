@@ -8,7 +8,6 @@ class simphongthuy(forms.ModelForm):
         model = Datapt
         fields= ("__all__")
 
-
     def is_valid(self):
         valid = super(simphongthuy, self).is_valid()
         # if already valid, then return True

@@ -1,10 +1,7 @@
-from django.urls import path
-
-from phongthuy.views import Phongthuy
+from django.urls import path, re_path
 from . import views
 
 app_name = 'phongthuy'
 urlpatterns = [
-    path('xem', views.diem, name='diem'),
-    path('', Phongthuy.as_view(), name='cretare'),
+    re_path(r'xem-phong-thuy/$', views.diem, name='xem-phong-thuy'),
 ]
