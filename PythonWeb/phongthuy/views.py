@@ -43,7 +43,7 @@ def diem(request):
     if simnamsinh:
         sp = sp.filter(
             Q(SoSim__icontains=ngay) and Q(SoSim__icontains=thang) or Q(SoSim__icontains=nam)
-        )
+        )[0:50]
     pt = {
         'data':data,
         'sp':sp,
