@@ -11,37 +11,35 @@
         <section class="register_area p_100">
             <div class="container">
                 <div class="register_inner">
-                    <div>
-                            <h5 style="color:red;">{{Error}}</h5>
-                    </div>
                     <div class="row">
                         <div class="col-lg-7">
                             <div class="billing_details" style="text-align:center">
                                 <h1 class="reg_title">Thông tin đặt hàng</h1>
                                 <hr/>
+                                <h3 style="color:red;">{{Error}}</h3>
                                 <div class="billing_inner row" style="width:90%;text-align:left">
                                     <div class="col-lg-12">
                                         <div class="form-group">
-                                            <label for="name"><strong>Họ tên</strong><span style="color:red">*</span></label>
-                                            <input type="text" class="form-control" id="name" aria-describedby="name" name="HoTen" value="{{user.HoTen}}" readonly />
+                                            <label for="name"><strong>Họ tên người nhận</strong><span style="color:red">*</span></label>
+                                            <input type="text" class="form-control" id="name" aria-describedby="name" name="HoTen" value="{{user.HoTen}}" />
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for="address"><strong>Địa chỉ</strong><span style="color:red">*</span></label>
-                                            <input type="text" class="form-control" id="address" aria-describedby="address" name="DiaChi" value="{{user.DiaChi}}" readonly />
+                                            <input type="text" class="form-control" id="address" aria-describedby="address" name="DiaChi" value="{{user.DiaChi}}" />
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for="email"><strong>Email</strong><span style="color:red">*</span></label>
-                                            <input type="email" class="form-control" id="email" aria-describedby="email" name="Email" value="{{user.email}}" readonly />
+                                            <input type="email" class="form-control" id="email" aria-describedby="email" name="Email" value="{{user.email}}" readonly/>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-group">
-                                            <label for="phone1"><strong>Số điện thoại</strong><span style="color:red">*</span></label>
-                                            <input type="text" class="form-control" id="phone1" aria-describedby="phone" name="SoDienThoai" value="{{user.SDT}}" readonly />
+                                            <label for="phone1"><strong>Số điện thoại người nhận</strong><span style="color:red">*</span></label>
+                                            <input type="text" class="form-control" id="phone1" aria-describedby="phone" name="SoDienThoai" value="{{user.SDT}}" />
                                         </div>
                                     </div>
                                     <div style="width: 110%">
@@ -90,8 +88,11 @@
                                         <div class="card" style="margin:10px 0px 0px 50px">
                                             <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
                                                 <div class="card-body">
-                                                    <form class="billing_inner row" method="post" action="">
+                                                    <form class="billing_inner row" method="post" action="" onsubmit="return set_value_for_input();">
                                                         {% csrf_token %}
+                                                        <input type="hidden" class="form-control" id="name1" aria-describedby="name" name="HoTen" value="" />
+                                                        <input type="hidden" class="form-control" id="address1" aria-describedby="address" name="DiaChi" value="" />                                                    
+                                                        <input type="hidden" class="form-control" id="phone2" aria-describedby="phone" name="SoDienThoai" value="" />
                                                         <button type="submit" value="submit" class="btn btn-success" style="margin-left: 15px;">Thanh toán khi nhận hàng</button>
                                                     </form>
                                                 </div>
@@ -130,4 +131,26 @@
         padding: 2px;
     }
 </style>
+<script>
+    function set_value_for_input()
+    {
+        var name1 = document.getElementById('name').value;
+        var address = document.getElementById('address').value;
+        var phone = document.getElementById('phone1').value;
+
+        if(name1 == "" || address == ""  || phone == "")
+        {
+            alert("Vui lòng nhập đầy đủ thông tin");
+            return false;
+        }
+        else
+        {
+            document.getElementById('name1').value = name1;
+            document.getElementById('address1').value = address;
+            document.getElementById('phone2').value = phone;
+            return true;
+        }
+            
+    }  
+</script>
 {% endblock  %}

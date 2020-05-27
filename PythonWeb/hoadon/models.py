@@ -7,6 +7,9 @@ from django.db.models.signals import pre_save, post_save
 # Create your models here.
 class HoaDon(models.Model):
     GH = models.ForeignKey(GioHang, on_delete=models.CASCADE, null=True, blank=True, verbose_name='Giỏ hàng')
+    HoTenNguoiNhan = models.CharField(default='', max_length=200, verbose_name='Họ tên người nhận')
+    DiaChiNguoiNhan = models.TextField(default='', verbose_name='Địa chỉ người nhận')
+    SDT = models.CharField(default='', max_length=10, verbose_name='Số điện thoại người nhận')
     NgayDatHang = models.DateTimeField(auto_now_add=True, verbose_name='Ngày đặt hàng')
     ThanhToan = models.BooleanField(default=False, verbose_name='Thanh toán')
     GiaoHang = models.BooleanField(default=False, verbose_name='Giao hàng')
@@ -26,7 +29,7 @@ class HoaDon(models.Model):
         #Kiểm tra thông tin user
         user = CustomerUser.objects.get(id=self.GH.user.id)
         tongtien = self.TongTien
-        if user.DiaChi and user.SDT and user.email and tongtien > 0:
+        if self.HoTenNguoiNhan and self.DiaChiNguoiNhan and self.SDT and user.email and tongtien > 0:
             return True
         return False
 

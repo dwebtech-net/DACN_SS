@@ -168,9 +168,12 @@ def checkout_home(request):
     if request.method == "POST":
         if cart_created:
             return redirect("giohang:home")
-        else:
+        else:           
             order_obj, new_order_obj = HoaDon.objects.get_or_create(GH=cart_obj)
-
+            order_obj.HoTenNguoiNhan = request.POST['HoTen']
+            order_obj.DiaChiNguoiNhan = request.POST['DiaChi']
+            order_obj.SDT = request.POST['SoDienThoai']
+           
         is_done = order_obj.check_done()
         if is_done:
             return redirect("giohang:thanhcong")
