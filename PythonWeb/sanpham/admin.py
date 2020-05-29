@@ -24,7 +24,7 @@ class Sim_Key(resources.ModelResource):
 
 class Sim(ImportExportModelAdmin,ExportActionMixin):
     readonly_fields = ('LoaiGia',)
-    list_display = ('SoSim', 'Gia', 'LoaiGia', 'Mang', 'TacVu', 'get_loaisims', 'NgayNhap', 'id',)
+    list_display = ('SoSim', 'Gia', 'LoaiGia', 'Mang', 'TacVu', 'get_loaisims', 'NgayNhap', 'DaBan', 'id',)
     list_per_page = 20
     resource_class = Sim_Key
 

@@ -8,26 +8,30 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from giohang.models import GioHang, CTGH
 from user.models import CustomerUser
 from news.models import TinTuc
+from hoadon.models import HoaDon
 import operator
 
 # Create your views here.
 def index(request):
     # Lấy dữ liệu từ database
-    km = SanPham.objects.filter(TacVu='khuyenmai')[0:12]
-    vip = SanPham.objects.filter(TacVu='vip')[0:9]
-    vipdn = SanPham.objects.filter(TacVu='vipdn')[0:9]
-    thuong = SanPham.objects.filter(TacVu='thuong')[0:999]
+    km = SanPham.objects.filter(TacVu='khuyenmai', DaBan=False)[0:12]
+    vip = SanPham.objects.filter(TacVu='vip', DaBan=False)[0:9]
+    vipdn = SanPham.objects.filter(TacVu='vipdn', DaBan=False)[0:9]
+    thuong = SanPham.objects.filter(TacVu='thuong', DaBan=False)[0:999]
 
     stl = SimTheoLoai.objects.all()
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
+    hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+
 
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
 
 
     Data = {
+            "hd": hd,
             "km": km,
             "vip": vip,
             "vipdn": vipdn,
@@ -41,17 +45,20 @@ def index(request):
 
 def sanpham(request, slug):
     # Lấy dữ liệu từ database
-    sanpham = SanPham.objects.get(slug=slug)
+    sanpham = SanPham.objects.get(slug=slug, DaBan=False)
 
     stl = SimTheoLoai.objects.all()
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
+    hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+
 
     #Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
 
     Data = {'sanpham': sanpham,
+            "hd": hd,
             "stl": stl,
             "sns": sns,
             "nm": nm,
@@ -66,7 +73,7 @@ def error(request):
 def simtheogia(request, slug):
 
     stg1 = SimTheoGia.objects.get(slug=slug)
-    sanpham = stg1.sanpham_set.all()
+    sanpham = stg1.sanpham_set.filter(DaBan=False)
     paginator = Paginator(sanpham, 25)  # Show 25 contacts per page
     page = request.GET.get('page')
     sanphams = paginator.get_page(page)
@@ -75,6 +82,8 @@ def simtheogia(request, slug):
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
+    hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+
 
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
@@ -82,6 +91,7 @@ def simtheogia(request, slug):
     Data = {
             'stg1': stg1,
             'sanpham': sanphams,
+            "hd": hd,
             "stl": stl,
             "sns": sns,
             "nm": nm,
@@ -93,7 +103,7 @@ def simtheogia(request, slug):
 def simtheomang(request, slug):
 
     nm1 = NhaMang.objects.get(slug=slug)
-    sanpham = nm1.sanpham_set.all()
+    sanpham = nm1.sanpham_set.filter(DaBan=False)
 
     paginator = Paginator(sanpham, 70)  # Show 25 contacts per page
 
@@ -104,6 +114,8 @@ def simtheomang(request, slug):
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
+    hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+
 
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
@@ -111,6 +123,7 @@ def simtheomang(request, slug):
     Data = {
             'nm1': nm1,
             'sanpham': sanphams,
+            "hd": hd,
             "stl": stl,
             "sns": sns,
             "nm": nm,
@@ -121,7 +134,7 @@ def simtheomang(request, slug):
 def simtheoloai(request, slug):
     stl1 = SimTheoLoai.objects.get(slug=slug)
 
-    sanpham = stl1.sanpham_set.all()
+    sanpham = stl1.sanpham_set.filter(DaBan=False)
     paginator = Paginator(sanpham, 10)  # Show 25 contacts per page
 
     page = request.GET.get('page')
@@ -131,6 +144,8 @@ def simtheoloai(request, slug):
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
+    hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+
 
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
@@ -138,6 +153,7 @@ def simtheoloai(request, slug):
     Data = {
             'stl1': stl1,
             'sanpham': sanphams,
+            "hd": hd,
             "stl": stl,
             "sns": sns,
             "nm": nm,
@@ -149,7 +165,7 @@ def simtheoloai(request, slug):
 def simnamsinh(request, slug):
 
     sns1 = SimNamSinh.objects.get(slug=slug)
-    sanpham = sns1.sanpham_set.all()
+    sanpham = sns1.sanpham_set.filter(DaBan=False)
 
     paginator = Paginator(sanpham, 10)  # Show 25 contacts per page
 
@@ -160,6 +176,8 @@ def simnamsinh(request, slug):
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
+    hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+
 
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
@@ -167,6 +185,7 @@ def simnamsinh(request, slug):
     Data = {
             'sns1': sns1,
             'sanpham': sanphams,
+            "hd": hd,
             "stl": stl,
             "sns": sns,
             "nm": nm,
@@ -176,7 +195,7 @@ def simnamsinh(request, slug):
 
 
 def tknc(request, slug):
-    sp = SanPham.objects.get(slug=slug)
+    sp = SanPham.objects.get(slug=slug, DaBan=False)
     Data = {
             'sp':sp,
             }

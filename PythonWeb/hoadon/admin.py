@@ -5,16 +5,15 @@ from .models import HoaDon
 
 # Hiển thị hóa đơn trên trang admin
 class HoaDonAdmin(admin.ModelAdmin):
-    list_display = ['id', 'GH', 'NgayDatHang', 'TongTien', 'ThanhToan', 'GiaoHang','Nguoi_mua']
+    list_display = ['GH', 'NgayDatHang', 'TongTien', 'ThanhToan', 'GiaoHang','Nguoi_mua', 'id', ]
     list_filter = ['id']
     search_fields = ['GH']
     list_per_page = 10
 
     def Nguoi_mua(self, obj):
+        return obj.GH.user.HoTen()
 
-        return obj.GH.user.get_full_name()
-
-
+    Nguoi_mua.short_description = "Người mua"
 
 admin.site.register(HoaDon, HoaDonAdmin)
 

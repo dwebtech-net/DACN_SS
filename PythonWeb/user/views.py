@@ -14,14 +14,15 @@ from .tokens import account_activation_token
 from django.core.mail import EmailMessage
 from user.models import CustomerUser
 from django.contrib.auth import login, authenticate
+from hoadon.models import HoaDon
 
-# import nexmo
+import nexmo
 
 
 class Dataview(ListView):
     model = SanPham
     context_object_name = 'sp'
-    queryset = SanPham.objects.all()
+    queryset = SanPham.objects.filter(DaBan=False)
 
     def get_context_data(self, **kwargs):
         context = super(Dataview, self).get_context_data(**kwargs)
@@ -29,6 +30,7 @@ class Dataview(ListView):
         context['sns'] = SimNamSinh.objects.all()
         context['nm'] = NhaMang.objects.all()
         context['stg'] = SimTheoGia.objects.all()
+        context['hd'] = HoaDon.objects.order_by('-NgayDatHang')[0:9]
         # Sắp xếp danh mục sim theo giá theo title
         return context
 
@@ -40,6 +42,8 @@ def dangky(request):
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
+    hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
     ########
@@ -53,6 +57,7 @@ def dangky(request):
 
     Data = {
         'form': form,
+        "hd": hd,
         "stl": stl,
         "sns": sns,
         "nm": nm,
@@ -70,10 +75,13 @@ def verify(request):
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
+    hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
 
     Data = {
+        "hd": hd,
         "stl": stl,
         "sns": sns,
         "nm": nm,
@@ -123,10 +131,13 @@ def checkcode(request):
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
+    hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
 
     Data = {
+        "hd": hd,
         "stl": stl,
         "sns": sns,
         "nm": nm,
@@ -152,10 +163,13 @@ def activate(request, uidb64, token):
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
+    hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
 
     Data = {
+        "hd": hd,
         "stl": stl,
         "sns": sns,
         "nm": nm,
@@ -185,6 +199,8 @@ def thongtintaikhoan(request):
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
+    hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
 
@@ -235,6 +251,7 @@ def thongtintaikhoan(request):
         user.save()
     Data = {"User": user,
             "form": form,
+            "hd": hd,
             "stl": stl,
             "sns": sns,
             "nm": nm,
@@ -253,6 +270,8 @@ def doimatkhau(request):
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
+    hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
 
@@ -265,6 +284,7 @@ def doimatkhau(request):
             return HttpResponseRedirect('/user/dang-nhap/')
 
     Data = {"form": form,
+            "hd": hd,
             "stl": stl,
             "sns": sns,
             "nm": nm,

@@ -92,6 +92,7 @@ class SanPham(models.Model):
     NamSinh = models.ForeignKey(SimNamSinh, on_delete=models.CASCADE, null=True, blank=True, verbose_name='Theo năm sinh ')
     Anh = models.ImageField(default=Default_img, verbose_name='Hình đại diện')
     NgayNhap = models.DateTimeField(auto_now_add=True, verbose_name='Ngày nhập')
+    DaBan = models.BooleanField(default=False, verbose_name='Đã bán')
 
     def __str__(self):
         return self.SoSim

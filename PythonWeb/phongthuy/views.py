@@ -7,7 +7,9 @@ from django.views.generic import CreateView
 
 from phongthuy.froms import simphongthuy
 from phongthuy.models import Datapt, namsinh, nguhanh
-from sanpham.models import SanPham
+from sanpham.models import SanPham, SimTheoLoai, SimNamSinh, NhaMang, SimTheoGia
+from hoadon.models import HoaDon
+import operator
 
 def diem(request):
     data = Datapt.objects.all()
@@ -38,13 +40,28 @@ def diem(request):
             Q(name__icontains=menh)
 
         )
-    sp = SanPham.objects.all()
+    sp = SanPham.objects.filter(DaBan=False)
     simnamsinh = request.GET.get('namsinh')
     if simnamsinh:
         sp = sp.filter(
             Q(SoSim__icontains=ngay) and Q(SoSim__icontains=thang) or Q(SoSim__icontains=nam)
         )[0:50]
+    
+    stl = SimTheoLoai.objects.all()
+    sns = SimNamSinh.objects.all()
+    nm = NhaMang.objects.all()
+    stg = SimTheoGia.objects.all()
+    hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+
+    # Sắp xếp danh mục sim theo giá theo title
+    stg_dsx = sorted(stg, key=operator.attrgetter('title'))
+
     pt = {
+        'hd': hd,
+        'stl': stl,
+        'sns': sns,
+        'nm': nm,
+        'stg': stg_dsx,
         'data':data,
         'sp':sp,
         'data_ns':data_ns,
