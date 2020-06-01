@@ -50,13 +50,14 @@ def CTGHMoi(cart_obj=None):
 # Tạo bảng giỏ hàng
 class GioHang(models.Model):
     user = models.ForeignKey(CustomerUser, on_delete=models.CASCADE, null= True, blank= True, verbose_name='Người đặt')
+    ngaytao = models.DateField(auto_now_add=True)
     SanPhams = models.ManyToManyField(SanPham, blank=True, verbose_name='Danh sách sản phẩm')
     TongTien = models.FloatField(default=0, verbose_name='Tổng tiền')
 
     objects = GioHangManager()
 
     def __str__(self):
-        return str(self.id)
+        return str(self.user) + " | Ngày đặt %s" % self.ngaytao
 
     def get_sanphams(self):
         return " - ".join([s.SoSim for s in self.SanPhams.all()])
