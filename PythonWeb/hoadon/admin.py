@@ -11,10 +11,9 @@ class HoaDonAdmin(admin.ModelAdmin):
     list_per_page = 10
 
     def Nguoi_mua(self, obj):
+        return obj.GH.user.HoTen()
 
-        return obj.GH.user.get_full_name()
-
-
+    Nguoi_mua.short_description = "Người mua"
 
 admin.site.register(HoaDon, HoaDonAdmin)
 

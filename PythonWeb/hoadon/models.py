@@ -33,6 +33,10 @@ class HoaDon(models.Model):
             return True
         return False
 
+    @property
+    def hidden_phone_number(self):
+        return '%sxxxx%s' % (self.SDT[:3], self.SDT[-3:])
+
     class Meta:
         verbose_name_plural = 'Hóa đơn'
 

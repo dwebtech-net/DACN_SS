@@ -16,41 +16,19 @@
                 <div class="list-group"> <a href="javascript:void(0);" class="list-group-item active">Đơn hàng mới</a>
                     <div class="wgc-right">
                         <ul style=" list-style: none; padding: 5px; margin: 0; ">
-                            <li style=" border-bottom: 1px solid #ccc; padding-bottom: 5px; ">
-                                <h3 style=" margin: 3px; "> Bùi Hoàng Nam</h3>
-                                <label>&emsp;094772...90</label>
-                                <br>
-                                <label class='stg'> Đã đặt mua </label> <span>&nbsp; (15h34)</span> </li>
-                            <li style=" border-bottom: 1px solid #ccc; padding-bottom: 5px; ">
-                                <h3 style=" margin: 3px; "> Huỳnh Hiếu Khanh</h3>
-                                <label>&emsp;094624...18</label>
-                                <br>
-                                <label class='stg' style='background:#4CAF50'>Đã giao hàng</label> <span>&nbsp; (15h32)</span> </li>
-                            <li style=" border-bottom: 1px solid #ccc; padding-bottom: 5px; ">
-                                <h3 style=" margin: 3px; "> Trần Thành Tín</h3>
-                                <label>&emsp;055882...67</label>
-                                <br>
-                                <label class='stg'> Đã đặt mua </label> <span>&nbsp; (15h30)</span> </li>
-                            <li style=" border-bottom: 1px solid #ccc; padding-bottom: 5px; ">
-                                <h3 style=" margin: 3px; "> Võ Diệp Anh</h3>
-                                <label>&emsp;033441...57</label>
-                                <br>
-                                <label class='stg' style='background:#4CAF50'>Đã giao hàng</label> <span>&nbsp; (15h29)</span> </li>
-                            <li style=" border-bottom: 1px solid #ccc; padding-bottom: 5px; ">
-                                <h3 style=" margin: 3px; "> Nguyễn Bích Nhã</h3>
-                                <label>&emsp;037956...40</label>
-                                <br>
-                                <label class='stg' style='background:#4CAF50'>Đã giao hàng</label> <span>&nbsp; (15h28)</span> </li>
-                            <li style=" border-bottom: 1px solid #ccc; padding-bottom: 5px; ">
-                                <h3 style=" margin: 3px; "> Lý Mộng Quỳnh</h3>
-                                <label>&emsp;098511...38</label>
-                                <br>
-                                <label class='stg' style='background:#4CAF50'>Đã giao hàng</label> <span>&nbsp; (15h27)</span> </li>
-                            <li style=" border-bottom: 1px solid #ccc; padding-bottom: 5px; ">
-                                <h3 style=" margin: 3px; "> Vũ Huyền Diệu</h3>
-                                <label>&emsp;055509...78</label>
-                                <br>
-                                <label class='stg' style='background:#4CAF50'>Đã giao hàng</label> <span>&nbsp; (15h25)</span> </li>
+                            {% for hoadon in hd %}
+                                <li style=" border-bottom: 1px solid #ccc; padding-bottom: 5px; ">
+                                    <h3 style=" margin: 3px; ">{{ hoadon.HoTenNguoiNhan|default:"Người dùng chưa đặt tên" }}</h3>
+                                    <label>&emsp;{% if not hoadon.SDT %} xxxxxxxxx {% else %} {{ hoadon.hidden_phone_number }} {% endif %}</label>
+                                    <br>
+                                    {% if not hoadon.GiaoHang %}
+                                        <label class='stg'> Đã đặt mua </label>
+                                    {% else %}
+                                        <label class='stg' style='background:#4CAF50'>Đã giao hàng</label>
+                                    {% endif %}
+                                     <span>&nbsp;({{ hoadon.NgayDatHang|date:"d-m-y h:i" }})</span> 
+                                </li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>

@@ -5,7 +5,7 @@ from django.db.models import Q
 from sanpham.models import SimTheoGia ,NhaMang, SimTheoLoai , SimNamSinh ,SanPham
 
 def timkiem_nangcao(request):
-    sp = SanPham.objects.all()
+    sp = SanPham.objects.filter(DaBan=False)
     nm = NhaMang.objects.all()
     ns = SimNamSinh.objects.all()
     stl = SimTheoLoai.objects.all()

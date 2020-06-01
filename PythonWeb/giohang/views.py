@@ -40,11 +40,14 @@ def cart_home(request):
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
+    hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
 
 
     Data = {
+        "hd": hd,
         "stl": stl,
         "sns": sns,
         "nm": nm,
@@ -64,7 +67,7 @@ def cart_update(request):
 
     if product_id is not None:
         try:
-            obj = SanPham.objects.get(id=product_id)
+            obj = SanPham.objects.get(id=product_id, DaBan=False)
         except:
             return redirect('giohang:home')
 
@@ -97,7 +100,7 @@ def cart_delete(request):
     product_id = request.POST.get('product_id')
     if product_id is not None:
         try:
-            obj = SanPham.objects.get(id=product_id)
+            obj = SanPham.objects.get(id=product_id, DaBan=False)
         except:
             return redirect('giohang:home')
 
@@ -144,9 +147,12 @@ def cart_empty(request):
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
+    hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
     Data = {
+        "hd": hd,
         "stl": stl,
         "sns": sns,
         "nm": nm,
@@ -173,9 +179,15 @@ def checkout_home(request):
             order_obj.HoTenNguoiNhan = request.POST['HoTen']
             order_obj.DiaChiNguoiNhan = request.POST['DiaChi']
             order_obj.SDT = request.POST['SoDienThoai']
-           
+            
         is_done = order_obj.check_done()
+        
         if is_done:
+            order_obj.save()
+            for item in ctgh:
+                sanpham_obj = SanPham.objects.get(id=item.SP.id)
+                sanpham_obj.DaBan = True
+                sanpham_obj.save()
             return redirect("giohang:thanhcong")
         else:
             error = "Vui lòng kiểm tra thông tin đặt hàng"
@@ -184,10 +196,13 @@ def checkout_home(request):
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
+    hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
 
     Data = {
+        "hd": hd,
         "stl": stl,
         "sns": sns,
         "nm": nm,
@@ -256,9 +271,12 @@ def thanhcong(request):
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
+    hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
     Data = {
+        "hd": hd,
         "stl": stl,
         "sns": sns,
         "nm": nm,

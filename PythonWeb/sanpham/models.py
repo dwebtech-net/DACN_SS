@@ -20,7 +20,7 @@ SIM_CHOICES = (
 ##
 class SimTheoGia(models.Model):
     title = models.CharField(max_length=100,verbose_name='Tiêu đề')
-    slug = models.SlugField(max_length=20, null=False, default='')
+    slug = models.SlugField(max_length=100, null=False, default='')
 
     def __str__(self):
         return self.title
@@ -35,7 +35,7 @@ class SimTheoGia(models.Model):
 
 class NhaMang(models.Model):
     title = models.CharField(max_length=100,verbose_name='Tiêu đề')
-    slug = models.SlugField(max_length=20, null=False, default='')
+    slug = models.SlugField(max_length=100, null=False, default='')
 
     def __str__(self):
         return self.title
@@ -50,7 +50,7 @@ class NhaMang(models.Model):
 
 class SimTheoLoai(models.Model):
     title = models.CharField(max_length=100,verbose_name='Tiêu đề')
-    slug = models.SlugField(max_length=20, null=False, default='')
+    slug = models.SlugField(max_length=100, null=False, default='')
 
     def __str__(self):
         return self.title
@@ -65,7 +65,7 @@ class SimTheoLoai(models.Model):
 
 class SimNamSinh(models.Model):
     title = models.CharField(max_length=100,verbose_name='Tiêu đề')
-    slug = models.SlugField(max_length=20, null=False, default='')
+    slug = models.SlugField(max_length=100, null=False, default='')
 
     def __str__(self):
         return self.title
@@ -83,15 +83,16 @@ class SimNamSinh(models.Model):
 
 class SanPham(models.Model):
     LoaiSims = models.ManyToManyField(SimTheoLoai,default=0, verbose_name='Loại sim')
-    slug = models.SlugField(max_length=20, null=False, default='')
+    slug = models.SlugField(max_length=100, null=False, default='')
     TacVu = models.CharField(max_length=100, choices=SIM_CHOICES,default='thuong',verbose_name='Tác vụ trang chủ')
-    SoSim = models.CharField(max_length=100, verbose_name='Nhập số sim')
-    Gia = models.IntegerField(default=0, verbose_name='Nhập giá bán')
+    SoSim = models.CharField(max_length=100, verbose_name='Số sim')
+    Gia = models.IntegerField(default=0, verbose_name='Giá bán')
     Mang = models.ForeignKey(NhaMang, on_delete=models.CASCADE, null=True, verbose_name='Nhà Mạng')
     LoaiGia = models.ForeignKey(SimTheoGia, on_delete=models.CASCADE, null=True, verbose_name='Sim theo giá ')
     NamSinh = models.ForeignKey(SimNamSinh, on_delete=models.CASCADE, null=True, blank=True, verbose_name='Theo năm sinh ')
     Anh = models.ImageField(default=Default_img, verbose_name='Hình đại diện')
     NgayNhap = models.DateTimeField(auto_now_add=True, verbose_name='Ngày nhập')
+    DaBan = models.BooleanField(default=False, verbose_name='Đã bán')
 
     def __str__(self):
         return self.SoSim
@@ -101,8 +102,10 @@ class SanPham(models.Model):
             self.slug = get_unique_slug(self, 'SoSim', 'slug')
         super().save(*args, **kwargs)
 
-    # def get_loaisims(self):
-    #     return " - ".join([s.title for s in self.LoaiSims.all()])
+    def get_loaisims(self):
+        return " - ".join([s.title for s in self.LoaiSims.all()])
+
+    get_loaisims.short_description = "Loại sim"
 
     class Meta:
         verbose_name_plural = 'Sản Phẩm'
