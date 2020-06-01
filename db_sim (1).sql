@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 01, 2020 lúc 08:41 AM
+-- Thời gian đã tạo: Th6 01, 2020 lúc 12:54 PM
 -- Phiên bản máy phục vụ: 10.4.11-MariaDB
 -- Phiên bản PHP: 7.4.5
 
@@ -4263,7 +4263,15 @@ INSERT INTO `django_admin_log` (`id`, `action_time`, `object_id`, `object_repr`,
 (3981, '2020-06-01 05:44:29.266353', '2', '2', 3, '', 12, 1),
 (3982, '2020-06-01 05:44:29.266353', '1', '1', 3, '', 12, 1),
 (3983, '2020-06-01 06:23:18.108056', '1', 'Bạn cần biết', 1, '[{\"added\": {}}]', 25, 1),
-(3984, '2020-06-01 06:28:25.302491', '1', 'Cam kết bán hàng', 1, '[{\"added\": {}}]', 15, 1);
+(3984, '2020-06-01 06:28:25.302491', '1', 'Cam kết bán hàng', 1, '[{\"added\": {}}]', 15, 1),
+(3985, '2020-06-01 06:46:26.835477', '1', 'Cam kết bán hàng', 2, '[{\"changed\": {\"fields\": [\"noi_dung\"]}}]', 15, 1),
+(3986, '2020-06-01 07:16:21.050314', '1', 'Bạn cần biết', 1, '[{\"added\": {}}]', 25, 1),
+(3987, '2020-06-01 07:16:50.467841', '1', 'Cam kết bán hàng', 1, '[{\"added\": {}}]', 15, 1),
+(3988, '2020-06-01 07:37:09.229096', '2', 'Tin mới cập nhật', 1, '[{\"added\": {}}]', 25, 1),
+(3989, '2020-06-01 09:08:03.270960', '1957', '123123213', 1, '[{\"added\": {}}]', 10, 1),
+(3990, '2020-06-01 09:45:40.693277', '10', 'Tin tức', 1, '[{\"added\": {}}]', 20, 1),
+(3991, '2020-06-01 09:45:53.905170', '1', 'menu-header', 2, '[]', 19, 1),
+(3992, '2020-06-01 10:33:19.187763', '1958', '123123123', 1, '[{\"added\": {}}]', 10, 1);
 
 -- --------------------------------------------------------
 
@@ -4361,7 +4369,7 @@ INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES
 (33, 'giohang', '0001_initial', '2020-05-13 06:37:45.344181'),
 (34, 'giohang', '0002_auto_20191203_0201', '2020-05-13 06:37:45.937981'),
 (35, 'giohang', '0003_auto_20191203_0551', '2020-05-13 06:37:46.327544'),
-(52, 'news', '0001_initial', '2020-06-01 06:21:34.601600'),
+(60, 'news', '0001_initial', '2020-06-01 07:15:22.467121'),
 (37, 'phongthuy', '0001_initial', '2020-05-13 06:37:46.450894'),
 (38, 'sanpham', '0002_auto_20191212_1852', '2020-05-13 06:37:46.530738'),
 (39, 'sessions', '0001_initial', '2020-05-13 06:37:46.582922'),
@@ -4375,7 +4383,14 @@ INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES
 (47, 'hoadon', '0002_auto_20200527_2108', '2020-05-27 14:11:23.892846'),
 (48, 'sanpham', '0002_auto_20200529_2104', '2020-05-29 14:04:25.240958'),
 (49, 'sanpham', '0003_auto_20200529_2114', '2020-05-29 14:14:51.917946'),
-(50, 'sanpham', '0004_sanpham_daban', '2020-05-29 16:54:01.215542');
+(50, 'sanpham', '0004_sanpham_daban', '2020-05-29 16:54:01.215542'),
+(53, 'CauHinh', '0003_auto_20200529_1522', '2020-06-01 07:05:02.759453'),
+(54, 'CauHinh', '0004_auto_20200529_1535', '2020-06-01 07:05:02.766370'),
+(55, 'CauHinh', '0005_auto_20200529_1537', '2020-06-01 07:05:02.779232'),
+(56, 'giohang', '0002_giohang_ngaytao', '2020-06-01 07:05:02.921100'),
+(57, 'giohang', '0003_auto_20200529_1537', '2020-06-01 07:05:03.022901'),
+(58, 'CauHinh', '0006_auto_20200601_1405', '2020-06-01 07:05:28.587448'),
+(61, 'giohang', '0002_auto_20200601_1729', '2020-06-01 10:32:15.594797');
 
 -- --------------------------------------------------------
 
@@ -4397,7 +4412,7 @@ INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALU
 ('zg95t6hae1sct800rmshqbaozkf4kyri', 'M2EyMzkwMGU1MzdkYTExZjdjNjFiMDBiYTU0MWZkNmI4YzYwZjhmZjp7ImNhcnRfaXRlbXMiOjAsIl9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIwNGJkN2E0MDkyNzliOTYyNWU2MTQ5ZmQwOWZlNDllYWJkOTg3N2MzIiwiY2FydF9pZCI6NH0=', '2019-12-11 17:56:04.910805'),
 ('q7nuc7uvr914u9b84c2kmhe484cc9d4g', 'MTYzODkyMDU1NDFjNjk0ZGMxNzBkMGE1MTVjMTc3ZjNlMGZmZGVjOTp7InVzZXJfaWQiOjQsInJlcXVlc3RfaWQiOiJkMzljYTBmMjI4ZGI0NDY5ODYwMDNiYWM1MWQyMTcyMyJ9', '2019-12-11 10:52:25.628255'),
 ('0txes2k0tb12c1yozo410don9xquiz1q', 'YjM5ZTY1MmFhNTEwYTRkZmRkZTE4MTQwOGRkZDUxZTM2MTk4NzNkMTp7ImNhcnRfaWQiOjUsImNhcnRfaXRlbXMiOjIsIl9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIwNGJkN2E0MDkyNzliOTYyNWU2MTQ5ZmQwOWZlNDllYWJkOTg3N2MzIn0=', '2019-12-13 15:29:25.915433'),
-('mh5ze4te9dmojxqqnrfdn6llsgezjt3o', 'OTlmYmU5NDE3M2Y3OWFiYTI3ZWRkODZlYWNjODIzN2UwZGJkMDE4NDp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJjNDUzYzBhMDRhM2RjMjY2MjU3ZTg5Y2JlZWI0OTk1YTk3ZjRiNDdlIiwiY2FydF9pdGVtcyI6MH0=', '2020-06-12 17:40:56.475611');
+('mh5ze4te9dmojxqqnrfdn6llsgezjt3o', 'NzNjZTRkMmE3NzgxYmIzMWM4NTAyNjcyM2YzNmE3ZmJiMmMyYmNhOTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJjNDUzYzBhMDRhM2RjMjY2MjU3ZTg5Y2JlZWI0OTk1YTk3ZjRiNDdlIiwiY2FydF9pdGVtcyI6MCwiY2FydF9pZCI6MjF9', '2020-06-15 10:52:31.224604');
 
 -- --------------------------------------------------------
 
@@ -4421,8 +4436,19 @@ CREATE TABLE `giohang_ctgh` (
 CREATE TABLE `giohang_giohang` (
   `id` int(11) NOT NULL,
   `TongTien` double NOT NULL,
-  `user_id` int(11) DEFAULT NULL
+  `user_id` int(11) DEFAULT NULL,
+  `ngaytao` date NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `giohang_giohang`
+--
+
+INSERT INTO `giohang_giohang` (`id`, `TongTien`, `user_id`, `ngaytao`) VALUES
+(18, 0, 1, '2020-06-01'),
+(19, 0, 1, '2020-06-01'),
+(20, 0, 1, '2020-06-01'),
+(21, 0, 1, '2020-06-01');
 
 -- --------------------------------------------------------
 
@@ -4462,16 +4488,17 @@ CREATE TABLE `hoadon_hoadon` (
 
 CREATE TABLE `news_danhmuctintuc` (
   `id` int(11) NOT NULL,
-  `tieu_de` varchar(500) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `duong_dan` varchar(100) COLLATE utf8_unicode_ci NOT NULL
+  `TieuDe` varchar(500) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `DuongDan` varchar(100) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `news_danhmuctintuc`
 --
 
-INSERT INTO `news_danhmuctintuc` (`id`, `tieu_de`, `duong_dan`) VALUES
-(1, 'Bạn cần biết', 'ban-can-biet');
+INSERT INTO `news_danhmuctintuc` (`id`, `TieuDe`, `DuongDan`) VALUES
+(1, 'Bạn cần biết', 'ban-can-biet'),
+(2, 'Tin mới cập nhật', 'tin-moi-cap-nhat');
 
 -- --------------------------------------------------------
 
@@ -4481,20 +4508,21 @@ INSERT INTO `news_danhmuctintuc` (`id`, `tieu_de`, `duong_dan`) VALUES
 
 CREATE TABLE `news_tintuc` (
   `id` int(11) NOT NULL,
-  `tieu_de` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
-  `mo_ta_ngan` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
-  `noi_dung` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
-  `anh` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `ngay_tao` datetime(6) NOT NULL,
-  `duong_dan` varchar(200) COLLATE utf8_unicode_ci NOT NULL
+  `TieuDe` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `MoTaNgan` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `NoiDung` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Anh` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `NgayTao` datetime(6) NOT NULL,
+  `DuongDan` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `LoaiTinTuc_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `news_tintuc`
 --
 
-INSERT INTO `news_tintuc` (`id`, `tieu_de`, `mo_ta_ngan`, `noi_dung`, `anh`, `ngay_tao`, `duong_dan`) VALUES
-(1, 'Cam kết bán hàng', 'Cam kết bán hàng', '\"Uy tín chính là sự sống còn của công ty\"\r\n\r\n6 Cam kết bán hàng của Sim Thăng Long:\r\n\r\nCam kết 1: Bán hàng không mập mờ. Luôn trả lời cho khách hàng biết sim có hay không có, còn hay đã bán.\r\n\r\nCam kết 2: Hoàn tiền 100% cho khách hàng nếu sim bị thất lạc hoặc do sai sót của Sim Thăng Long dẫn đến giao dịch không thành công.\r\n\r\nCam kết 3: Luôn đăng ký tên chính chủ cho khách hàng mua sim. Đảm bảo quyền sở hữu số thuê bao theo đúng quy định của pháp luật.\r\n\r\nCam kết 4: Giữ bí mật tuyệt đối thông tin của khách hàng. Không chia sẻ cho các cá nhân và tổ chức khác.\r\n\r\nCam kết 5: Bán đúng giá và luôn cố gắng bán giá thấp nhất có thể so với các số sim tương tự đang có trên thị trường.\r\n\r\nCam kết 6: Giao sim hoàn toàn miễn phí trên toàn quốc. Khách hàng không phải trả thêm bất cứ khoản phí nào khi nhận sim.\r\n\r\nToàn thể đội ngũ nhân viên chúng tôi luôn nỗ lực và không ngừng phấn đấu để đạt được mục tiêu trở thành đơn vị phân phối sim số đẹp lớn nhất & uy tín nhất tại Việt Nam. Hãy giúp chúng tôi bằng cách nói thẳng cho chúng tôi biết nếu quý khách có bất kỳ điều gì không hài lòng.\r\n\r\nChúng tôi mong muốn nhận được những góp ý chân thành để chúng tôi có thể phục vụ quý khách ngày càng tốt hơn!\r\n\r\nThắc mắc về chất lượng dịch vụ xin gọi đến số điện thoại ban giám đốc: 0917.588.886', 'news-default.jpg', '2020-06-01 06:28:25.302491', 'cam-ket-ban-hang');
+INSERT INTO `news_tintuc` (`id`, `TieuDe`, `MoTaNgan`, `NoiDung`, `Anh`, `NgayTao`, `DuongDan`, `LoaiTinTuc_id`) VALUES
+(1, 'Cam kết bán hàng', 'Cam kết bán hàng', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p style=\"font-family: Arial, Helvetica, sans-serif; font-size: 14px;\"><strong>\"Uy t&iacute;n ch&iacute;nh l&agrave; sự sống c&ograve;n của c&ocirc;ng ty\"</strong></p>\r\n<p style=\"font-family: Arial, Helvetica, sans-serif; font-size: 14px;\"><strong>6 Cam kết b&aacute;n h&agrave;ng của Sim Thăng Long:</strong></p>\r\n<p style=\"font-family: Arial, Helvetica, sans-serif; font-size: 14px;\"><strong>Cam kết 1:&nbsp;</strong>B&aacute;n h&agrave;ng kh&ocirc;ng mập mờ. Lu&ocirc;n trả lời cho kh&aacute;ch h&agrave;ng biết sim c&oacute; hay kh&ocirc;ng c&oacute;, c&ograve;n hay đ&atilde; b&aacute;n.</p>\r\n<p style=\"font-family: Arial, Helvetica, sans-serif; font-size: 14px;\"><strong>Cam kết 2:&nbsp;</strong>Ho&agrave;n tiền 100% cho kh&aacute;ch h&agrave;ng nếu sim bị thất lạc hoặc do sai s&oacute;t của Sim Thăng Long dẫn đến giao dịch kh&ocirc;ng th&agrave;nh c&ocirc;ng.</p>\r\n<p style=\"font-family: Arial, Helvetica, sans-serif; font-size: 14px;\"><strong>Cam kết 3:&nbsp;</strong>Lu&ocirc;n đăng k&yacute; t&ecirc;n ch&iacute;nh chủ cho kh&aacute;ch h&agrave;ng mua sim. Đảm bảo quyền sở hữu số thu&ecirc; bao theo đ&uacute;ng quy định của ph&aacute;p luật.</p>\r\n<p style=\"font-family: Arial, Helvetica, sans-serif; font-size: 14px;\"><strong>Cam kết 4:&nbsp;</strong>Giữ b&iacute; mật tuyệt đối th&ocirc;ng tin của kh&aacute;ch h&agrave;ng. Kh&ocirc;ng chia sẻ cho c&aacute;c c&aacute; nh&acirc;n v&agrave; tổ chức kh&aacute;c.</p>\r\n<p style=\"font-family: Arial, Helvetica, sans-serif; font-size: 14px;\"><strong>Cam kết 5:&nbsp;</strong>B&aacute;n đ&uacute;ng gi&aacute; v&agrave; lu&ocirc;n cố gắng b&aacute;n gi&aacute; thấp nhất c&oacute; thể so với c&aacute;c số sim tương tự đang c&oacute; tr&ecirc;n thị trường.</p>\r\n<p style=\"font-family: Arial, Helvetica, sans-serif; font-size: 14px;\"><strong>Cam kết 6:&nbsp;</strong>Giao sim ho&agrave;n to&agrave;n miễn ph&iacute; tr&ecirc;n to&agrave;n quốc. Kh&aacute;ch h&agrave;ng kh&ocirc;ng phải trả th&ecirc;m bất cứ khoản ph&iacute; n&agrave;o khi nhận sim.</p>\r\n<p style=\"font-family: Arial, Helvetica, sans-serif; font-size: 14px;\">To&agrave;n thể đội ngũ nh&acirc;n vi&ecirc;n ch&uacute;ng t&ocirc;i lu&ocirc;n nỗ lực v&agrave; kh&ocirc;ng ngừng phấn đấu để đạt được mục ti&ecirc;u trở th&agrave;nh đơn vị ph&acirc;n phối sim số đẹp&nbsp;<strong>lớn nhất &amp; uy t&iacute;n nhất</strong>&nbsp;tại Việt Nam. H&atilde;y gi&uacute;p ch&uacute;ng t&ocirc;i bằng c&aacute;ch n&oacute;i thẳng cho ch&uacute;ng t&ocirc;i biết nếu qu&yacute; kh&aacute;ch c&oacute; bất kỳ điều g&igrave; kh&ocirc;ng h&agrave;i l&ograve;ng.<br /><br />Ch&uacute;ng t&ocirc;i mong muốn nhận được những g&oacute;p &yacute; ch&acirc;n th&agrave;nh để ch&uacute;ng t&ocirc;i c&oacute; thể phục vụ qu&yacute; kh&aacute;ch ng&agrave;y c&agrave;ng tốt hơn!<br /><br />Thắc mắc về chất lượng dịch vụ xin gọi đến số điện thoại ban gi&aacute;m đốc:&nbsp;<strong>0917.588.886</strong></p>\r\n</body>\r\n</html>', 'product-default.jpg', '2020-06-01 07:16:50.467841', 'cam-ket-ban-hang', 1);
 
 -- --------------------------------------------------------
 
@@ -6543,7 +6571,9 @@ INSERT INTO `sanpham_sanpham` (`id`, `slug`, `TacVu`, `SoSim`, `Gia`, `Anh`, `Ng
 (7, '0784848789', 'thuong', '0784848789', 3500000, '/default.png', '2020-05-19 10:41:17.846991', NULL, 2, NULL, 0),
 (6, '0899897889', 'thuong', '0899897889', 4000000, '/default.png', '2020-05-19 10:41:17.853039', NULL, 2, NULL, 0),
 (5, '0702630246', 'thuong', '0702630246', 4000000, '/default.png', '2020-05-19 10:41:17.857994', NULL, 2, NULL, 0),
-(4, '0772552468', 'thuong', '0772552468', 4000000, '/default.png', '2020-05-19 10:41:17.862993', NULL, 2, NULL, 0);
+(4, '0772552468', 'thuong', '0772552468', 4000000, '/default.png', '2020-05-19 10:41:17.862993', NULL, 2, NULL, 0),
+(1957, '12312312', 'thuong', '123123213', 123123123, '/default.png', '2020-06-01 09:08:03.267933', 12, 2, NULL, 0),
+(1958, '123123123', 'thuong', '123123123', 123213123, '', '2020-06-01 10:33:19.183724', 13, 2, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -6567,7 +6597,9 @@ INSERT INTO `sanpham_sanpham_loaisims` (`id`, `sanpham_id`, `simtheoloai_id`) VA
 (6, 1954, 1),
 (8, 1953, 4),
 (7, 1953, 3),
-(9, 1952, 2);
+(9, 1952, 2),
+(10, 1957, 1),
+(11, 1958, 1);
 
 -- --------------------------------------------------------
 
@@ -6603,7 +6635,9 @@ INSERT INTO `sanpham_simtheogia` (`id`, `title`, `slug`) VALUES
 (5, 'Sim giá 10 triệu - 50 triệu', 'sim-gia-10-50-trieu'),
 (6, 'Sim giá 5 triệu - 10 triệu', 'sim-gia-5-10-trieu'),
 (10, 'Sim giá 500 nghìn - 1 triệu', 'sim-gia-500-nghin-1-'),
-(11, 'Sim giá 1 triệu - 3 triệu', 'sim-gia-1-trieu-3-trieu');
+(11, 'Sim giá 1 triệu - 3 triệu', 'sim-gia-1-trieu-3-trieu'),
+(12, 'Sim giá trên 50 triệu', 'sim-gia-tren-50-trieu'),
+(13, 'Sim giá trên 100 triệu', 'sim-gia-tren-100-trieu');
 
 -- --------------------------------------------------------
 
@@ -6679,13 +6713,14 @@ CREATE TABLE `sitetree_treeitem` (
 
 INSERT INTO `sitetree_treeitem` (`id`, `title`, `hint`, `url`, `urlaspattern`, `hidden`, `alias`, `description`, `inmenu`, `inbreadcrumbs`, `insitetree`, `access_loggedin`, `access_guest`, `access_restricted`, `access_perm_type`, `sort_order`, `parent_id`, `tree_id`) VALUES
 (1, 'Trang chủ', '', '/', 0, 0, NULL, '', 1, 1, 1, 0, 0, 0, 1, 1, NULL, 1),
-(2, 'Đăng nhập', '', '/user/dang-nhap', 0, 0, NULL, '', 1, 1, 1, 0, 1, 0, 1, 6, NULL, 1),
-(3, 'Đăng ký', '', '/user/dang-ky', 0, 0, NULL, '', 1, 1, 1, 0, 1, 0, 1, 7, NULL, 1),
-(4, 'Đăng xuất', '', '/user/dang-xuat', 0, 0, NULL, '', 1, 1, 1, 1, 0, 0, 1, 9, NULL, 1),
+(2, 'Đăng nhập', '', '/user/dang-nhap', 0, 0, NULL, '', 1, 1, 1, 0, 1, 0, 1, 7, NULL, 1),
+(3, 'Đăng ký', '', '/user/dang-ky', 0, 0, NULL, '', 1, 1, 1, 0, 1, 0, 1, 8, NULL, 1),
+(4, 'Đăng xuất', '', '/user/dang-xuat', 0, 0, NULL, '', 1, 1, 1, 1, 0, 0, 1, 10, NULL, 1),
 (8, 'Thanh toán', '', '/gio-hang/thanh-toan/', 0, 0, NULL, '', 1, 1, 1, 1, 0, 0, 1, 3, NULL, 1),
 (7, 'Giỏ hàng({{ request.session.cart_items }})', '', '/gio-hang', 0, 0, NULL, '', 1, 1, 1, 0, 0, 0, 1, 2, NULL, 1),
-(6, 'Xin chào {{ request.user.last_name}}', '', '/user/thong-tin-tai-khoan', 0, 0, NULL, '', 1, 1, 1, 1, 0, 0, 1, 8, NULL, 1),
-(9, 'Phong thủy', '', '/phongthuy/xem-phong-thuy', 0, 0, NULL, '', 1, 1, 1, 0, 0, 0, 1, 5, NULL, 1);
+(6, 'Xin chào {{ request.user.last_name}}', '', '/user/thong-tin-tai-khoan', 0, 0, NULL, '', 1, 1, 1, 1, 0, 0, 1, 9, NULL, 1),
+(9, 'Phong thủy', '', '/phongthuy/xem-phong-thuy', 0, 0, NULL, '', 1, 1, 1, 0, 0, 0, 1, 5, NULL, 1),
+(10, 'Tin tức', '', '/tin-tuc', 0, 0, NULL, '', 1, 1, 1, 0, 0, 0, 1, 6, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -6881,14 +6916,15 @@ ALTER TABLE `hoadon_hoadon`
 --
 ALTER TABLE `news_danhmuctintuc`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `news_danhmuctintuc_duong_dan_085581dc` (`duong_dan`);
+  ADD KEY `news_danhmuctintuc_DuongDan_947b5c57` (`DuongDan`);
 
 --
 -- Chỉ mục cho bảng `news_tintuc`
 --
 ALTER TABLE `news_tintuc`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `news_tintuc_duong_dan_2d1bde35` (`duong_dan`);
+  ADD KEY `news_tintuc_DuongDan_91dc3f60` (`DuongDan`),
+  ADD KEY `news_tintuc_LoaiTinTuc_id_1c3f5d25` (`LoaiTinTuc_id`);
 
 --
 -- Chỉ mục cho bảng `phongthuy_datapt`
@@ -7071,7 +7107,7 @@ ALTER TABLE `contact_lienhe`
 -- AUTO_INCREMENT cho bảng `django_admin_log`
 --
 ALTER TABLE `django_admin_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3985;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3993;
 
 --
 -- AUTO_INCREMENT cho bảng `django_content_type`
@@ -7083,7 +7119,7 @@ ALTER TABLE `django_content_type`
 -- AUTO_INCREMENT cho bảng `django_migrations`
 --
 ALTER TABLE `django_migrations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT cho bảng `giohang_ctgh`
@@ -7095,7 +7131,7 @@ ALTER TABLE `giohang_ctgh`
 -- AUTO_INCREMENT cho bảng `giohang_giohang`
 --
 ALTER TABLE `giohang_giohang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT cho bảng `giohang_giohang_sanphams`
@@ -7113,7 +7149,7 @@ ALTER TABLE `hoadon_hoadon`
 -- AUTO_INCREMENT cho bảng `news_danhmuctintuc`
 --
 ALTER TABLE `news_danhmuctintuc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `news_tintuc`
@@ -7149,13 +7185,13 @@ ALTER TABLE `sanpham_nhamang`
 -- AUTO_INCREMENT cho bảng `sanpham_sanpham`
 --
 ALTER TABLE `sanpham_sanpham`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1957;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1959;
 
 --
 -- AUTO_INCREMENT cho bảng `sanpham_sanpham_loaisims`
 --
 ALTER TABLE `sanpham_sanpham_loaisims`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT cho bảng `sanpham_simnamsinh`
@@ -7167,7 +7203,7 @@ ALTER TABLE `sanpham_simnamsinh`
 -- AUTO_INCREMENT cho bảng `sanpham_simtheogia`
 --
 ALTER TABLE `sanpham_simtheogia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT cho bảng `sanpham_simtheoloai`
@@ -7185,7 +7221,7 @@ ALTER TABLE `sitetree_tree`
 -- AUTO_INCREMENT cho bảng `sitetree_treeitem`
 --
 ALTER TABLE `sitetree_treeitem`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT cho bảng `sitetree_treeitem_access_permissions`

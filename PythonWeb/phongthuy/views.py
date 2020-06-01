@@ -9,6 +9,8 @@ from phongthuy.froms import simphongthuy
 from phongthuy.models import Datapt, namsinh, nguhanh
 from sanpham.models import SanPham, SimTheoLoai, SimNamSinh, NhaMang, SimTheoGia
 from hoadon.models import HoaDon
+from news.models import TinTuc, DanhMucTinTuc
+
 import operator
 
 def diem(request):
@@ -52,11 +54,20 @@ def diem(request):
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
     hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+    dmtt1 = DanhMucTinTuc.objects.get(TieuDe='Bạn cần biết')
+    bcbs = dmtt1.tintuc_set.order_by('-NgayTao')[0:5]
+    dmtt2 = DanhMucTinTuc.objects.get(TieuDe='Tin mới cập nhật')
+    tmcns = dmtt2.tintuc_set.order_by('-NgayTao')[0:5]
+
 
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
 
     pt = {
+        "dmtt1": dmtt1,
+        "bcbs": bcbs,
+        "dmtt2": dmtt2,
+        "tmcns": tmcns,
         'hd': hd,
         'stl': stl,
         'sns': sns,

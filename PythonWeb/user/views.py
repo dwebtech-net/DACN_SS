@@ -15,6 +15,7 @@ from django.core.mail import EmailMessage
 from user.models import CustomerUser
 from django.contrib.auth import login, authenticate
 from hoadon.models import HoaDon
+from news.models import TinTuc, DanhMucTinTuc
 
 import nexmo
 
@@ -31,6 +32,10 @@ class Dataview(ListView):
         context['nm'] = NhaMang.objects.all()
         context['stg'] = SimTheoGia.objects.all()
         context['hd'] = HoaDon.objects.order_by('-NgayDatHang')[0:9]
+        context['dmtt1'] = DanhMucTinTuc.objects.get(TieuDe='Bạn cần biết')
+        context['bcbs'] = dmtt1.tintuc_set.order_by('-NgayTao')[0:5]
+        context['dmtt2'] = DanhMucTinTuc.objects.get(TieuDe='Tin mới cập nhật')
+        context['tmcns'] = dmtt2.tintuc_set.order_by('-NgayTao')[0:5]
         # Sắp xếp danh mục sim theo giá theo title
         return context
 
@@ -43,6 +48,10 @@ def dangky(request):
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
     hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+    dmtt1 = DanhMucTinTuc.objects.get(TieuDe='Bạn cần biết')
+    bcbs = dmtt1.tintuc_set.order_by('-NgayTao')[0:5]
+    dmtt2 = DanhMucTinTuc.objects.get(TieuDe='Tin mới cập nhật')
+    tmcns = dmtt2.tintuc_set.order_by('-NgayTao')[0:5]
 
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
@@ -62,6 +71,10 @@ def dangky(request):
         "sns": sns,
         "nm": nm,
         "stg": stg_dsx,
+        "dmtt1": dmtt1,
+        "bcbs": bcbs,
+        "dmtt2": dmtt2,
+        "tmcns": tmcns,
     }
 
     return render(request, 'simso/page-user/dangky.html', Data)
@@ -76,6 +89,10 @@ def verify(request):
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
     hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+    dmtt1 = DanhMucTinTuc.objects.get(TieuDe='Bạn cần biết')
+    bcbs = dmtt1.tintuc_set.order_by('-NgayTao')[0:5]
+    dmtt2 = DanhMucTinTuc.objects.get(TieuDe='Tin mới cập nhật')
+    tmcns = dmtt2.tintuc_set.order_by('-NgayTao')[0:5]
 
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
@@ -86,6 +103,10 @@ def verify(request):
         "sns": sns,
         "nm": nm,
         "stg": stg_dsx,
+        "dmtt1": dmtt1,
+        "bcbs": bcbs,
+        "dmtt2": dmtt2,
+        "tmcns": tmcns,
     }
 
     if request.method == 'POST':
@@ -132,6 +153,10 @@ def checkcode(request):
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
     hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+    dmtt1 = DanhMucTinTuc.objects.get(TieuDe='Bạn cần biết')
+    bcbs = dmtt1.tintuc_set.order_by('-NgayTao')[0:5]
+    dmtt2 = DanhMucTinTuc.objects.get(TieuDe='Tin mới cập nhật')
+    tmcns = dmtt2.tintuc_set.order_by('-NgayTao')[0:5]
 
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
@@ -142,6 +167,10 @@ def checkcode(request):
         "sns": sns,
         "nm": nm,
         "stg": stg_dsx,
+        "dmtt1": dmtt1,
+        "bcbs": bcbs,
+        "dmtt2": dmtt2,
+        "tmcns": tmcns,
     }
 
     if request.method == 'POST':
@@ -164,6 +193,10 @@ def activate(request, uidb64, token):
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
     hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+    dmtt1 = DanhMucTinTuc.objects.get(TieuDe='Bạn cần biết')
+    bcbs = dmtt1.tintuc_set.order_by('-NgayTao')[0:5]
+    dmtt2 = DanhMucTinTuc.objects.get(TieuDe='Tin mới cập nhật')
+    tmcns = dmtt2.tintuc_set.order_by('-NgayTao')[0:5]
 
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
@@ -174,6 +207,10 @@ def activate(request, uidb64, token):
         "sns": sns,
         "nm": nm,
         "stg": stg_dsx,
+        "dmtt1": dmtt1,
+        "bcbs": bcbs,
+        "dmtt2": dmtt2,
+        "tmcns": tmcns,
     }
 
     try:
@@ -200,6 +237,10 @@ def thongtintaikhoan(request):
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
     hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+    dmtt1 = DanhMucTinTuc.objects.get(TieuDe='Bạn cần biết')
+    bcbs = dmtt1.tintuc_set.order_by('-NgayTao')[0:5]
+    dmtt2 = DanhMucTinTuc.objects.get(TieuDe='Tin mới cập nhật')
+    tmcns = dmtt2.tintuc_set.order_by('-NgayTao')[0:5]
 
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
@@ -256,6 +297,10 @@ def thongtintaikhoan(request):
             "sns": sns,
             "nm": nm,
             "stg": stg_dsx,
+            "dmtt1": dmtt1,
+            "bcbs": bcbs,
+            "dmtt2": dmtt2,
+            "tmcns": tmcns,
             }
     return render(request, 'simso/page-user/thongtintaikhoan.html', Data)
 
@@ -271,6 +316,11 @@ def doimatkhau(request):
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
     hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+    dmtt1 = DanhMucTinTuc.objects.get(TieuDe='Bạn cần biết')
+    bcbs = dmtt1.tintuc_set.order_by('-NgayTao')[0:5]
+    dmtt2 = DanhMucTinTuc.objects.get(TieuDe='Tin mới cập nhật')
+    tmcns = dmtt2.tintuc_set.order_by('-NgayTao')[0:5]
+
 
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
@@ -289,5 +339,9 @@ def doimatkhau(request):
             "sns": sns,
             "nm": nm,
             "stg": stg_dsx,
+            "dmtt1": dmtt1,
+            "bcbs": bcbs,
+            "dmtt2": dmtt2,
+            "tmcns": tmcns,
             }
     return render(request, 'simso/page-user/doimatkhau.html', Data)

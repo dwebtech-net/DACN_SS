@@ -19,9 +19,3 @@ class CustomerUser(AbstractUser):
         verbose_name_plural = 'Người dùng'
 
 
-class BinhLuanDanhGia(models.Model):
-    MaKH = models.ForeignKey(CustomerUser, on_delete=models.CASCADE)
-    MaSP = models.ForeignKey(SanPham, on_delete=models.CASCADE)
-    NgayBL = models.DateTimeField(auto_now_add=True)
-    NoiDung = models.TextField(default='')
-    SoSao = models.IntegerField(default=0)
