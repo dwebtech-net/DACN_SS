@@ -2,7 +2,7 @@
 // Modify the following code to customize TinyMCE
 
 tinymce.init({
-	selector: "textarea#id_noi_dung",
+	selector: "textarea#id_NoiDung",
 	plugins: 'print preview fullpage powerpaste searchreplace autolink directionality advcode visualblocks visualchars fullscreen image link media mediaembed template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount tinymcespellchecker a11ychecker imagetools textpattern help formatpainter permanentpen pageembed tinycomments mentions linkchecker',
     toolbar1: "bold italic underline strikethrough | blockquote | bullist numlist | subscript superscript | table | hr | formatselect fontselect fontsizeselect addcomment",
 	toolbar2: "undo redo | forecolor backcolor | link unlink | image media | alignleft aligncenter alignright alignjustify | outdent indent | charmap emoticons | searchreplace | removeformat code | preview fullscreen",

@@ -7,7 +7,7 @@ from .models import SanPham, SimTheoLoai, SimNamSinh, NhaMang, SimTheoGia
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from giohang.models import GioHang, CTGH
 from user.models import CustomerUser
-from news.models import TinTuc
+from news.models import TinTuc, DanhMucTinTuc
 from hoadon.models import HoaDon
 import operator
 
@@ -24,13 +24,20 @@ def index(request):
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
     hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
-
-
+    dmtt1 = DanhMucTinTuc.objects.get(TieuDe='Bạn cần biết')
+    bcbs = dmtt1.tintuc_set.order_by('-NgayTao')[0:5]
+    dmtt2 = DanhMucTinTuc.objects.get(TieuDe='Tin mới cập nhật')
+    tmcns = dmtt2.tintuc_set.order_by('-NgayTao')[0:5]
+    
     # Sắp xếp danh mục sim theo giá theo title
     stg_dsx = sorted(stg, key=operator.attrgetter('title'))
 
 
     Data = {
+            "dmtt1": dmtt1,
+            "bcbs": bcbs,
+            "dmtt2": dmtt2,
+            "tmcns": tmcns,
             "hd": hd,
             "km": km,
             "vip": vip,

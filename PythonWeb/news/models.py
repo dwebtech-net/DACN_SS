@@ -6,15 +6,15 @@ from PythonWeb.utils import get_unique_slug
 
 #Tạo bảng danh mục tin tức
 class DanhMucTinTuc(models.Model):
-    tieu_de = models.CharField(max_length=500 ,null=True, verbose_name='Tên danh mục tin tức')
-    duong_dan = models.SlugField(max_length=100, null=False, default='', verbose_name='Đường dẫn')
+    TieuDe = models.CharField(max_length=500 ,null=True, verbose_name='Tên danh mục tin tức')
+    DuongDan = models.SlugField(max_length=100, null=False, default='', verbose_name='Đường dẫn')
 
     def __str__(self):
-        return self.tieu_de
+        return self.TieuDe
 
     def save(self, *args, **kwargs):
-        if not self.duong_dan:
-            self.duong_dan = get_unique_slug(self, 'tieu_de', 'duong_dan')
+        if not self.DuongDan:
+            self.DuongDan = get_unique_slug(self, 'TieuDe', 'DuongDan')
         super().save(*args, **kwargs)
 
     class Meta:
@@ -22,19 +22,20 @@ class DanhMucTinTuc(models.Model):
 
 # Tạo bảng tin tức
 class TinTuc(models.Model):
-    tieu_de = models.TextField(null=True, verbose_name='Tiêu đề')
-    mo_ta_ngan = models.TextField(null=True, verbose_name='Mô tả ngắn')
-    noi_dung = models.TextField(null=True, verbose_name='Nội dung')
-    anh = models.ImageField(default='product-default.jpg', verbose_name='Ảnh')
-    ngay_tao = models.DateTimeField(auto_now_add=True, verbose_name='Ngày tạo')
-    duong_dan = models.SlugField(max_length=200, null=False, default='', verbose_name='Đường dẫn')
-
+    LoaiTinTuc = models.ForeignKey(DanhMucTinTuc, on_delete=models.CASCADE, null=False, verbose_name='Danh mục tin tức')
+    TieuDe = models.TextField(null=True, verbose_name='Tiêu đề')
+    MoTaNgan = models.TextField(null=True, verbose_name='Mô tả ngắn')
+    NoiDung = models.TextField(null=True, verbose_name='Nội dung')
+    Anh = models.ImageField(default='product-default.jpg', verbose_name='Ảnh')
+    NgayTao = models.DateTimeField(auto_now_add=True, verbose_name='Ngày tạo')
+    DuongDan = models.SlugField(max_length=200, null=False, default='', verbose_name='Đường dẫn')
+    
     def __str__(self):
-        return self.tieu_de
+        return self.TieuDe
 
     def save(self, *args, **kwargs):
-        if not self.duong_dan:
-            self.duong_dan = get_unique_slug(self, 'tieu_de', 'duong_dan')
+        if not self.DuongDan:
+            self.DuongDan = get_unique_slug(self, 'TieuDe', 'DuongDan')
         super().save(*args, **kwargs)
     
     class Meta:

@@ -47,10 +47,10 @@ class Sim(ImportExportModelAdmin,ExportActionMixin):
             loaigia_obj, created = SimTheoGia.objects.get_or_create(title="Sim giá 5 triệu - 10 triệu")
             obj.LoaiGia = loaigia_obj
         elif gia >= 10000000 and gia < 50000000:
-            loaigia_obj, created = SimTheoGia.objects.filter(title="Sim giá 10 triệu - 50 triệu")
+            loaigia_obj, created = SimTheoGia.objects.get_or_create(title="Sim giá 10 triệu - 50 triệu")
             obj.LoaiGia = loaigia_obj
         elif gia >= 50000000:
-            loaigia_obj, created = SimTheoGia.objects.filter(title="Sim giá trên 50 triệu")
+            loaigia_obj, created = SimTheoGia.objects.get_or_create(title="Sim giá trên 50 triệu")
             obj.LoaiGia = loaigia_obj
         obj.save()
 

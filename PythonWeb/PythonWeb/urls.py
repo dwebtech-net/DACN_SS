@@ -30,6 +30,7 @@ urlpatterns = [
     path('tim-kiem/', include('timkiem.urls')),
     path('phongthuy/', include('phongthuy.urls')),
     url(r'^admin/', include('dbbackup_ui.urls')),
+    path('tin-tuc/', include('news.urls')),
 ]
 
 if settings.DEBUG:
