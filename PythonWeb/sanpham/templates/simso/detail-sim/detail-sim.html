@@ -1,25 +1,17 @@
 {% extends 'base.html' %}
-
 {% block seo %}
     <title>Mua Sim {{ sanpham.SoSim }} - Sim số Đức Lộc</title>
 {% endblock %}
-
 {% block index %}
-
     {% load static %}
     {% static "" as baseUrl %}
     {% load humanize %}
-
-
     <article>
         {% include 'tim-kiem.html' %}
 
-        <center><img alt="Loading" src="images/filter-loader.gif" name="loading_div" width="95" height="15" border="0"
-                     id="loading_div" style="display:none"></center>
-
-        <!--<a class="desktop-hide" href="/sim-dep-tra-gop"><img style="width:100%;padding-top:5px" border="0" alt="Sim số đẹp" src="//static.simthanglong.vn/images/sim-dep-tra-gop-0-phan-tram.jpg"></a>-->
-
-
+        <center><img alt="Loading" src="/static/home/img/filter-loader.gif" name="loading_div" width="95" height="15" border="0"
+                     id="loading_div" style="display:none">
+        </center>
         <style>
             /*  SECTIONS  */
             .section {
@@ -85,16 +77,13 @@
                 border-radius: 4px;
                 box-sizing: border-box;
             }
-
             #order_form label {
                 display: inline-block;
                 line-height: 30px;
                 width: 115px;
             }
-
             &
             #8203
-
             ;
         </style>
         <h1>Sim {{ sanpham.SoSim }} - Bán sim {{ sanpham.SoSim }} giá rẻ</h1>
@@ -102,15 +91,13 @@
             {% csrf_token %}
             <input type="hidden" name="lead_source" value="undefined">
             <div class="section group" style=" background: #fff; border: 1px solid #ccc; ">
-                <div class="col span_7_of_12">
+                <div class="col span_5_of_12">
                     <div style="width: fit-content;margin: 10px auto;padding: 15px;">
                         <input name="sosim" type="hidden" id="sosim" value="{{ sanpham.SoSim }}">
                         <input name="giaban" type="hidden" id="giaban" value="{{ sanpham.Gia|intcomma }}₫">
                         <input name="mang" type="hidden" id="mang" value="{{ sanpham.Mang }}">
                         <label style=" width: 65px; text-align: left; ">Số sim:</label><span
                             class="simso2">{{ sanpham.SoSim }}</span><br>
-
-                        <!--<h2 style="font-size: 14px;font-weight: normal;color: #000000;background: #FFEB3B;padding: 5px;text-align: center;border-radius: 20px;border: 1px solid #ff5722;">Vui lòng <a href="tel:02466666666">gọi <strong>024.6666.6666</strong> hoặc</a> <strong>ĐẶT HÀNG</strong> ngay để có giá TỐT hơn !</h2>-->
                         <label style=" width: 65px; text-align: left; ">Giá bán:</label><strong><font
                             size="3">{{ sanpham.Gia|intcomma }}₫</font></strong><br>
                         <label style=" width: 65px; text-align: left; ">Mạng:</label><a href="#"><img
@@ -126,9 +113,10 @@
                                value="{% url 'giohang:home' %}"/>
                     </div>
                 </div>
-                <div class="col span_5_of_12">
-                    <img class="mobile-hide" id="img-product" style="width: 100%;" src="{{ sanpham.Anh.url }}"
-                         alt="{{ sanpham.SoSim }}">
+                <div class="col span_7_of_12">
+                   <div id="image" class="s-{{ sanpham.Mang| lower }}">
+                       <div class="sim">{{ sanpham.SoSim }}</div>
+                   </div>
                 </div>
             </div>
 

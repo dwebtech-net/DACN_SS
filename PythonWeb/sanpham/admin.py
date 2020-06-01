@@ -25,6 +25,7 @@ class Sim_Key(resources.ModelResource):
 class Sim(ImportExportModelAdmin,ExportActionMixin):
     readonly_fields = ('LoaiGia',)
     list_display = ('SoSim', 'Gia', 'LoaiGia', 'Mang', 'TacVu', 'get_loaisims', 'NgayNhap', 'DaBan', 'id',)
+    exclude = [ 'slug', ]
     list_per_page = 20
     resource_class = Sim_Key
 
@@ -49,8 +50,11 @@ class Sim(ImportExportModelAdmin,ExportActionMixin):
         elif gia >= 10000000 and gia < 50000000:
             loaigia_obj, created = SimTheoGia.objects.get_or_create(title="Sim giá 10 triệu - 50 triệu")
             obj.LoaiGia = loaigia_obj
-        elif gia >= 50000000:
-            loaigia_obj, created = SimTheoGia.objects.get_or_create(title="Sim giá trên 50 triệu")
+        elif gia >= 50000000 and gia < 100000000:
+            loaigia_obj, created = SimTheoGia.objects.get_or_create(title="Sim giá 50 triệu - 100 triệu")
+            obj.LoaiGia = loaigia_obj
+        elif gia >= 100000000:
+            loaigia_obj, created = SimTheoGia.objects.get_or_create(title="Sim giá trên 100 triệu")
             obj.LoaiGia = loaigia_obj
         obj.save()
 
