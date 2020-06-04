@@ -21,6 +21,37 @@ class Sim_Key(resources.ModelResource):
         fields = (
         'id', 'LoaiSims', 'slug', 'TacVu', 'SoSim', 'Gia', 'Mang', 'LoaiGia', 'NamSinh',
         'Anh',)
+    
+    def before_import_row(self, row, **kwargs):
+        if 'LoaiGia' in row:
+            if row['LoaiGia'] == '':
+                gia = int(row['Gia'])
+                if gia < 500000:
+                    loaigia_obj, created = SimTheoGia.objects.get_or_create(title="Sim dưới 500 nghìn")
+                    row['LoaiGia'] = loaigia_obj.id
+                elif gia >= 500000 and gia < 1000000:
+                    loaigia_obj, created = SimTheoGia.objects.get_or_create(title="Sim giá 500 nghìn - 1 triệu")
+                    row['LoaiGia'] = loaigia_obj.id
+                elif gia >= 1000000 and gia < 3000000:
+                    loaigia_obj, created = SimTheoGia.objects.get_or_create(title="Sim giá 1 triệu - 3 triệu")
+                    row['LoaiGia'] = loaigia_obj.id
+                elif gia >= 3000000 and gia < 5000000:
+                    loaigia_obj, created = SimTheoGia.objects.get_or_create(title="Sim giá 3 triệu - 5 triệu")
+                    row['LoaiGia'] = loaigia_obj.id
+                elif gia >= 5000000 and gia < 10000000:
+                    loaigia_obj, created = SimTheoGia.objects.get_or_create(title="Sim giá 5 triệu - 10 triệu")
+                    row['LoaiGia'] = loaigia_obj.id
+                elif gia >= 10000000 and gia < 50000000:
+                    loaigia_obj, created = SimTheoGia.objects.get_or_create(title="Sim giá 10 triệu - 50 triệu")
+                    row['LoaiGia'] = loaigia_obj.id
+                elif gia >= 50000000 and gia < 100000000:
+                    loaigia_obj, created = SimTheoGia.objects.get_or_create(title="Sim giá 50 triệu - 100 triệu")
+                    row['LoaiGia'] = loaigia_obj.id
+                elif gia >= 100000000:
+                    loaigia_obj, created = SimTheoGia.objects.get_or_create(title="Sim giá trên 100 triệu")
+                    row['LoaiGia'] = loaigia_obj.id
+        return super(Sim_Key, self).before_import_row(row, **kwargs)
+
 
 class Sim(ImportExportModelAdmin,ExportActionMixin):
     readonly_fields = ('LoaiGia',)
@@ -75,8 +106,10 @@ class LoaiSimResource(resources.ModelResource):
         model = SimTheoLoai
         exclude = ('slug')
         fields = ('id', 'title')
+
 class LoaiSimAdmin(ImportExportModelAdmin):
     list_per_page = 5
+    exclude = [ 'slug', ]
     resource_class = LoaiSimResource
 
 
@@ -100,6 +133,7 @@ class SimNamSinhResource(resources.ModelResource):
         fields = ('id', 'title')
 class SimTheoNamAdmin(ImportExportModelAdmin):
     list_per_page = 5
+    exclude = [ 'slug', ]
     resource_class = SimNamSinhResource
 
 admin.site.register(NhaMang, NhaMangAdmin)

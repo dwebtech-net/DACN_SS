@@ -2,7 +2,8 @@ from django.urls import path
 from django.conf.urls import url
 from . import views
 from django.contrib.auth import views as auth_views
-from sanpham import models
+from sanpham.models import SimTheoLoai, SimNamSinh, NhaMang, SimTheoGia
+from news.models import TinTuc, DanhMucTinTuc
 import operator
 
 
@@ -11,11 +12,14 @@ urlpatterns = [
     path("dang-ky/", views.dangky, name='dangky'),
     path("dang-nhap/", auth_views.LoginView.as_view(template_name='simso/page-user/dangnhap.html',
                                                     extra_context={
-
-                                                        "stl": models.SimTheoLoai.objects.all(),
-                                                        "sns": models.SimNamSinh.objects.all(),
-                                                        "nm": models.NhaMang.objects.all(),
-                                                        "stg": sorted(models.SimTheoGia.objects.all(), key=operator.attrgetter('title')),
+                                                        "stl": SimTheoLoai.objects.all(),
+                                                        "sns": SimNamSinh.objects.all(),
+                                                        "nm": NhaMang.objects.all(),
+                                                        "stg": sorted(SimTheoGia.objects.all(), key=operator.attrgetter('title')),
+                                                        "dmtt1": DanhMucTinTuc.objects.get(TieuDe='Bạn cần biết'),
+                                                        "bcbs": DanhMucTinTuc.objects.get(TieuDe='Bạn cần biết').tintuc_set.order_by('-NgayTao')[0:5],
+                                                        "dmtt2": DanhMucTinTuc.objects.get(TieuDe='Tin mới cập nhật'),
+                                                        "tmcns": DanhMucTinTuc.objects.get(TieuDe='Tin mới cập nhật').tintuc_set.order_by('-NgayTao')[0:5],
                                                     }),
          name='dangnhap'),
     path("dang-xuat/", auth_views.LogoutView.as_view(next_page='/'), name='dangxuat'),

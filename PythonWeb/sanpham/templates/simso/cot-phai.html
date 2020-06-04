@@ -40,7 +40,7 @@
                 </div>
                 
                 <div class="list-group item-tintuc mobile-hide"> <a href="{% url 'tintuc:danhmuctintuc' dmtt2.DuongDan %}" class="list-group-item active">{{ dmtt2.TieuDe }} </a> 
-                    {% for tt in ttms %}
+                    {% for tt in tmcns %}
                         <a class="list-group-item lgit" href="{% url 'tintuc:tintuc' tt.DuongDan %}">{{ tt.TieuDe }}</a> 
                     {% endfor %}
                 </div>

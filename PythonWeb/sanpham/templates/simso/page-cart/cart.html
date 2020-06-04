@@ -20,16 +20,13 @@ Giỏ hàng
                             <table class="table">
                                 <tbody>
                                         <tr>
-                                            <th scope="row"></th>
                                             <td><strong><font size="3">Ảnh</font></strong></td>
                                             <td><strong><font size="3">Sim</font></strong></td>
                                             <td><strong><font size="3">Giá</font></strong></td>
+                                            <th scope="row"></th>
                                         </tr>
                                     {% for sanpham in GioHangs.SanPhams.all %}
                                         <tr>
-                                            <th scope="row">
-                                                {% include 'simso/page-cart/xoakhoigiohang.html' %}
-                                            </th>
                                             <td>
                                                 <a href="{% url 'sanpham:sanpham' sanpham.slug %}">
                                                     <img src="{{sanpham.Anh.url}}" alt="{{sanpham.TenSanPham}}" style="width: 200px; height: 123px;" />
@@ -41,12 +38,12 @@ Giỏ hàng
                                                 </a>
                                             </td>
                                             <td><p class="red"><strong><font size="3">{{ sanpham.Gia|intcomma }}₫</font></strong></p></td>
+                                            <th scope="row">
+                                                {% include 'simso/page-cart/xoakhoigiohang.html' %}
+                                            </th>
                                         </tr>
                                     {% endfor %}
                                     <tr class="last">
-                                        <th scope="row">
-                                            {% include 'simso/page-cart/xoatatcasanpham.html' %}
-                                        </th>
                                         <td>
                                             <div class="media-body">
                                                 <div class="d-flex">
@@ -69,6 +66,9 @@ Giỏ hàng
                                                 </div>
                                             </div>
                                         </td>
+                                        <th scope="row">
+                                            {% include 'simso/page-cart/xoatatcasanpham.html' %}
+                                        </th>
                                     </tr>
                                 </tbody>
                             </table>
