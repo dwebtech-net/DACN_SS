@@ -12,7 +12,6 @@ Default_robot = {
     ('noindex,nofollow' , 'Chặn google lập chỉ mục trang web :(noindex,nofollow)')
 }
 
-
 # Create your models herec
 class CauHinhSeo(models.Model):
     title = models.CharField(max_length=200,default=Default_title,verbose_name='Tiêu đề website')
@@ -30,7 +29,7 @@ class CauHinhSeo(models.Model):
 
 
 
-Default_title = 'Sim số đẹp - Thương hiệu sim số uy tín nhất việt nam'
+Default_titles = 'Sim số đẹp - Thương hiệu sim số uy tín nhất việt nam'
 zalo_d = '0969641652'
 Default_sdt1 = '0969641652'
 Default_sdt2 = '0345003654'
@@ -42,7 +41,7 @@ mess ='1317836384978667'
 
 # Create your models herec
 class CauHinhTrang(models.Model):
-    title = models.CharField(max_length=200,default=Default_title,verbose_name='Tiêu đề website')
+    title = models.CharField(max_length=200,default=Default_titles,verbose_name='Tiêu đề website')
     sdt1 = models.CharField(max_length=300,default=Default_sdt1,verbose_name='Số điện thoại 1')
     sdt2 = models.CharField(max_length=300, default=Default_sdt2, verbose_name='Số điện thoại 2')
     banner = models.ImageField(null=True,default=Default_banner,verbose_name='Banner đầu trang')
