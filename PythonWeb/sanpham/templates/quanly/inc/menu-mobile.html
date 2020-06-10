@@ -1,0 +1,129 @@
+<div class="mobile-menu md:hidden">
+            <div class="mobile-menu-bar">
+                <a href="#" class="flex mr-auto">
+                    <img alt="Midone Tailwind HTML Admin Template" class="w-6" src="/static/logo.svg">
+                </a>
+                <a href="javascript:" id="mobile-menu-toggler"> <i data-feather="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i> </a>
+            </div>
+            <ul class="border-t border-theme-24 py-5 hidden">
+                    <li>
+                        <a href="{% url 'quantri:main' %}" class="menu menu--{{ class.main }}">
+                            <div class="menu__icon"> <i data-feather="home"></i> </div>
+                            <div class="menu__title"> Bảng điều khiển </div>
+                        </a>
+                    </li>
+
+                     {% if request.user.is_superuser %}
+                        <!---Kiem tra quyen truy cap-->
+                    <li>
+                        <a href="javascript:" class="menu">
+                            <div class="menu__icon"> <i data-feather="file-plus"></i> </div>
+                            <div class="menu__title"> Hợp đồng <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                        </a>
+                        <ul class="">
+                            <li>
+                                <a href="/" class="menu menu--{{ class_tp }}">
+                                    <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                                    <div class="menu__title"> Thêm hợp đồng </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" class="menu menu--{{ class_ds }}">
+                                    <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                                    <div class="menu__title"> Danh sách hợp đồng </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    {% else %}
+                         <li>
+                            <a href="/" class="menu menu--{{ class.main }}">
+                                <div class="menu__icon"> <i data-feather="file-text"></i> </div>
+                                <div class="menu__title"> Xem hợp đồng </div>
+                            </a>
+                        </li>
+                    {% endif %}
+
+                <!--------hoa don-------->
+                    {% if request.user.is_superuser %}
+                        <!---Kiem tra quyen truy cap-->
+                    <li>
+                        <a href="javascript:" class="menu">
+                            <div class="menu__icon"> <i data-feather="file-text"></i> </div>
+                            <div class="menu__title"> Hoá đơn <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                        </a>
+                        <ul class="">
+                            <li>
+                                <a href="/" class="menu menu--{{ class_tp }}">
+                                    <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                                    <div class="menu__title"> Tạo hoá đơn</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" class="menu menu--{{ class_ds }}">
+                                    <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                                    <div class="menu__title"> Danh sách hoá đơn </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    {% else %}
+                            <li>
+                                <a href="/" class="menu  menu--{{ class.main }}">
+                                    <div class="menu__icon"> <i data-feather="file-plus"></i> </div>
+                                    <div class="menu__title"> Xem hoá đơn </div>
+                                </a>
+                            </li>
+                    {% endif %}
+                <!----------->
+                    <li class="side-nav__devider my-6"></li>
+                    <li>
+                        <a href="javascript:" class="menu menu--{{ class.profile }}">
+                            <div class="menu__icon"> <i data-feather="trello"></i> </div>
+                            <div class="menu__title">Tài khoản <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                        </a>
+                        <ul class="">
+                            <li>
+                                <a href="/" class="menu menu--{{ class.profile }}">
+                                    <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                                    <div class="menu__title"> Thông tin cá nhân </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" class="menu">
+                                    <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                                    <div class="menu__title"> Đổi mật khẩu </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="side-nav__devider my-6"></li>
+
+                    {% if request.user.is_superuser %}
+                        <!---Kiem tra quyen truy cap-->
+                    <li>
+                        <a href="javascript:" class="menu">
+                            <div class="menu__icon"> <i data-feather="inbox"></i> </div>
+                            <div class="menu__title"> Quản lý phòng <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                        </a>
+                        <ul class="">
+                            <li>
+                                <a href="/" class="menu menu--{{ class_tp }}">
+                                    <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                                    <div class="menu__title"> Thêm phòng mới </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" class="menu menu--{{ class_ds }}">
+                                    <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                                    <div class="menu__title"> Danh sách phòng </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    {% else %}
+                    {% endif %}
+
+                </ul>
+        </div>

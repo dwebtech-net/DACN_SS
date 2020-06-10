@@ -31,6 +31,7 @@ urlpatterns = [
     path('phongthuy/', include('phongthuy.urls')),
     url(r'^admin/', include('dbbackup_ui.urls')),
     path('tin-tuc/', include('news.urls')),
+    path('quantri/', include('quantri.urls')),
 ]
 
 if settings.DEBUG:
