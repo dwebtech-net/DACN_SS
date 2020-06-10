@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'news',
     'contact',
     'CauHinh',
+    'DauGia',
 
     #plugin them vao
     'sitetree',
@@ -141,7 +142,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Ho_Chi_Minh'
 
 USE_I18N = True
 
@@ -169,4 +170,3 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'ntxl1588@gmail.com'
 EMAIL_HOST_PASSWORD = '1231234q'
 EMAIL_PORT = 587
-

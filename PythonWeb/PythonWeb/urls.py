@@ -31,6 +31,7 @@ urlpatterns = [
     path('phongthuy/', include('phongthuy.urls')),
     url(r'^admin/', include('dbbackup_ui.urls')),
     path('tin-tuc/', include('news.urls')),
+    path('dau-gia/', include('DauGia.urls')),
 ]
 
 if settings.DEBUG:
