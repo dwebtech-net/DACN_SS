@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'contact',
     'CauHinh',
     'DauGia',
+    'quantri',
 
     #plugin them vao
     'sitetree',
