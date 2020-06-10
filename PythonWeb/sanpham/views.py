@@ -24,20 +24,9 @@ def index(request):
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
     hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
-    dmtt1 = DanhMucTinTuc.objects.get(TieuDe='Bạn cần biết')
-    bcbs = dmtt1.tintuc_set.order_by('-NgayTao')[0:5]
-    dmtt2 = DanhMucTinTuc.objects.get(TieuDe='Tin mới cập nhật')
-    tmcns = dmtt2.tintuc_set.order_by('-NgayTao')[0:5]
-    
-    # Sắp xếp danh mục sim theo giá theo title
-    stg_dsx = sorted(stg, key=operator.attrgetter('title'))
 
 
     Data = {
-            "dmtt1": dmtt1,
-            "bcbs": bcbs,
-            "dmtt2": dmtt2,
-            "tmcns": tmcns,
             "hd": hd,
             "km": km,
             "vip": vip,
@@ -46,7 +35,7 @@ def index(request):
             "stl": stl,
             "sns": sns,
             "nm": nm,
-            "stg": stg_dsx,
+            "stg": stg,
             }
     return render(request, "simso/index.html", Data)
 
@@ -59,25 +48,12 @@ def sanpham(request, slug):
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
     hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
-    dmtt1 = DanhMucTinTuc.objects.get(TieuDe='Bạn cần biết')
-    bcbs = dmtt1.tintuc_set.order_by('-NgayTao')[0:5]
-    dmtt2 = DanhMucTinTuc.objects.get(TieuDe='Tin mới cập nhật')
-    tmcns = dmtt2.tintuc_set.order_by('-NgayTao')[0:5]
-
-
-    #Sắp xếp danh mục sim theo giá theo title
-    stg_dsx = sorted(stg, key=operator.attrgetter('title'))
 
     Data = {'sanpham': sanpham,
             "hd": hd,
             "stl": stl,
             "sns": sns,
             "nm": nm,
-            "stg": stg_dsx,
-            "dmtt1": dmtt1,
-            "bcbs": bcbs,
-            "dmtt2": dmtt2,
-            "tmcns": tmcns,
             }
     return render(request, 'simso/detail-sim/detail-sim.html', Data)
 
@@ -92,21 +68,12 @@ def simtheogia(request, slug):
     paginator = Paginator(sanpham, 25)  # Show 25 contacts per page
     page = request.GET.get('page')
     sanphams = paginator.get_page(page)
-    
 
     stl = SimTheoLoai.objects.order_by('?')
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
     hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
-    dmtt1 = DanhMucTinTuc.objects.get(TieuDe='Bạn cần biết')
-    bcbs = dmtt1.tintuc_set.order_by('-NgayTao')[0:5]
-    dmtt2 = DanhMucTinTuc.objects.get(TieuDe='Tin mới cập nhật')
-    tmcns = dmtt2.tintuc_set.order_by('-NgayTao')[0:5]
-
-
-    # Sắp xếp danh mục sim theo giá theo title
-    stg_dsx = sorted(stg, key=operator.attrgetter('title'))
 
     Data = {
             'stg1': stg1,
@@ -115,11 +82,6 @@ def simtheogia(request, slug):
             "stl": stl,
             "sns": sns,
             "nm": nm,
-            "stg": stg_dsx,
-            "dmtt1": dmtt1,
-            "bcbs": bcbs,
-            "dmtt2": dmtt2,
-            "tmcns": tmcns,
             }
     return render(request, 'simso/category/sim-theo-gia.html', Data)
 
@@ -133,21 +95,11 @@ def simtheomang(request, slug):
 
     page = request.GET.get('page')
     sanphams = paginator.get_page(page)
-
     stl = SimTheoLoai.objects.order_by('?')
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
     hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
-    dmtt1 = DanhMucTinTuc.objects.get(TieuDe='Bạn cần biết')
-    bcbs = dmtt1.tintuc_set.order_by('-NgayTao')[0:5]
-    dmtt2 = DanhMucTinTuc.objects.get(TieuDe='Tin mới cập nhật')
-    tmcns = dmtt2.tintuc_set.order_by('-NgayTao')[0:5]
-
-
-    # Sắp xếp danh mục sim theo giá theo title
-    stg_dsx = sorted(stg, key=operator.attrgetter('title'))
-
     Data = {
             'nm1': nm1,
             'sanpham': sanphams,
@@ -155,11 +107,7 @@ def simtheomang(request, slug):
             "stl": stl,
             "sns": sns,
             "nm": nm,
-            "stg": stg_dsx,
-            "dmtt1": dmtt1,
-            "bcbs": bcbs,
-            "dmtt2": dmtt2,
-            "tmcns": tmcns,
+            "stg": stg,
             }
     return render(request, 'category/sim-theo-mang.html', Data)
 
@@ -177,14 +125,6 @@ def simtheoloai(request, slug):
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
     hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
-    dmtt1 = DanhMucTinTuc.objects.get(TieuDe='Bạn cần biết')
-    bcbs = dmtt1.tintuc_set.order_by('-NgayTao')[0:5]
-    dmtt2 = DanhMucTinTuc.objects.get(TieuDe='Tin mới cập nhật')
-    tmcns = dmtt2.tintuc_set.order_by('-NgayTao')[0:5]
-
-
-    # Sắp xếp danh mục sim theo giá theo title
-    stg_dsx = sorted(stg, key=operator.attrgetter('title'))
 
     Data = {
             'stl1': stl1,
@@ -193,11 +133,8 @@ def simtheoloai(request, slug):
             "stl": stl,
             "sns": sns,
             "nm": nm,
-            "stg": stg_dsx,
-            "dmtt1": dmtt1,
-            "bcbs": bcbs,
-            "dmtt2": dmtt2,
-            "tmcns": tmcns,
+            "stg": stg,
+
             }
     return render(request, 'category/sim-theo-loai.html', Data)
 
@@ -217,14 +154,7 @@ def simnamsinh(request, slug):
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
     hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
-    dmtt1 = DanhMucTinTuc.objects.get(TieuDe='Bạn cần biết')
-    bcbs = dmtt1.tintuc_set.order_by('-NgayTao')[0:5]
-    dmtt2 = DanhMucTinTuc.objects.get(TieuDe='Tin mới cập nhật')
-    tmcns = dmtt2.tintuc_set.order_by('-NgayTao')[0:5]
 
-
-    # Sắp xếp danh mục sim theo giá theo title
-    stg_dsx = sorted(stg, key=operator.attrgetter('title'))
 
     Data = {
             'sns1': sns1,
@@ -233,11 +163,7 @@ def simnamsinh(request, slug):
             "stl": stl,
             "sns": sns,
             "nm": nm,
-            "stg": stg_dsx,
-            "dmtt1": dmtt1,
-            "bcbs": bcbs,
-            "dmtt2": dmtt2,
-            "tmcns": tmcns,
+            "stg": stg,
             }
     return render(request, 'simso/category/sim-nam-sinh.html', Data)
 

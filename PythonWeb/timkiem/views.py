@@ -11,11 +11,6 @@ def timkiem_nangcao(request):
     ns = SimNamSinh.objects.all()
     stl = SimTheoLoai.objects.all()
     stg = SimTheoGia.objects.all()
-    dmtt1 = DanhMucTinTuc.objects.get(TieuDe='Bạn cần biết')
-    bcbs = dmtt1.tintuc_set.order_by('-NgayTao')[0:5]
-    dmtt2 = DanhMucTinTuc.objects.get(TieuDe='Tin mới cập nhật')
-    tmcns = dmtt2.tintuc_set.order_by('-NgayTao')[0:5]
-
 # tim theo nha mang
 
     nhamang = request.GET.get('mang')
@@ -69,10 +64,5 @@ def timkiem_nangcao(request):
         "stl": stl,
         "stg": stg,
         "nm": nm,
-        "dmtt1": dmtt1,
-        "bcbs": bcbs,
-        "dmtt2": dmtt2,
-        "tmcns": tmcns,
-
     }
     return render(request, 'includes/timkiem/ketqua-timkiem.html', context)

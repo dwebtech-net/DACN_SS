@@ -86,10 +86,6 @@ def danhmuctintuc(request, DuongDan):
 def tintuc(request, DuongDan):
     # Lấy dữ liệu từ database
     tintuc = TinTuc.objects.get(DuongDan=DuongDan)
-    dmtt1 = DanhMucTinTuc.objects.get(TieuDe='Bạn cần biết')
-    bcbs = dmtt1.tintuc_set.order_by('-NgayTao')[0:5]
-    dmtt2 = DanhMucTinTuc.objects.get(TieuDe='Tin mới cập nhật')
-    tmcns = dmtt2.tintuc_set.order_by('-NgayTao')[0:5]
     stl = SimTheoLoai.objects.all()
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
@@ -99,10 +95,6 @@ def tintuc(request, DuongDan):
 
     Data = {'TinTuc': tintuc,
             "TinTucKhacs": TinTuc.objects.all().order_by('-NgayTao').exclude(DuongDan=DuongDan)[:10],
-            "dmtt1": dmtt1,
-            "bcbs": bcbs,
-            "dmtt2": dmtt2,
-            "tmcns": tmcns,
             "stl": stl,
             "sns": sns,
             "nm": nm,

@@ -1,7 +1,7 @@
 <div class="list-group">
     <a href="javascript:void(0);" class="list-group-item active">Sim theo giá</a>
                     <div class="box2col177">
-                                            {% for cate in stg %}
+                                            {% for cate in stg|dictsort:'title' %}
                         <a class="list-group-item lgit" href="{% url 'sanpham:simtheogia' cate.slug %}">{{ cate.title }}</a>
                                             {% endfor %}
                     </div>

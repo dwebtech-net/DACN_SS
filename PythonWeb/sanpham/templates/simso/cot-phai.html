@@ -1,8 +1,9 @@
+{% load tintuc %}
 {% load setting %}
+
+
 {% setting as stting %}
 {% for st in stting %}
-
-
 <div class="list-group mobile-hide"> <a href="javascript:void(0);" class="list-group-item active">Bán hàng online</a>
                     <div class="contact-right" id="contact-right">
                         <h3 class="hotline-right"><a href="tel:{{ st.sdt2 }}"> <div class="phone"><span>&nbsp;</span></div><div></div> {{ st.sdt2 }} </a></h3>
@@ -32,16 +33,12 @@
                         </ul>
                     </div>
                 </div>
+{% tintuc as tintuc %}
+                <div class="list-group item-tintuc">
+                    <a href="" class="list-group-item active">Tin Tức Mới</a>
+                    {% for tt in tintuc %}
+                        <a class="list-group-item lgit" href="{% url 'tintuc:tintuc' tt.DuongDan %}">{{ tt.TieuDe }}</a> 
+                    {% endfor %}
+                </div>
 
-                <div class="list-group item-tintuc"> <a href="{% url 'tintuc:danhmuctintuc' dmtt1.DuongDan %}" class="list-group-item active">{{ dmtt1.TieuDe }}</a>
-                    {% for tt in bcbs %}
-                        <a class="list-group-item lgit" href="{% url 'tintuc:tintuc' tt.DuongDan %}">{{ tt.TieuDe }}</a> 
-                    {% endfor %}
-                </div>
-                
-                <div class="list-group item-tintuc mobile-hide"> <a href="{% url 'tintuc:danhmuctintuc' dmtt2.DuongDan %}" class="list-group-item active">{{ dmtt2.TieuDe }} </a> 
-                    {% for tt in tmcns %}
-                        <a class="list-group-item lgit" href="{% url 'tintuc:tintuc' tt.DuongDan %}">{{ tt.TieuDe }}</a> 
-                    {% endfor %}
-                </div>
  {% endfor %}
