@@ -5,7 +5,7 @@ from .models import HoaDon
 
 # Hiển thị hóa đơn trên trang admin
 class HoaDonAdmin(admin.ModelAdmin):
-    list_display = ['Nguoi_mua', 'GH', 'NgayDatHang', 'TongTien', 'ThanhToan', 'GiaoHang','id']
+    list_display = ['GH','Nguoi_mua', 'NgayDatHang', 'TongTien', 'ThanhToan', 'GiaoHang','id']
     list_filter = ['GH']
     search_fields = ['GH']
     list_per_page = 10

@@ -1,15 +1,7 @@
-from django.db.models import Max
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
-from django.views.generic import ListView
-
 from .models import SanPham, SimTheoLoai, SimNamSinh, NhaMang, SimTheoGia
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from giohang.models import GioHang, CTGH
-from user.models import CustomerUser
-from news.models import TinTuc, DanhMucTinTuc
 from hoadon.models import HoaDon
-import operator
 
 # Create your views here.
 def index(request):
@@ -42,6 +34,9 @@ def index(request):
 def sanpham(request, slug):
     # Lấy dữ liệu từ database
     sanpham = SanPham.objects.get(slug=slug, DaBan=False)
+    sim = SanPham.objects.all()
+    sanpham.luotxem += 1
+    sanpham.save()
 
     stl = SimTheoLoai.objects.all()
     sns = SimNamSinh.objects.all()
@@ -51,7 +46,9 @@ def sanpham(request, slug):
 
     Data = {'sanpham': sanpham,
             "hd": hd,
+            "sim": sim,
             "stl": stl,
+            "stg": stg,
             "sns": sns,
             "nm": nm,
             }
@@ -62,7 +59,6 @@ def error(request):
 
 
 def simtheogia(request, slug):
-
     stg1 = SimTheoGia.objects.get(slug=slug)
     sanpham = stg1.sanpham_set.filter(DaBan=False)
     paginator = Paginator(sanpham, 25)  # Show 25 contacts per page
@@ -140,12 +136,9 @@ def simtheoloai(request, slug):
 
 
 def simnamsinh(request, slug):
-
     sns1 = SimNamSinh.objects.get(slug=slug)
     sanpham = sns1.sanpham_set.filter(DaBan=False)
-
     paginator = Paginator(sanpham, 10)  # Show 25 contacts per page
-
     page = request.GET.get('page')
     sanphams = paginator.get_page(page)
 
