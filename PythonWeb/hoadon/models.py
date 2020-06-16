@@ -13,8 +13,11 @@ class HoaDon(models.Model):
     NgayDatHang = models.DateTimeField(auto_now_add=True, verbose_name='Ngày đặt hàng')
     ThanhToan = models.BooleanField(default=False, verbose_name='Thanh toán')
     GiaoHang = models.BooleanField(default=False, verbose_name='Giao hàng')
-    TongTien = models.FloatField(default=0, verbose_name='Tổng tiền')
+    TongTien = models.IntegerField(default=0, verbose_name='Tổng tiền')
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.HoaDon = None
 
     def __str__(self):
         return str(self.id)

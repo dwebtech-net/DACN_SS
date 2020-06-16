@@ -2,79 +2,6 @@
 {% load static %}
 {% load humanize %}
 {% block index %}
-<style>
-  /*  SECTIONS  */
-  .section {
-      clear: both;
-      padding: 0px;
-      margin: 0px;
-  }
-
-  /*  COLUMN SETUP  */
-  .col {
-      display: block;
-      float: left;
-  }
-
-  .col:first-child {
-      margin-left: 0;
-  }
-
-  /*  GROUPING  */
-  .group:before,
-  .group:after {
-      content: "";
-      display: table;
-  }
-
-  .group:after {
-      clear: both;
-  }
-
-  .group {
-      zoom: 1; /* For IE 6/7 */
-  }
-
-  /*  GRID OF TWELVE  */
-
-  .span_7_of_12 {
-      width: 50%;
-  }
-
-
-  .span_5_of_12 {
-      width: 50%;
-  }
-
-
-  /*  GO FULL WIDTH BELOW 480 PIXELS */
-  @media only screen and (max-width: 480px) {
-      .col {
-          margin: 1% 0 1% 0%;
-      }
-
-      .span_5_of_12, .span_7_of_12 {
-          width: 100%;
-      }
-  }
-
-  label {
-      display: inline-block;
-      line-height: 30px;
-      width: 115px;
-  }
-
-  ul
-  { 
-    width: 80%;
-    display: relative;
-  } 
-
-  li
-  { 
-    display:inline; 
-  }       
-</style>
   <div class="section group" style=" background: #fff; border: 1px solid #ccc; ">
     <div class="col span_5_of_12">
         <div style="width: fit-content;margin: 10px auto;padding: 15px;">
@@ -114,20 +41,30 @@
                   size="3">{{ daugia.GiaHienTai|intcomma }}₫</font></strong><br>
               {% endif %}
               <h3 style="color:red;">{{msg}}</h3>
-              <form id="daugia_form" name="daugia_form" method="post" 
-                action="{% url 'DauGia:chitietdaugia' daugia.DuongDan %}" class="form"
-                onsubmit="return alphanumeric(document.daugia_form.GiaDauGia)">
-                {% csrf_token %}
-                <input type="hidden" name="DuongDan" value="{{daugia.DuongDan}}"/>
-                <input type="number" min="{{ daugia.GiaHienTai|add:'1' }}" class="form-control" name="GiaDauGia"/>
-                <input type="submit" class="btn-mua" style="font-size: 18px;padding: 5px 10px;background: #F44336; margin: 5px;" value="Đấu giá"/>
-              </form>
+                {% if daugia.DaDauGia == False %}
+                        <form id="daugia_form" name="daugia_form" method="post"
+                            action="{% url 'DauGia:chitietdaugia' daugia.DuongDan %}" class="form"
+                            onsubmit="return alphanumeric(document.daugia_form.GiaDauGia)">
+                            {% csrf_token %}
+                            <input type="hidden" name="DuongDan" value="{{daugia.DuongDan}}"/>
+                                    <input type="number"
+                                           min="{{ daugia.GiaHienTai|add:'1' }}"
+                                           class="form-control"
+                                           style="padding: 2px 10px 5px 5px;"
+                                           name="GiaDauGia"/>
+                                    <input type="submit" class="btn-mua"
+                                           style="font-size: 18px;padding: 5px 10px;background: #F44336; margin: 5px;"
+                                           value="Đấu giá"/>
+                        </form>
+                    {% else %}
+                  <span style="color: red;"> Đấu giá đã kết thúc</span>
+                {% endif %}
             {% endif %}
             
         </div>
     </div>
     <div class="col span_7_of_12">
-      <div id="image" class="s-{{daugia.Sim.Mang|lower}}">
+      <div id="image" class="s-{{daugia.Sim.Mang|lower}}" style="width: 100%">
           <div class="sim">{{ daugia.Sim.SoSim }}</div>
       </div>
     </div>
@@ -172,4 +109,70 @@
       }
     }, 1000);
   </script>
+<style>
+  /*  SECTIONS  */
+  .section {
+      clear: both;
+      padding: 0px;
+      margin: 0px;
+  }
+
+  /*  COLUMN SETUP  */
+  .col {
+      display: block;
+      float: left;
+  }
+
+  .col:first-child {
+      margin-left: 0;
+  }
+
+  /*  GROUPING  */
+  .group:before,
+  .group:after {
+      content: "";
+      display: table;
+  }
+
+  .group:after {
+      clear: both;
+  }
+
+  .group {
+      zoom: 1; /* For IE 6/7 */
+  }
+
+  /*  GRID OF TWELVE  */
+  .span_7_of_12 {
+      width: 50%;
+  }
+  .span_5_of_12 {
+      width: 50%;
+  }
+
+  /*  GO FULL WIDTH BELOW 480 PIXELS */
+  @media only screen and (max-width: 480px) {
+      .col {
+          margin: 1% 0 1% 0%;
+      }
+
+      .span_5_of_12, .span_7_of_12 {
+          width: 100%;
+      }
+  }
+  label {
+      display: inline-block;
+      line-height: 30px;
+      width: 115px;
+  }
+  ul
+  {
+    width: 80%;
+    display: relative;
+  }
+  li
+  {
+    display:inline;
+  }
+</style>
 {% endblock %}

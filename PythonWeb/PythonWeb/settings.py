@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'dbbackup_ui',
     'import_export',
     'phongthuy',
+    'django_recommend',
 
 
 ]

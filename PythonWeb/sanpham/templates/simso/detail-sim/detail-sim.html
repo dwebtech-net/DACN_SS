@@ -6,13 +6,117 @@
     {% load static %}
     {% static "" as baseUrl %}
     {% load humanize %}
+    {% load django_recommend %}
     <article>
         {% include 'tim-kiem.html' %}
 
         <center><img alt="Loading" src="/static/home/img/filter-loader.gif" name="loading_div" width="95" height="15" border="0"
                      id="loading_div" style="display:none">
         </center>
-        <style>
+
+        <h1>Sim {{ sanpham.SoSim }} - Bán sim {{ sanpham.SoSim }} giá rẻ</h1>
+        <form id="order_form" name="order_form" method="post" action="{% url 'giohang:update' %}" class="form">
+            {% csrf_token %}
+            <input type="hidden" name="lead_source" value="undefined">
+            <div class="section group" style=" background: #fff; border: 1px solid #ccc; ">
+                <div class="col span_5_of_12">
+                    <div style="width: fit-content;margin: 10px auto;padding: 15px;">
+                        <input name="sosim" type="hidden" id="sosim" value="{{ sanpham.SoSim }}">
+                        <input name="giaban" type="hidden" id="giaban" value="{{ sanpham.Gia|intcomma }}₫">
+                        <input name="mang" type="hidden" id="mang" value="{{ sanpham.Mang }}">
+                        <label style=" width: 65px; text-align: left; ">Số sim:</label><span
+                            class="simso2">{{ sanpham.SoSim }}</span><br>
+                        <label style=" width: 65px; text-align: left; ">Giá bán:</label><strong><font
+                            size="3">{{ sanpham.Gia|intcomma }}₫</font></strong><br>
+                        <label style=" width: 65px; text-align: left; ">Mạng:</label><a href="#"><img
+                            src="{{ baseUrl }}home/img/{{ sanpham.Mang | lower }}.png" alt="{{ sanpham.Mang }}"
+                            border="0" style=" max-height: 30px;max-width: 50px;"></a>
+                        <label style=" width: 100%; text-align: left; ">Lượt xem : {{ sanpham.luotxem }}</label>
+                        <label style=" width: 100%; text-align: left; "> <span style="font-style: italic;">Giao sim miễn phí trên toàn quốc !</span></label>
+
+                        <input type="hidden" name="product_id" value="{{ sanpham.id }}"/>
+                        <input type="submit" onclick="{% url 'giohang:home' %}" name="Submit2" value="Thêm vào giỏ hàng" class="btn-mua"
+                               style="font-size: 18px;padding: 5px 10px;background: #F44336;">
+                        <input type="hidden" name="current_url"
+                               value="{% url 'giohang:home' %}"/>
+                    </div>
+                </div>
+                <div class="col span_7_of_12">
+                   <div id="image" class="s-{{ sanpham.Mang| lower }}">
+                       <div class="sim">{{ sanpham.SoSim }}</div>
+                   </div>
+                </div>
+            </div>
+        </form>
+        <br>
+        <div style=" background: #fff; border: 1px solid #ccc; ">
+            <div style=" padding:10px; ">
+                <strong>Hướng dẫn cách thức mua sim 0962.333.529:</strong><br>
+
+
+                ▪ Cách 1: Sim Thăng Long giao sim và thu tiền tận nhà miễn phí (áp dụng Hà Nội, Tp.HCM và các tỉnh/thành
+                có đại lý)<br>
+                ▪ Cách 2: Quý khách đến cửa hàng tại Hà Nội hoặc Tp.HCM (<a href="/sim-so-dep/10/lien-he.html">Xem địa
+                chỉ cửa hàng tại đây</a>)<br>
+                ▪ Cách 3: Đặt cọc và thanh toán tiền còn lại khi nhận sim (áp dụng tại các tỉnh không có đại lý):
+                Quý khách đảm bảo việc mua hàng bằng cách đặt cọc tối thiểu 10% giá trị sim qua chuyển khoản hoặc mã thẻ
+                cào (<a href="/bai-viet/65/cach-mua-sim-va-thanh-toan.html">Xem danh sách tài khoản ngân hàng tại
+                đây</a>). Chúng tôi sẽ gửi bưu điện phát sim đến tay quý khách và thu tiền còn lại <em>(Hệ thống bưu
+                điện trên cả nước đều cung cấp dịch vụ thu hộ tiền cho người bán - gọi tắt là COD. Theo đó, bưu điện sẽ
+                giao hàng (sim) đến tận tay quý khách và thu tiền cho chúng tôi)</em>
+
+                <br>
+                <br>
+                <em>Chúc quý khách gặp nhiều may mắn khi sở hữu thuê bao <strong>0962.333.529</strong></em>
+            </div>
+        </div>
+        <br>
+{% for a in sim|slice:2|dictsort:'luotxem' %}
+    {{ a }}
+    {% endfor %}
+
+{#        {% with sanpham|similar_objects as goi %}#}
+{#            {% if goi %}#}
+{#                <h2>Other users also liked:</h2>#}
+{#                <ul>#}
+{#                r#}
+{#                {% for a in goi %}#}
+{#                    <li><a href="">{{ a }}</a></li>#}
+{#                {% endfor %}#}
+{#                </ul>#}
+{#            {% endif %}#}
+{#        {% endwith %}#}
+
+
+
+
+
+        <div align="center"><strong>&lt;&lt; <a href="javascript:history.back(-1)">Về trang trước</a> </strong></div>
+
+        <script>
+            function getCookie(name) { //Gets the value of traffic_source
+                var value = "; " + document.cookie;
+                var parts = value.split("; " + name + "=");
+                if (parts.length == 2) return parts.pop().split(";").shift();
+            }
+
+            function addTrafficSourceToForm() {  //injects the traffic_source value to the form
+                document.order_form.lead_source.value = getCookie("traffic_source");
+            }
+
+            addTrafficSourceToForm() //initates the process
+
+        </script>
+        <form action="" method="get" id="chitietsim"></form>
+        <script type="text/javascript">
+            //set_filter('','');
+            function ctsim(sosim) {
+                document.getElementById("chitietsim").action = sosim;
+                document.getElementById("chitietsim").submit();
+            }
+        </script>
+        <br>
+  <style>
             /*  SECTIONS  */
             .section {
                 clear: both;
@@ -83,154 +187,5 @@
                 width: 115px;
             }
         </style>
-        <h1>Sim {{ sanpham.SoSim }} - Bán sim {{ sanpham.SoSim }} giá rẻ</h1>
-        <form id="order_form" name="order_form" method="post" action="{% url 'giohang:update' %}" class="form">
-            {% csrf_token %}
-            <input type="hidden" name="lead_source" value="undefined">
-            <div class="section group" style=" background: #fff; border: 1px solid #ccc; ">
-                <div class="col span_5_of_12">
-                    <div style="width: fit-content;margin: 10px auto;padding: 15px;">
-                        <input name="sosim" type="hidden" id="sosim" value="{{ sanpham.SoSim }}">
-                        <input name="giaban" type="hidden" id="giaban" value="{{ sanpham.Gia|intcomma }}₫">
-                        <input name="mang" type="hidden" id="mang" value="{{ sanpham.Mang }}">
-                        <label style=" width: 65px; text-align: left; ">Số sim:</label><span
-                            class="simso2">{{ sanpham.SoSim }}</span><br>
-                        <label style=" width: 65px; text-align: left; ">Giá bán:</label><strong><font
-                            size="3">{{ sanpham.Gia|intcomma }}₫</font></strong><br>
-                        <label style=" width: 65px; text-align: left; ">Mạng:</label><a href="#"><img
-                            src="{{ baseUrl }}home/img/{{ sanpham.Mang | lower }}.png" alt="{{ sanpham.Mang }}"
-                            border="0" style=" max-height: 30px;max-width: 50px;"></a>
-                        <label style=" width: 100%; text-align: left; "></label>
-                        <label style=" width: 100%; text-align: left; "> <span style="font-style: italic;">Giao sim miễn phí trên toàn quốc !</span></label>
-
-                        <input type="hidden" name="product_id" value="{{ sanpham.id }}"/>
-                        <input type="submit" onclick="{% url 'giohang:home' %}" name="Submit2" value="Thêm vào giỏ hàng" class="btn-mua"
-                               style="font-size: 18px;padding: 5px 10px;background: #F44336;">
-                        <input type="hidden" name="current_url"
-                               value="{% url 'giohang:home' %}"/>
-                    </div>
-                </div>
-                <div class="col span_7_of_12">
-                   <div id="image" class="s-{{ sanpham.Mang| lower }}">
-                       <div class="sim">{{ sanpham.SoSim }}</div>
-                   </div>
-                </div>
-            </div>
-
-            <!--		<table width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#CCCCCC">-->
-            <!--			<tbody>-->
-            <!--				-->
-            <!--			</tbody>-->
-            <!--		</table>-->
-            <br>
-            <!--		<div id="frm-order" style=" background: #cfe6d0; border: 1px solid #ccc; padding: 10px;">-->
-            <!--			<h3 style=" text-align: center; "><strong>ĐẶT MUA SIM</strong></h3>-->
-
-            <!--			<label for="dienthoai">Điện thoại liên hệ*:</label>-->
-            <!--			<input placeholder="Điện thoại liên hệ" name="dienthoai" type="tel" id="dienthoai" value=""><br>-->
-            <!--			<label for="hoten">Họ tên*:</label>-->
-            <!--			<input placeholder="Họ tên của bạn" name="hoten" type="text" id="hoten" value="">	<br>-->
-            <!--			<label for="diachi">Địa chỉ*:</label>-->
-            <!--			<input placeholder="Địa chỉ " name="diachi" type="text" id="diachi" value="">-->
-            <!--			<input name="txtsorder" type="hidden" id="txtsorder" value="72f67e70f6b7cdc4cc893edaddf0c4c6">-->
-            <!--			<div class="ghg-bol">-->
-            <!--				<p class="ghg-bl1" id="using-now" style="display: block">Bạn có mã giảm giá? <span onclick="document.getElementById('using-now').style.display ='none';document.getElementById('frmenvc').style.display ='block';" style="cursor: pointer;color: #337ab7;">Sử dụng ngay</span></p>-->
-            <!--				<div class="ghg-bl2" id="frmenvc" style="display: none">-->
-            <!--					<label for="diachi">Mã giảm giá:</label>-->
-            <!--					<input type="text" placeholder="Mã giảm giá" name="yeucau" id="yeucau" style=" width: 100px; ">-->
-            <!--				</div>-->
-            <!--			</div>-->
-
-            <!--			<div>-->
-            <!--				<input style=" width: 20px; height: 20px; border-radius: 50%;-webkit-appearance: checkbox; " placeholder="Thanh toán khi nhận hàng " name="tragop2" type="checkbox" id="tragop2" value="Thanh toán khi nhận hàng" checked=""> <label for="tragop2" style="text-align: left;position: absolute;padding-top: 3px;padding-left: 5px;line-height: 15px;width: 160px;">Thanh toán khi nhận hàng </label>-->
-            <!--			</div>-->
-            <!--			<div>-->
-            <!--				<input style=" width: 20px; height: 20px; border-radius: 50%;-webkit-appearance: checkbox; " placeholder="Thanh toán khi nhận hàng " name="tragop3" type="checkbox" id="tragop3" value="Thanh toán khi nhận hàng"> <label for="tragop3" style="text-align: left;position: absolute;padding-top: 3px;padding-left: 5px;line-height: 15px;width: 160px;">Chuyển khoản ngân hàng </label>-->
-            <!--			</div>-->
-            <!--			<div style="display:none">-->
-            <!--				<input style=" width: 20px; height: 20px; border-radius: 50%;-webkit-appearance: checkbox; " placeholder="Trả góp " name="tragop" type="checkbox" id="tragop" value="Trả góp"> <label for="tragop" style="text-align: left;position: absolute;padding-top: 3px;padding-left: 5px;line-height: 15px;">Mua trả góp </label>-->
-            <!--			</div>-->
-            <!--			<h3 style=" text-align: center; "><input type="submit" name="Submit2" value="Đặt sim" class="btn-mua" style="font-size: 18px;padding: 5px 10px;background: #F44336;width: 150px;"></h3>-->
-
-            <!--			<center><h2>So dep 0962333529, giá sim 0962333529, so dien thoai 0962333529</h2></center><br>-->
-            <!--		</div>-->
-        </form>
-        <br>
-        <div style=" background: #fff; border: 1px solid #ccc; ">
-            <div style=" padding:10px; ">
-                <strong>Hướng dẫn cách thức mua sim 0962.333.529:</strong><br>
-
-
-                ▪ Cách 1: Sim Thăng Long giao sim và thu tiền tận nhà miễn phí (áp dụng Hà Nội, Tp.HCM và các tỉnh/thành
-                có đại lý)<br>
-                ▪ Cách 2: Quý khách đến cửa hàng tại Hà Nội hoặc Tp.HCM (<a href="/sim-so-dep/10/lien-he.html">Xem địa
-                chỉ cửa hàng tại đây</a>)<br>
-                ▪ Cách 3: Đặt cọc và thanh toán tiền còn lại khi nhận sim (áp dụng tại các tỉnh không có đại lý):
-                Quý khách đảm bảo việc mua hàng bằng cách đặt cọc tối thiểu 10% giá trị sim qua chuyển khoản hoặc mã thẻ
-                cào (<a href="/bai-viet/65/cach-mua-sim-va-thanh-toan.html">Xem danh sách tài khoản ngân hàng tại
-                đây</a>). Chúng tôi sẽ gửi bưu điện phát sim đến tay quý khách và thu tiền còn lại <em>(Hệ thống bưu
-                điện trên cả nước đều cung cấp dịch vụ thu hộ tiền cho người bán - gọi tắt là COD. Theo đó, bưu điện sẽ
-                giao hàng (sim) đến tận tay quý khách và thu tiền cho chúng tôi)</em>
-
-                <br>
-                <br>
-                <em>Chúc quý khách gặp nhiều may mắn khi sở hữu thuê bao <strong>0962.333.529</strong></em>
-            </div>
-        </div>
-        <br>
-
-        <div align="center"><strong>&lt;&lt; <a href="javascript:history.back(-1)">Về trang trước</a> </strong></div>
-        <script type="application/ld+json">
-	{
-		"@context": "https://schema.org/",
-		"@type": "Product",
-		"name": "Sim 0962.333.529",
-		"image": "https://static.simthanglong.vn/0962333529.jpg",
-		"description": "Bán sim 0962.333.529 giá rẻ. Sim Thăng Long cam kết đăng ký chính chủ cho khách hàng và giao sim miễn phí tận nhà trên toàn quốc.",
-		"mpn": "0962333529",
-		"sku": "0962333529",
-		"brand": {
-		"@type": "Thing",
-		"name": "Viettel"
-		},
-		"offers": {
-		"@type": "Offer",
-		"url ": "https://simthanglong.vn/0962333529",
-		"priceCurrency": "VND",
-		"price": "498000",
-		"availability": "https://schema.org/InStock",
-		"itemCondition": "https://schema.org/NewCondition",
-		"category": "Sim Hung",
-		"seller": {
-			"@type": "Organization",
-			"name": "SimThangLong.vn"
-		}
-		}
-	}
-	</script>
-        <script>
-            function getCookie(name) { //Gets the value of traffic_source
-                var value = "; " + document.cookie;
-                var parts = value.split("; " + name + "=");
-                if (parts.length == 2) return parts.pop().split(";").shift();
-            }
-
-            function addTrafficSourceToForm() {  //injects the traffic_source value to the form
-                document.order_form.lead_source.value = getCookie("traffic_source");
-            }
-
-            addTrafficSourceToForm() //initates the process
-
-        </script>
-        <form action="" method="get" id="chitietsim"></form>
-        <script type="text/javascript">
-            //set_filter('','');
-            function ctsim(sosim) {
-                document.getElementById("chitietsim").action = sosim;
-                document.getElementById("chitietsim").submit();
-            }
-        </script>
-        <br>
-
     </article>
 {% endblock %}

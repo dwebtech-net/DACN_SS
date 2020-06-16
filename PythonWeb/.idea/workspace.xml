@@ -3,150 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7ca1d334-84fd-4cd7-831a-18506e67a625" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CauHinh/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/CauHinh/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CauHinh/migrations/0002_auto_20200525_1800.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CauHinh/migrations/0003_auto_20200529_1522.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CauHinh/migrations/0004_auto_20200529_1535.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CauHinh/migrations/0005_auto_20200529_1537.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/PIL/ImageShow.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/PIL/ImageShow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/PIL/TiffImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/PIL/TiffImagePlugin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/asgiref/sync.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/asgiref/sync.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/astroid/node_classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/astroid/node_classes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/cffi/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/cffi/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/chardet/hebrewprober.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/chardet/hebrewprober.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/dateutil/parser/_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/dateutil/parser/_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/admin/options.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/admin/options.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/admin/sites.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/admin/sites.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/jquery/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/staticfiles/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/staticfiles/handlers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/commands/startproject.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/commands/startproject.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/db/backends/base/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/db/backends/base/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/db/backends/oracle/creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/db/backends/oracle/creation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/db/migrations/executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/db/migrations/executor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/db/migrations/loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/db/migrations/loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/db/migrations/operations/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/db/migrations/operations/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/db/migrations/state.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/db/migrations/state.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/db/models/expressions.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/db/models/expressions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/db/models/query.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/db/models/query.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/db/models/query_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/db/models/query_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/db/models/sql/compiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/db/models/sql/compiler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/db/models/sql/query.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/db/models/sql/query.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/forms/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/forms/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/forms/widgets.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/forms/widgets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/http/multipartparser.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/http/multipartparser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/test/testcases.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/test/testcases.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/urls/resolvers.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/urls/resolvers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/utils/autoreload.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/utils/autoreload.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/utils/deconstruct.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/utils/deconstruct.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/utils/regex_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/utils/regex_helper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/utils/translation/trans_real.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/utils/translation/trans_real.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/utils/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/utils/version.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/views/csrf.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/views/csrf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/core/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/core/fromnumeric.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/core/fromnumeric.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/core/numeric.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/core/numeric.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/core/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/core/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/core/setup_common.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/core/setup_common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/core/tests/test_multiarray.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/core/tests/test_multiarray.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/command/autodist.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/command/autodist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/command/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/command/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/conv_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/conv_template.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/mingw32ccompiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/mingw32ccompiler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/system_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/system_info.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/doc/subclassing.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/doc/subclassing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/f2py/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/f2py/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/f2py/tests/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/f2py/tests/util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/lib/function_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/lib/function_base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/lib/index_tricks.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/lib/index_tricks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/lib/info.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/lib/info.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/lib/tests/test_twodim_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/lib/tests/test_twodim_base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/lib/twodim_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/lib/twodim_base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/ma/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/ma/core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/matlib.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/matlib.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pandas/core/arrays/datetimelike.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pandas/core/arrays/datetimelike.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pandas/core/computation/align.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pandas/core/computation/align.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pandas/core/frame.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pandas/core/frame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pandas/core/indexing.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pandas/core/indexing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pandas/io/pytables.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pandas/io/pytables.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pandas/tests/indexing/multiindex/test_getitem.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pandas/tests/indexing/multiindex/test_getitem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/cli/autocompletion.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/cli/autocompletion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/cli/main_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/cli/main_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/cli/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/cli/parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/collector.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/collector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/models/search_scope.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/models/search_scope.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/utils/glibc.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/utils/glibc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/utils/logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/utils/logging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/chardet/hebrewprober.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/chardet/hebrewprober.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/html5lib/html5parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/html5lib/html5parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/packaging/tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/packaging/tags.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pkg_resources/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pkg_resources/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pyparsing.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pyparsing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pycparser/ply/lex.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pycparser/ply/lex.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/checkers/python3.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/checkers/python3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/lint.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/lint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/pyreverse/diagrams.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/pyreverse/diagrams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/sitetree/sitetreeapp.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/sitetree/sitetreeapp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/sqlparse/filters/aligned_indent.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlparse/filters/aligned_indent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/tablib/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/tablib/core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/tablib/packages/markup.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/tablib/packages/markup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/tablib/packages/markup3.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/tablib/packages/markup3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/twilio/rest/flex_api/v1/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/twilio/rest/flex_api/v1/configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/typed_ast/ast27.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/typed_ast/ast27.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/typed_ast/ast3.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/typed_ast/ast3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/core/management/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/core/management/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/core/management/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/core/management/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/core/management/commands/startproject.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/core/management/commands/startproject.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/db/backends/base/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/db/backends/base/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/db/backends/oracle/creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/db/backends/oracle/creation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/db/migrations/executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/db/migrations/executor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/db/migrations/loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/db/migrations/loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/db/migrations/operations/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/db/migrations/operations/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/db/migrations/state.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/db/migrations/state.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/db/models/expressions.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/db/models/expressions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/db/models/query.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/db/models/query.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/db/models/query_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/db/models/query_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/db/models/sql/compiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/db/models/sql/compiler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/db/models/sql/query.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/db/models/sql/query.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/forms/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/forms/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/forms/widgets.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/forms/widgets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/http/multipartparser.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/http/multipartparser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/test/testcases.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/test/testcases.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/urls/resolvers.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/urls/resolvers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/utils/autoreload.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/utils/autoreload.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/utils/deconstruct.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/utils/deconstruct.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/utils/regex_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/utils/regex_helper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/utils/translation/trans_real.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/utils/translation/trans_real.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/utils/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/utils/version.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/~jango/views/csrf.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/~jango/views/csrf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/giohang/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/giohang/migrations/0002_giohang_ngaytao.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/giohang/migrations/0003_auto_20200529_1537.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hoadon/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hoadon/migrations/0002_auto_20200527_2108.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hoadon/migrations/0002_auto_20200529_1522.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/news/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phongthuy/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/phongthuy/migrations/0002_namsinh_nguhanh.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/phongthuy/migrations/0003_auto_20200525_1827.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/migrations/0002_auto_20200529_2104.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/migrations/0003_auto_20200529_2114.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/migrations/0004_sanpham_daban.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonWeb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonWeb/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sanpham/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/templates/quanly/page/tao-phong.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/quanly/page/them-san-pham.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/detail-sim/detail-sim.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/detail-sim/detail-sim.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/style/main.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/style/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/home/css-main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/home/css-main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/home/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/home/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/tinymce/tinymce.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/tinymce/tinymce.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -172,37 +34,13 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sanpham/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
-              <caret line="86" column="53" lean-forward="true" selection-start-line="86" selection-start-column="53" selection-end-line="86" selection-end-column="53" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sanpham/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-476">
-              <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -211,6 +49,7 @@
       <find>filter-loader.gif</find>
       <find>viettel</find>
       <find>img</find>
+      <find>taikh</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -219,41 +58,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/PythonWeb/settings.py" />
-        <option value="$PROJECT_DIR$/user/urls.py" />
-        <option value="$PROJECT_DIR$/user/tokens.py" />
-        <option value="$PROJECT_DIR$/CauHinh/templatetags/setting.py" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/header.html" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/category/sim-nam-sinh.html" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/ketqua-timkiem.html" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/tim-kiem.html" />
-        <option value="$PROJECT_DIR$/static/home/script.min.js" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/timkiem-nangcao.html" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/sub/sim-gia-re.html" />
-        <option value="$PROJECT_DIR$/static/home/loadpage.js" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/sub/tinhdiem.html" />
-        <option value="$PROJECT_DIR$/phongthuy/froms.py" />
-        <option value="$PROJECT_DIR$/phongthuy/admin.py" />
-        <option value="$PROJECT_DIR$/phongthuy/models.py" />
-        <option value="$PROJECT_DIR$/sanpham/views.py" />
-        <option value="$PROJECT_DIR$/phongthuy/urls.py" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/sub/kiem.html" />
-        <option value="$PROJECT_DIR$/timkiem/views.py" />
         <option value="$PROJECT_DIR$/phongthuy/views.py" />
-        <option value="$PROJECT_DIR$/hoadon/admin.py" />
         <option value="$PROJECT_DIR$/giohang/models.py" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/index.html" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/footer.html" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/style/main" />
         <option value="$PROJECT_DIR$/sanpham/migrations/0001_initial.py" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/base.html" />
         <option value="$PROJECT_DIR$/static/home/css/style.css" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/detail-sim/detail-sim.html" />
         <option value="$PROJECT_DIR$/static/home/css-main.css" />
         <option value="$PROJECT_DIR$/sanpham/migrations/0005_auto_20200601_1525.py" />
         <option value="$PROJECT_DIR$/user/migrations/0001_initial.py" />
         <option value="$PROJECT_DIR$/sanpham/admin.py" />
+        <option value="$PROJECT_DIR$/user/urls.py" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-gia.html" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/cot-trai.html" />
+        <option value="$PROJECT_DIR$/CauHinh/models.py" />
+        <option value="$PROJECT_DIR$/CauHinh/admin.py" />
+        <option value="$PROJECT_DIR$/news/urls.py" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/news/danh-muc-tin-tuc.html" />
+        <option value="$PROJECT_DIR$/timkiem/views.py" />
+        <option value="$PROJECT_DIR$/user/views.py" />
+        <option value="$PROJECT_DIR$/news/templatetags/tintuc.py" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/cot-phai.html" />
+        <option value="$PROJECT_DIR$/news/views.py" />
+        <option value="$PROJECT_DIR$/giohang/views.py" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/page-cart/xoatatcasanpham.html" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/footer.html" />
+        <option value="$PROJECT_DIR$/static/home/font-awesome.min.css" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/base.html" />
+        <option value="$PROJECT_DIR$/sanpham/templates/quanly/header.html" />
+        <option value="$PROJECT_DIR$/sanpham/templates/quanly/page/danh-sach-hoa-don.html" />
+        <option value="$PROJECT_DIR$/PythonWeb/urls.py" />
+        <option value="$PROJECT_DIR$/quantri/views.py" />
+        <option value="$PROJECT_DIR$/quantri/urls.py" />
+        <option value="$PROJECT_DIR$/sanpham/templates/quanly/inc/menu-mobile.html" />
+        <option value="$PROJECT_DIR$/DauGia/views.py" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/page-daugia/detail-daugia.html" />
+        <option value="$PROJECT_DIR$/sanpham/templates/quanly/inc/menu-pc.html" />
+        <option value="$PROJECT_DIR$/quantri/views/sanpham.py" />
+        <option value="$PROJECT_DIR$/sanpham/templates/quanly/inc/topbar.html" />
+        <option value="$PROJECT_DIR$/hoadon/admin.py" />
+        <option value="$PROJECT_DIR$/hoadon/models.py" />
+        <option value="$PROJECT_DIR$/sanpham/urls.py" />
+        <option value="$PROJECT_DIR$/sanpham/templates/quanly/page/dashboards.html" />
+        <option value="$PROJECT_DIR$/quantri/views/main.py" />
+        <option value="$PROJECT_DIR$/PythonWeb/settings.py" />
+        <option value="$PROJECT_DIR$/env/Lib/site-packages/django_recommend/models.py" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/index.html" />
         <option value="$PROJECT_DIR$/sanpham/models.py" />
+        <option value="$PROJECT_DIR$/env/Lib/site-packages/django_recommend/templatetags/django_recommend.py" />
+        <option value="$PROJECT_DIR$/sanpham/views.py" />
+        <option value="$PROJECT_DIR$/env/Lib/site-packages/django_recommend/__init__.py" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/detail-sim/detail-sim.html" />
       </list>
     </option>
   </component>
@@ -279,13 +134,24 @@
             <path>
               <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+              <item name="templatetags" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
               <item name="sanpham" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
               <item name="sanpham" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -297,7 +163,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sanpham" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/quantri" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -309,9 +175,15 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\sanpham\templates" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\sanpham" />
-      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\static\home\img" />
+      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\quantri" />
+      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\static" />
+      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\sanpham\templates\quantri" />
+      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\news\templatetags" />
+      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\news" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -384,16 +256,32 @@
       <workItem from="1590651925556" duration="813000" />
       <workItem from="1590740015559" duration="2574000" />
       <workItem from="1590990371683" duration="14326000" />
+      <workItem from="1591009141693" duration="682000" />
+      <workItem from="1591086044654" duration="21000" />
+      <workItem from="1591695101058" duration="3478000" />
+      <workItem from="1591718156917" duration="9627000" />
+      <workItem from="1591867814779" duration="3156000" />
+      <workItem from="1591881776699" duration="2915000" />
+      <workItem from="1592028508304" duration="16502000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70010000" />
+    <option name="totallyTimeSpent" value="106391000" />
+  </component>
+  <component name="TodoView" selected-index="3">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20272315" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20499243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -402,13 +290,13 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.33387887" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49848714" visible="true" weight="0.32405892" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49848714" weight="0.3535188" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -418,21 +306,21 @@
       <window_info anchor="right" id="Database" order="6" weight="0.32980332" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20272315" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20499243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.33387887" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.33387887" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.33387887" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49848714" weight="0.32405892" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49848714" visible="true" weight="0.3535188" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -447,227 +335,215 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sanpham/templatetags/category.py">
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/timkiem/timkiem_indexes.py">
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/user/change-pass.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+        <state relative-caret-position="-153" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CauHinh/templatetags/setting.py">
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/page/danh-sach-hoa-don.html" />
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/page/404-user.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="119">
+          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CauHinh/templatetags/seo.py">
+    <entry file="file://$PROJECT_DIR$/user/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-403">
-          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/category/sim-nam-sinh.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="31" column="16" lean-forward="true" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-          <folding>
-            <element signature="e#3970#3999#0#HTML" expanded="true" />
-            <element signature="e#4118#4125#1#HTML" expanded="true" />
-            <element signature="e#4223#4231#1#HTML" expanded="true" />
-            <element signature="e#4776#4784#1#HTML" expanded="true" />
-            <element signature="e#4882#4889#1#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-gia.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1479" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/timkiem-md.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/home/script.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="32" column="15" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/home/loadpage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phongthuy/froms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/sub/tinhdiem.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phongthuy/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phongthuy/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="304" column="27" selection-start-line="304" selection-start-column="27" selection-end-line="304" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/tim-kiem.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/timkiem-nangcao.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="95" column="28" lean-forward="true" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/ketqua-timkiem.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
-          <folding>
-            <element signature="e#209#400#0#HTML" />
-            <element signature="e#615#1479#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/sub/kiem.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6137">
-          <caret line="361" column="35" selection-start-line="361" selection-start-column="35" selection-end-line="361" selection-end-column="35" />
-          <folding>
-            <element signature="n#div#0;n#form#0;n#div#0;n#div#0;n#article#0;n#!!top" />
-            <element signature="n#select#0;n#div#1;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#article#0;n#!!top" />
-            <element signature="n#select#1;n#div#1;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#article#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#article#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#0;n#div#1;n#article#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#4;n#div#0;n#div#1;n#article#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#4;n#div#0;n#div#1;n#article#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#li#2;n#ul#0;n#div#4;n#div#0;n#div#1;n#article#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#li#3;n#ul#0;n#div#4;n#div#0;n#div#1;n#article#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#div#1;n#article#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#1;n#div#1;n#article#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#2;n#div#1;n#article#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#h2#0;n#article#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phongthuy/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timkiem/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+        <state relative-caret-position="104">
+          <caret line="195" column="12" lean-forward="true" selection-start-line="195" selection-end-line="195" selection-end-column="30" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phongthuy/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="65" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="65" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/quantri/models.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/giohang/models.py">
+    <entry file="file://$PROJECT_DIR$/news/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="83" column="28" selection-start-line="83" selection-start-column="28" selection-end-line="83" selection-end-column="28" />
+        <state relative-caret-position="136">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/footer.html">
+    <entry file="file://$PROJECT_DIR$/quantri/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quantri/views.py" />
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/inc/menu-mobile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="83" column="41" selection-start-line="83" selection-start-column="41" selection-end-line="83" selection-end-column="41" />
+        <state relative-caret-position="1734">
+          <caret line="111" column="42" selection-start-line="111" selection-start-column="42" selection-end-line="111" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quantri/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DauGia/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="48" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-daugia/detail-daugia.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
+          <folding>
+            <element signature="e#2819#2837#0#HTML" expanded="true" />
+            <element signature="e#3615#3654#0#HTML" expanded="true" />
+            <element signature="e#3727#3802#0#HTML" expanded="true" />
+            <element signature="e#3730#3749#0#HTML" expanded="true" />
+            <element signature="e#3917#3936#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DauGia/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="70" selection-start-line="69" selection-end-line="70" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quantri/views/sanpham.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/page/dashboards_user.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/inc/topbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="76" column="46" lean-forward="true" selection-start-line="76" selection-start-column="46" selection-end-line="76" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hoadon/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hoadon/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonWeb/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="38" />
+          <folding>
+            <element signature="e#634#666#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quantri/views/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/inc/menu-pc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/page/dashboards.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="93" column="69" selection-start-line="93" selection-start-column="69" selection-end-line="93" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="13" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -678,174 +554,146 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/style/main.css">
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/page/them-san-pham.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="2485" column="1" selection-start-line="2485" selection-start-column="1" selection-end-line="2485" selection-end-column="1" />
+        <state relative-caret-position="-238">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hoadon/models.py">
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django_recommend/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="170">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django_recommend/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="326" column="41" lean-forward="true" selection-start-line="326" selection-start-column="41" selection-end-line="326" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django_recommend/conf.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django_recommend/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django_recommend/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-612" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django_recommend/storage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-542" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-534">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news/templatetags/tintuc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/cot-phai.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hoadon/views.py">
+    <entry file="file://$PROJECT_DIR$/news/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/giohang/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django/db/models/__init__.py">
+    <entry file="file://$PROJECT_DIR$/PythonWeb/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="50" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="200">
+          <caret line="56" column="16" lean-forward="true" selection-start-line="56" selection-start-column="16" selection-end-line="57" selection-end-column="19" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news/templatetags/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/sanpham/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="137" column="40" selection-start-line="137" selection-start-column="40" selection-end-line="137" selection-end-column="40" />
+        <state relative-caret-position="34">
+          <caret line="35" column="27" lean-forward="true" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#1#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PythonWeb/wsgi.py">
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django_recommend/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="119">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="e#85#193#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django_recommend/templatetags/django_recommend.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/base.html">
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django/template/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="119">
+          <caret line="936" selection-start-line="936" selection-end-line="936" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/sub/sim-gia-re.html">
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django/template/loader_tags.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="97" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/home/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="6862" column="1" selection-start-line="6862" selection-start-column="1" selection-end-line="6862" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/migrations/0005_auto_20200601_1525.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="68" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/migrations/0006_auto_20200601_1526.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/migrations/0007_auto_20200601_1527.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="51" column="33" lean-forward="true" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/home/css-main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="2514" column="40" selection-start-line="2514" selection-start-column="40" selection-end-line="2514" selection-end-column="40" />
+        <state relative-caret-position="127">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/detail-sim/detail-sim.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="115" column="38" selection-start-line="115" selection-start-column="38" selection-end-line="115" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hoadon/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="94" selection-start-line="7" selection-start-column="94" selection-end-line="7" selection-end-column="94" />
+        <state relative-caret-position="597">
+          <caret line="75" column="16" lean-forward="true" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#6226#7880#0#HTML" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/MySQLdb/connections.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="238" selection-start-line="238" selection-end-line="238" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PythonWeb/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="116" column="45" selection-start-line="116" selection-start-column="45" selection-end-line="116" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sanpham/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="86" column="53" lean-forward="true" selection-start-line="86" selection-start-column="53" selection-end-line="86" selection-end-column="53" />
+        <state relative-caret-position="121">
+          <caret line="84" column="11" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="11" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/migrations/0003_auto_20200601_1645.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/migrations/0002_auto_20200601_1628.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="65" column="47" lean-forward="true" selection-start-line="65" selection-start-column="47" selection-end-line="65" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-476">
-          <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
