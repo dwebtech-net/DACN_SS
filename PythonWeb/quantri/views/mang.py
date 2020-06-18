@@ -6,8 +6,8 @@ from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
 from django.views.generic import CreateView, ListView, DeleteView
 
-from quantri.froms.sanpham import ThemSanPhamForm
-from sanpham.models import SanPham
+from quantri.froms.mang import ThemNhaMangForm
+from sanpham.models import NhaMang
 
 
 @login_required(login_url='/user/dang-nhap')
@@ -16,16 +16,22 @@ def Quyen404(request):
     return render(request, 'quanly/page/404-user.html', data)
 
 
-class ThemSanPham(SuccessMessageMixin,CreateView):
-    model = SanPham
-    form_class = ThemSanPhamForm
-    template_name = 'quanly/page/them-san-pham.html'
-    success_url = reverse_lazy('quantri:main')
+class ThemMang(SuccessMessageMixin,CreateView):
+    model = NhaMang
+    form_class = ThemNhaMangForm
+    template_name = 'quanly/page/mang/them.html'
+    success_url = reverse_lazy('quantri:Them-mang')
     success_message = "Cập nhật thành công!"
+    paginate_by = 5
     extra_context = {
         'class_tp': 'active',
-        'item': 'Thêm sản phẩm mới'
+        'item': 'Thêm nhà mạng'
     }
+    def get_context_data(self, **kwargs):
+        data = super().get_context_data(**kwargs)
+        data['mang'] = NhaMang.objects.order_by('-id')
+        return data
+
 # Kiem tra quyen truy cap - Bao nhi
     @method_decorator(login_required(login_url=reverse_lazy('user:dangnhap')))
     def dispatch(self, request, *args, **kwargs):
@@ -37,9 +43,9 @@ class ThemSanPham(SuccessMessageMixin,CreateView):
 
 
 @login_required
-def SuaSanPham(request, id):
-    obj = get_object_or_404(SanPham, id=id)
-    form = ThemSanPhamForm(request.POST or None, instance=obj)
+def SuaMang(request, id):
+    obj = get_object_or_404(NhaMang, id=id)
+    form = ThemNhaMangForm(request.POST or None, instance=obj)
     context = {'form': form}
 
     if form.is_valid():
@@ -54,22 +60,17 @@ def SuaSanPham(request, id):
                    'error': 'Có gì đó sai sai'}
         return render(request, 'quanly/page/them-san-pham.html', context)
 
-class DanhSachSanPham(ListView):
-    model = SanPham
+class DanhSachMang(ListView):
+    model = NhaMang
     paginate_by = 20  # if pagination is desired
-    template_name = 'quanly/page/danh-sach-san-pham.html'
-    queryset = SanPham.objects.filter(DaBan=False)
-    context_object_name = 'sanpham'
+    template_name = 'quanly/page/mang/them.html'
+    context_object_name = 'mang'
     extra_context = {
         'title': 'Danh sách sản sim',
         'item' : 'Danh sác sim'
     }
-    def get_context_data(self, **kwargs):
-        data = super().get_context_data(**kwargs)
-        data['sp_daban'] = SanPham.objects.filter(DaBan=True)
-        return data
 
-class XoaSanPham(SuccessMessageMixin,DeleteView):
+class XoaMang(SuccessMessageMixin,DeleteView):
     template_name = 'quanly/page/xoa-post.html'
     success_message = "Xoá thành công phòng!"
     success_url = reverse_lazy('phong:Danh-sach-phong')
@@ -80,4 +81,4 @@ class XoaSanPham(SuccessMessageMixin,DeleteView):
 
     def get_object(self):
         id_ = self.kwargs.get("id")
-        return get_object_or_404(SanPham, id=id_)
+        return get_object_or_404(NhaMang, id=id_)

@@ -1,0 +1,67 @@
+{% extends 'quanly/main.html' %}
+{% load humanize %}
+{% block main %}
+<div class="content">
+    {% include 'quanly/inc/topbar.html' %}
+       <!-- END: Top Bar -->
+                <div class="intro-y flex items-center mt-8">
+                    <h2 class="text-lg font-medium mr-auto">
+                       {{ title }}
+                    </h2>
+                </div>
+    <form id="dang-bai" action="" method="post">
+        {% csrf_token %}
+        <!-- BEGIN: Form Layout -->
+                <div class="grid grid-cols-12 gap-6 mt-5" style="background: white">
+                    <div class="intro-y col-span-12 lg:col-span-6">
+                        <div class="intro-y box p-5">
+                            <div>
+                                <label>Tên nhà mạng</label>
+                                {{ form.title }}
+                                {{ form.title.errors }}
+
+                            </div>
+                            <div class="text-left mt-5">
+{#                                <button type="button" class="button w-24 border text-gray-700 mr-1">Cancel</button>#}
+                                <button type="submit" id="toast" class="button w-24 bg-theme-1 text-white">Cập nhật</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!----Ben phải----->
+                    <div class="intro-x col-span-12 lg:col-span-6">
+                        <div class="intro-y box p-5">
+                            <table class="table table-report -mt-2">
+                                    <thead>
+                                        <tr>
+                                            <th class="whitespace-no-wrap">Nhà mạng</th>
+                                            <th class="text-center whitespace-no-wrap">Tác vụ</th>
+                                        </tr>
+                                    </thead>
+                                    {%  for d in mang %}
+                                    <tbody>
+                                        <tr class="intro-x">
+                                            <td>
+                                                <a href="{% url 'sanpham:simtheomang' d.slug %}"target="_blank" class="font-medium whitespace-no-wrap">{{ d.title }}</a>
+                                            </td>
+                                            <td class="table-report__action w-56">
+                                                <div class="flex justify-center items-center">
+                                                    <a class="flex items-center mr-3" href="{% url 'quantri:Sua-mang' d.id %}" target="_blank"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Sửa </a>
+                                                    <a class="flex items-center text-theme-6" href="/" target="_blank"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Xoá </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                    {% endfor %}
+                                </table>
+                        </div>
+                    </div>
+</div>
+        <!-- END: Form Layout -->
+    </form>
+</div>
+<script>
+
+</script>
+{% endblock %}

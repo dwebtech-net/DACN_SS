@@ -1,3 +1,4 @@
+from django.db.models.aggregates import Max
 from django.shortcuts import render
 from .models import SanPham, SimTheoLoai, SimNamSinh, NhaMang, SimTheoGia
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger

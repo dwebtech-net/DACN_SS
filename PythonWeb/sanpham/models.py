@@ -18,7 +18,7 @@ SIM_CHOICES = (
 # Tạo danh muc san pham _Duc
 ##
 class SimTheoGia(models.Model):
-    title = models.CharField(max_length=100,verbose_name='Tiêu đề')
+    title = models.CharField(max_length=100,verbose_name='Tiêu đề',unique=True)
     slug = models.SlugField(max_length=100, null=False, default='')
 
     def __str__(self):
@@ -33,7 +33,7 @@ class SimTheoGia(models.Model):
 
 
 class NhaMang(models.Model):
-    title = models.CharField(max_length=100,verbose_name='Tiêu đề')
+    title = models.CharField(max_length=100,verbose_name='Tiêu đề',unique=True)
     slug = models.SlugField(max_length=100, null=False, default='')
 
     def __str__(self):
