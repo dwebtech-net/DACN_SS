@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ca1d334-84fd-4cd7-831a-18506e67a625" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/quantri/froms/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quantri/froms/mang.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quantri/froms/sanpham.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quantri/views/mang.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sanpham/templates/quanly/page/danh-sach-san-pham.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sanpham/templates/quanly/page/mang/them.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/font-sum.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/nha-mang.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sanpham/templates/quanly/page/mang/sua.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quantri/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/quantri/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quantri/views/sanpham.py" beforeDir="false" afterPath="$PROJECT_DIR$/quantri/views/sanpham.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/quanly/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/quanly/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/quanly/inc/menu-pc.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/quanly/inc/menu-pc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/quanly/page/404-user.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/quanly/page/404-user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/quanly/page/them-san-pham.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/quanly/page/them-san-pham.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/detail-sim/detail-sim.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/detail-sim/detail-sim.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quantri/views/mang.py" beforeDir="false" afterPath="$PROJECT_DIR$/quantri/views/mang.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/templates/quanly/page/mang/them.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/quanly/page/mang/them.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,12 +32,24 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/page/mang/them.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="842">
+              <caret line="81" column="38" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
+              <folding>
+                <element signature="e#579#604#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/quantri/views/mang.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+            <state relative-caret-position="346">
+              <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -58,23 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/page/mang/them.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="64" selection-start-line="64" selection-end-line="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sanpham/models.py">
+        <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/page/mang/sua.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="35" column="78" selection-start-line="35" selection-start-column="78" selection-end-line="35" selection-end-column="78" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -82,10 +69,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quantri/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+            <state relative-caret-position="289">
+              <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,7 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-gia.html" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/cot-trai.html" />
         <option value="$PROJECT_DIR$/CauHinh/models.py" />
         <option value="$PROJECT_DIR$/CauHinh/admin.py" />
@@ -169,14 +155,15 @@
         <option value="$PROJECT_DIR$/static/css/font-sum.css" />
         <option value="$PROJECT_DIR$/sanpham/templates/quanly/footer.html" />
         <option value="$PROJECT_DIR$/quantri/froms/mang.py" />
-        <option value="$PROJECT_DIR$/quantri/urls.py" />
-        <option value="$PROJECT_DIR$/quantri/views/mang.py" />
         <option value="$PROJECT_DIR$/sanpham/models.py" />
+        <option value="$PROJECT_DIR$/quantri/views/mang.py" />
+        <option value="$PROJECT_DIR$/sanpham/templates/quanly/page/mang/sua.html" />
+        <option value="$PROJECT_DIR$/quantri/urls.py" />
         <option value="$PROJECT_DIR$/sanpham/templates/quanly/page/mang/them.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="472" />
     <option name="y" value="10" />
     <option name="width" value="896" />
@@ -199,18 +186,6 @@
               <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
               <item name="quantri" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="quantri" type="462c0819:PsiDirectoryNode" />
-              <item name="froms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="quantri" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
@@ -238,6 +213,15 @@
               <item name="quanly" type="462c0819:PsiDirectoryNode" />
               <item name="page" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="sanpham" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="quanly" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="mang" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -249,7 +233,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/quantri/froms" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sanpham/templates/quanly/page/mang" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -262,16 +246,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\quantri\froms" />
-      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\quantri\views" />
-      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\sanpham\templates\quanly\page\mang" />
-      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\quantri" />
-      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\static" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\DACN_SS\DACN_SS\PythonWeb\static" />
       <recent name="F:\DACN_SS\DACN_SS\PythonWeb\sanpham\templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\sanpham\templates\quanly\page\mang" />
+      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\quantri\froms" />
+      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\quantri\views" />
+      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\quantri" />
+      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -354,11 +338,14 @@
       <workItem from="1592196663399" duration="823000" />
       <workItem from="1592328787782" duration="1282000" />
       <workItem from="1592463838230" duration="14997000" />
+      <workItem from="1592650893300" duration="96000" />
+      <workItem from="1592654448595" duration="10632000" />
+      <workItem from="1592675004178" duration="10376000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123493000" />
+    <option name="totallyTimeSpent" value="144597000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -370,15 +357,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22314675" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31164902" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.39934534" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.049099836" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -427,16 +414,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/user/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hoadon/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -605,9 +582,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quantri/froms/sim.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/quantri/froms/sim.py" />
     <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/detail-sim/detail-sim.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -749,50 +724,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/page/mang/danhsach.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="66" column="40" lean-forward="true" selection-start-line="27" selection-start-column="32" selection-end-line="66" selection-end-column="40" />
-          <folding>
-            <element signature="e#1131#4178#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quantri/views/sanpham.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="69" column="19" lean-forward="true" selection-start-line="66" selection-start-column="4" selection-end-line="69" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quantri/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/page/mang/danhsach.html" />
     <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django/views/generic/list.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="87" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quantri/views/mang.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -801,18 +737,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sanpham/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="35" column="78" selection-start-line="35" selection-start-column="78" selection-end-line="35" selection-end-column="78" />
+        <state relative-caret-position="83">
+          <caret line="40" column="36" lean-forward="true" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/quantri/views/sanpham.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="54" column="73" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quantri/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/page/mang/them.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        <state relative-caret-position="842">
+          <caret line="81" column="38" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
+          <folding>
+            <element signature="e#579#604#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/page/mang/sua.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quantri/views/mang.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

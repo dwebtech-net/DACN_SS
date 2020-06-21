@@ -1,9 +1,13 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.messages.views import SuccessMessageMixin
+from django.forms import model_to_dict
+from django.http import JsonResponse, request
 from django.shortcuts import render, redirect, get_object_or_404
+from django.template.loader import render_to_string
 from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
+from django.views import View
 from django.views.generic import CreateView, ListView, DeleteView
 
 from quantri.froms.mang import ThemNhaMangForm
@@ -16,7 +20,7 @@ def Quyen404(request):
     return render(request, 'quanly/page/404-user.html', data)
 
 
-class ThemMang(SuccessMessageMixin,CreateView):
+class ThemMang(SuccessMessageMixin, CreateView):
     model = NhaMang
     form_class = ThemNhaMangForm
     template_name = 'quanly/page/mang/them.html'
@@ -27,12 +31,20 @@ class ThemMang(SuccessMessageMixin,CreateView):
         'class_tp': 'active',
         'item': 'Thêm nhà mạng'
     }
+
     def get_context_data(self, **kwargs):
         data = super().get_context_data(**kwargs)
         data['mang'] = NhaMang.objects.order_by('-id')
         return data
+    def post(self, request, *args, **kwargs):
+        form = ThemNhaMangForm(request.POST)
+        if form.is_valid():
+            new_data = form.save()
+            return JsonResponse({'mang':model_to_dict(new_data)},status=200)
+        else:
+            return redirect('quantri:Them-mang')
 
-# Kiem tra quyen truy cap - Bao nhi
+    # Kiem tra quyen truy cap - duc
     @method_decorator(login_required(login_url=reverse_lazy('user:dangnhap')))
     def dispatch(self, request, *args, **kwargs):
         if not self.request.user.is_authenticated:
@@ -43,34 +55,23 @@ class ThemMang(SuccessMessageMixin,CreateView):
 
 
 @login_required
-def SuaMang(request, id):
-    obj = get_object_or_404(NhaMang, id=id)
-    form = ThemNhaMangForm(request.POST or None, instance=obj)
-    context = {'form': form}
-
+def Suamang(request, id):
+    mang = get_object_or_404(NhaMang, id=id)
+    data = dict()
+    form = ThemNhaMangForm(request.GET or None, instance=mang)
     if form.is_valid():
-        obj = form.save(commit=False)
-        obj.save()
+        new_data = form.save(commit=False)
+        new_data.save()
         messages.success(request, "Cập nhật thông tin thành công")
-        context = {'form': form}
-        return render(request, 'quanly/page/them-san-pham.html', context)
-
+        data['html'] = render_to_string('quanly/page/mang/sua.html', {'new_data': new_data}, request=request)
     else:
-        context = {'form': form,
-                   'error': 'Có gì đó sai sai'}
-        return render(request, 'quanly/page/them-san-pham.html', context)
+        form = ThemNhaMangForm(request.GET or None, instance=mang)
+        data['html'] = render_to_string('quanly/page/mang/sua.html', {'form': form}, request=request)
+        return JsonResponse(data)
 
-class DanhSachMang(ListView):
-    model = NhaMang
-    paginate_by = 20  # if pagination is desired
-    template_name = 'quanly/page/mang/them.html'
-    context_object_name = 'mang'
-    extra_context = {
-        'title': 'Danh sách sản sim',
-        'item' : 'Danh sác sim'
-    }
 
-class XoaMang(SuccessMessageMixin,DeleteView):
+
+class XoaMang(SuccessMessageMixin, DeleteView):
     template_name = 'quanly/page/xoa-post.html'
     success_message = "Xoá thành công phòng!"
     success_url = reverse_lazy('phong:Danh-sach-phong')
