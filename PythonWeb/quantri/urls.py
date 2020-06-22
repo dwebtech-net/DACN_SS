@@ -15,5 +15,5 @@ urlpatterns = [
 
     # nha mang
     path('mang/them/',ThemMang.as_view(),name='Them-mang'),
-    path('mang/ul/<id>',Suamang,name='Sua-mang'),
+    path('mang/them/<id>',Suamang,name='Sua-mang'),
 ]

@@ -48,62 +48,12 @@
                     </th>
                 </tr>
             </thead>
-            <tbody>
-            {% for sim in sanpham %}
-                <tr>
-                    <td class="hide480"><span class="sott">{{ forloop.counter }}</span>
-                    </td>
-                    <td><span class="simso"><a href="{% url 'sanpham:sanpham' sim.slug %}"><span>{{ sim.SoSim }}</span>
-                        </a>
-                        </span>
-                    </td>
-                    <td><strong>{{ sim.Gia|intcomma }}₫</strong>
-                    </td>
-                    <td class="hide480"><span class="lg-{{ sim.Mang | lower}}">{{ sim.Mang }}</span>
-                    </td>
-                    <td class="hide480 hide555"> <span class="cat2">{% for ls in sim.LoaiSims.all|slice:"1" %}{{ ls.title}}{% endfor %}</span>
-
-                    </td>
-                    <td class=""><span class="news2 btn-mua" ><a href="{% url 'sanpham:sanpham' sim.slug %}" style="color: white">Mua sim</a> </span>
-                    </td>
-                </tr>
-            {% endfor %}
+            <tbody id="table-body">
             </tbody>
         </table>
+    <div id="pagination-wrapper"></div>
 
-        <div class="pagination" style="list-style-type:none;" align="center">
-            {% if sanpham.has_previous %}
-                <a class="pagination-action" href="?page=1">&laquo;</a>
-                <a class="pagination-action" href="?page={{ sanpham.previous_page_number }}">&lsaquo;</a>
-            {% endif %}
-            {% for i in sanpham.paginator.page_range %}
-                {% if sanpham.number == i %}
-                    <span class="pagination-number pagination-current">{{ i }} <span class="sr-only">(current)</span></span>
-                {% else %}
-                    <a class="pagination-number" href="?page={{ i }}">{{ i }}</a>
-                {% endif %}
-            {% endfor %}
-            {% if sanpham.has_next %}
-                 <a class="pagination-action" href="?page={{ sanpham.next_page_number }}">&rsaquo;</a>
-                 <a class="pagination-action" href="?page={{ sanpham.paginator.num_pages }}">&raquo;</a>
-            {% endif %}
-        </div>
 
-        <center> </center>
-        <form action="" method="get" id="chitietsim"></form>
-        <script type="text/javascript">
-            function setFilterAll() {
-                set_filter2('0', '0', '0', '0', '0');
-            }
-            window.onload = setFilterAll;
-
-            function ctsim(sosim) {
-                sosim = sosim.replace(/\D/g, "");
-                document.getElementById("chitietsim").action = sosim;
-                document.getElementById("chitietsim").submit();
-            }
-        </script>
-        <br>
 
     </article>
 <style>
@@ -138,4 +88,24 @@
             color: #0080DA;
         }
     </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script>
+    var tableData = [
+        {% for sim in sanpham %}
+            {
+                'sosim': '{{ sim.SoSim }}',
+                'last_name': '{{ sim.Mang }}',
+                'stt': '{{ forloop.counter }}',
+                'slug': '{{ sim.slug }}',
+                'gia': '{{ sim.Gia|intcomma }}₫',
+                'mang': '{{ sim.Mang }}',
+                'loai': '{% for ls in sim.LoaiSims.all|slice:"1" %}{{ ls.title}}{% endfor %}',
+                'mua': '{% url 'sanpham:sanpham' sim.slug %}',
+            },
+        {% endfor %}
+    ]
+
+    </script>
+<script src="/static/js/js/namsinh.js"></script>
 {% endblock %}

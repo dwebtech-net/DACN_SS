@@ -60,10 +60,10 @@ def Suamang(request, id):
     data = dict()
     form = ThemNhaMangForm(request.GET or None, instance=mang)
     if form.is_valid():
-        new_data = form.save(commit=False)
-        new_data.save()
+        form = form.save(commit=False)
+        form.save()
         messages.success(request, "Cập nhật thông tin thành công")
-        data['html'] = render_to_string('quanly/page/mang/sua.html', {'new_data': new_data}, request=request)
+        data['html'] = render_to_string('quanly/page/mang/sua.html', {'form': form}, request=request)
     else:
         form = ThemNhaMangForm(request.GET or None, instance=mang)
         data['html'] = render_to_string('quanly/page/mang/sua.html', {'form': form}, request=request)
@@ -83,3 +83,4 @@ class XoaMang(SuccessMessageMixin, DeleteView):
     def get_object(self):
         id_ = self.kwargs.get("id")
         return get_object_or_404(NhaMang, id=id_)
+

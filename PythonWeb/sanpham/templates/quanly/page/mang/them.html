@@ -9,17 +9,11 @@
                        {{ title }}
                     </h2>
                 </div>
-    <form id="dang-bai" action="" method="post" data-url="{% url 'quantri:Them-mang' %}">
-        {% csrf_token %}
         <!-- BEGIN: Form Layout -->
                 <div class="grid grid-cols-12 gap-6 mt-5" style="background: white">
                     <div class="intro-y col-span-12 lg:col-span-6">
                         <div class="intro-y box p-5">
                             {% include 'quanly/page/mang/sua.html' %}
-                            <div class="text-left mt-5">
-                                <button type="button" id="btn_dang_bai" class="button w-24 bg-theme-1 text-white">Cập nhật</button>
-                            </div>
-
                         </div>
                     </div>
                     <!----Ben phải----->
@@ -53,7 +47,6 @@
                     </div>
 </div>
         <!-- END: Form Layout -->
-    </form>
 </div>
      <script
   src="https://code.jquery.com/jquery-1.12.4.min.js"
@@ -62,32 +55,38 @@
      </script>
 <script>
     $(document).ready(function () {
-        $("#btn_dang_bai").click(function () {
+        var csrfToken = $("input[name=csrfmiddlewaretoken]").val();
+
+        $("#dang-bai").on('click','#btn_dang_bai',function() {
             var serializedData = $("#dang-bai").serialize();
             $.ajax({
-                url : $("#dang-bai").data('url'),
+                url : '/quantri/mang/them/',
                 data : serializedData,
                 type : 'post',
                 success : function (data) {
-                    $("#show").append('<tbody><tr class="intro-x"><td><a href="/"target="_blank" class="font-medium whitespace-no-wrap">' + data.mang.title + '</a></td><td class="table-report__action w-56"><div class="flex justify-center items-center"><a class="flex items-center mr-3" href="/" target="_blank"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i>Sửa</a><a class="flex items-center text-theme-6"href="/"target="_blank"><i data-feather="trash-2" class="w-4 h-4 mr-1"></i>Xoá</a> </div></td></tr></tbody>')
+                    $("#show").append('<tbody><tr class="intro-x"><td><a href="/"target="_blank" class="font-medium whitespace-no-wrap">' + data.mang.title + '</a></td><td class="table-report__action w-56"><div class="flex justify-center items-center"><a class="flex items-center mr-3 edit" data-id="' + data.mang.id + '"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Sửa </a><a class="flex items-center text-theme-6"href="/"target="_blank"><i data-feather="trash-2" class="w-4 h-4 mr-1"></i>Xoá</a> </div></td></tr></tbody>')
                 },
             })
             $("#dang-bai")[0].reset();
         })
 
         // update
-        $(".edit").click(function() {
+        $("#show").on('click','.edit',function() {
               var btn = $(this);  // <-- HERE
+              console.log("form submitted!") ; // sanity check
               $.ajax({
-                url: '/quantri/mang/ul/' + btn.attr("data-id"),  // <-- AND HERE
-                type: 'get',
-                dataType: 'json',
+                url: '/quantri/mang/them/' + btn.attr("data-id"),  // <-- AND HERE
+                data:{
+                    csrfmiddlewaretoken: csrfToken,
+                    id: btn.attr("data-id")
+                },
+                  dataType:'json',
+                  type: 'post',
                 success: function (data) {
-                  $(".content #dang-bai #cl_edit").html(data.html);
+                  $(".content #dang-bai").html(data.html);
                 }
               });
-            });
-        $(".content #dang-bai #cl_edit")[0].reset();
+        });
     })
 </script>
 {% endblock %}

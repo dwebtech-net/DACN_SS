@@ -139,9 +139,9 @@ def simtheoloai(request, slug):
 def simnamsinh(request, slug):
     sns1 = SimNamSinh.objects.get(slug=slug)
     sanpham = sns1.sanpham_set.filter(DaBan=False)
-    paginator = Paginator(sanpham, 10)  # Show 25 contacts per page
-    page = request.GET.get('page')
-    sanphams = paginator.get_page(page)
+    # paginator = Paginator(sanpham, 10)  # Show 25 contacts per page
+    # page = request.GET.get('page')
+    # sanphams = paginator.get_page(page)
 
     stl = SimTheoLoai.objects.order_by('?')
     sns = SimNamSinh.objects.all()
@@ -152,7 +152,7 @@ def simnamsinh(request, slug):
 
     Data = {
             'sns1': sns1,
-            'sanpham': sanphams,
+            'sanpham': sanpham,
             "hd": hd,
             "stl": stl,
             "sns": sns,
