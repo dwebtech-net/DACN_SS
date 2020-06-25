@@ -7,7 +7,6 @@
 
 var state = {
     'querySet': tableData,
-
     'page': 1,
     'rows': 20,
     'window': 5,
@@ -87,11 +86,10 @@ function buildTable() {
                   <td class="hide480"><span class="sott">${myList[i].stt}</span></td>
                   <td><span class="simso"><a href="${myList[i].mua}"><span>${myList[i].sosim}</span></a></span></td>
                   <td><strong>${myList[i].gia}</strong></td>
-                 <td class="hide480"><span class="lg-${myList[i].mang}">${myList[i].mang}</span></td>
-                 <td class="hide480 hide555"> <span class="cat2">${myList[i].loai}</span></td>
-                 <td class=""><span class="news2 btn-mua" ><a href="${myList[i].mua}" style="color: white">Mua sim</a> </span>
-                    </td>
-                    </tr>
+                  <td class="hide480"><span class="lg-${myList[i].mang}">${myList[i].mang}</span></td>
+                  <td class="hide480 hide555"> <span class="cat2">${myList[i].loai}</span></td>
+                  <td class=""><span class="news2 btn-mua" ><a href="${myList[i].mua}" style="color: white">Mua sim</a> </span></td>
+                   </tr>
                   `
         table.append(row)
     }

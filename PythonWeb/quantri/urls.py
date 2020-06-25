@@ -1,4 +1,5 @@
 from django.urls import path, re_path
+from quantri.views.loaisim import *
 from quantri.views.main import *
 from quantri.views.mang import *
 from quantri.views.sanpham import *
@@ -16,4 +17,8 @@ urlpatterns = [
     # nha mang
     path('mang/them/',ThemMang.as_view(),name='Them-mang'),
     path('mang/them/<id>',Suamang,name='Sua-mang'),
+
+    # loai sim
+    path('loai/them/',ThemLoaiSim.as_view(),name='Them-loai'),
+    path('loai/them/<id>',Sualoaisim,name='Sua-loai'),
 ]
