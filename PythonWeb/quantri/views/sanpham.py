@@ -20,8 +20,8 @@ class ThemSanPham(SuccessMessageMixin,CreateView):
     model = SanPham
     form_class = ThemSanPhamForm
     template_name = 'quanly/page/them-san-pham.html'
-    success_url = reverse_lazy('quantri:main')
-    success_message = "Cập nhật thành công!"
+    success_url = reverse_lazy('quantri:Them-san-pham')
+    success_message = "Thêm sim thành công!"
     extra_context = {
         'class_tp': 'active',
         'item': 'Thêm sản phẩm mới'
@@ -45,7 +45,7 @@ def SuaSanPham(request, id):
     if form.is_valid():
         obj = form.save(commit=False)
         obj.save()
-        messages.success(request, "Cập nhật thông tin thành công")
+        messages.success(request, "Cập nhật thông tin sim thành công")
         context = {'form': form}
         return render(request, 'quanly/page/them-san-pham.html', context)
 
@@ -61,8 +61,8 @@ class DanhSachSanPham(ListView):
     queryset = SanPham.objects.filter(DaBan=False)
     context_object_name = 'sanpham'
     extra_context = {
-        'title': 'Danh sách sản sim',
-        'item' : 'Danh sác sim'
+        'title': 'Danh sách sim',
+        'item' : 'Danh sách sim'
     }
     def get_context_data(self, **kwargs):
         data = super().get_context_data(**kwargs)
@@ -71,11 +71,11 @@ class DanhSachSanPham(ListView):
 
 class XoaSanPham(SuccessMessageMixin,DeleteView):
     template_name = 'quanly/page/xoa-post.html'
-    success_message = "Xoá thành công phòng!"
-    success_url = reverse_lazy('phong:Danh-sach-phong')
+    success_message = "Xoá thành công!"
+    success_url = reverse_lazy('quantri:Danh-sach-san-pham')
     extra_context = {
-        'title': 'Xoá phòng',
-        'item': 'Xoá phòng'
+        'title': 'Xoá sim',
+        'item': 'Xoá sim'
     }
 
     def get_object(self):

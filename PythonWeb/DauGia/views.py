@@ -5,6 +5,9 @@ import operator
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from datetime import date
 from .models import DauGia
+from django.core.mail import EmailMessage
+from django.template.loader import render_to_string
+from user.models import CustomerUser
 
 # Create your views here.
 def home(request):
@@ -53,13 +56,13 @@ def chitietdaugia(request, DuongDan):
 
     if request.method == 'POST':
         daugia = DauGia.objects.filter(DuongDan=request.POST.get('DuongDan'))[0]
-        if (float)(request.POST.get('GiaDauGia')) > daugia.GiaHienTai:
+        if (float)(request.POST.get('GiaDauGia')) >= (daugia.GiaHienTai + daugia.GiaToiThieu):
             daugia.GiaHienTai = request.POST.get('GiaDauGia')
             daugia.NguoiDauGiaHienTai = request.user
             daugia.save()
             return redirect('DauGia:chitietdaugia', daugia.DuongDan)
         else:
-            message = "Giá đấu giá nhỏ hơn giá hiện tại"
+            message = "Giá đấu giá không hợp lệ"
 
     Data = {'daugia': daugia,
             "hd": hd,
@@ -77,4 +80,35 @@ def mualuon(request, DuongDan):
         daugia.NguoiDauGiaHienTai = request.user
         daugia.DaDauGia = True
         daugia.save()
+
+        #Gửi thông tin hóa đơn cho người dùng và admin
+        user = request.user
+        import pdb; pdb.set_trace()
+        mail_subject = '[Sim Đức Lộc] Thông tin đấu giá.'
+        message = render_to_string('simso/page-daugia/thongtindaugia.html', {
+            'user': user,
+            'DauGia': daugia,
+        })
+        to_email = user.email
+        email = EmailMessage(
+            mail_subject, message, to=[to_email]
+        )
+        email.content_subtype = 'html'
+        email.mixed_subtype = 'related'
+        email.send()
+
+
+        mail_subject_admin = 'Đấu giá kết thúc.'
+        message_admin = render_to_string('simso/page-daugia/thongtindaugiaadmin.html', {
+            'User': user,
+            'DauGia': daugia,
+        })
+        to_email_admins = CustomerUser.objects.get(is_superuser=True).email
+        email_admin = EmailMessage(
+            mail_subject_admin, message_admin, to=[to_email_admins]
+        )
+        email_admin.content_subtype = 'html'
+        email_admin.mixed_subtype = 'related'
+        email_admin.send()
+
         return redirect('DauGia:chitietdaugia', daugia.DuongDan)

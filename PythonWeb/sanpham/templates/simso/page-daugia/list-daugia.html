@@ -37,31 +37,7 @@
                             <div class="so-sim-home">Sim đấu giá: {{ daugia.Sim.SoSim }}</div>
                             <div id="countdown{{forloop.counter}}" class="so-sim-home"></div>
 
-                            <script>
-                              var countDownDate{{forloop.counter}} = new Date({{ daugia.NgayHetHan|date:"U" }} * 1000);
-               
-                              var x = setInterval(function() {
-                                var now = new Date().getTime();
-            
-                                var distance = countDownDate{{forloop.counter}} - now;
-            
-                                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-                                document.getElementById("countdown{{forloop.counter}}").innerHTML = "Thời gian: " + days + " Ngày " + hours + " Giờ "
-                                    + minutes + " Phút " + seconds + " Giây ";
-            
-                                document.getElementById("countdown{{forloop.counter}}").style.color = "blue";
-            
-                                if (distance < 0) {
-                                  clearInterval(x);
-                                  document.getElementById("countdown{{forloop.counter}}").innerHTML = "Thời gian: Hết thời gian";
-                                  document.getElementById("countdown{{forloop.counter}}").style.color = "red";
-                                }
-                              }, 1000);
-                            </script>
+                            
 
                             {% if daugia.DaDauGia %}
                               {% if daugia.NguoiDauGiaHienTai is None %}
@@ -70,7 +46,36 @@
                                 <div class="so-sim-home">Người đã mua: {{ daugia.NguoiDauGiaHienTai }}</div>
                                 <div class="so-sim-home">Với mức giá: {{ daugia.GiaHienTai|intcomma }}đ</div>
                               {% endif %}
+                              <script>
+                                document.getElementById("countdown{{forloop.counter}}").innerHTML = "Đấu giá đã kết thúc";
+                                document.getElementById("countdown{{forloop.counter}}").style.color = "red";
+                              </script>
                             {% else %}
+                              <script>
+                                var countDownDate{{forloop.counter}} = new Date({{ daugia.NgayHetHan|date:"U" }} * 1000);
+                
+                                var x = setInterval(function() {
+                                  var now = new Date().getTime();
+              
+                                  var distance = countDownDate{{forloop.counter}} - now;
+              
+                                  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+              
+                                  document.getElementById("countdown{{forloop.counter}}").innerHTML = "Thời gian: " + days + " Ngày " + hours + " Giờ "
+                                      + minutes + " Phút " + seconds + " Giây ";
+              
+                                  document.getElementById("countdown{{forloop.counter}}").style.color = "blue";
+              
+                                  if (distance < 0) {
+                                    clearInterval(x);
+                                    document.getElementById("countdown{{forloop.counter}}").innerHTML = "Thời gian: Hết thời gian";
+                                    document.getElementById("countdown{{forloop.counter}}").style.color = "red";
+                                  }
+                                }, 1000);
+                              </script>
                               {% if daugia.GiaMuaLuon > daugia.GiaHienTai %}
                                 <div class="so-sim-home">Giá mua luôn: {{ daugia.GiaMuaLuon|intcomma }}₫ </div>
                               {% endif %}
