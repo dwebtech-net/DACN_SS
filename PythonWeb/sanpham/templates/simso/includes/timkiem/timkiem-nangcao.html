@@ -1,186 +1,52 @@
-<ul class="filter" id="filter">
-            <li class="frange" onclick="showFilter('listTelcoFilter')"> <span class="criteria">
-                <span class="hide480">Nhà </span>Mạng </span>
-                <div id="listTelcoFilter" class="listprice" style="display: none;">
-                    <button type="button" class="closefilter"><i class="ic-closefilter"></i>
-                    </button>
-                    <label id="tF0" onclick="telcoFilter(0)" class="all check"><i class="ic-checklist"></i><a href="javascript:void(0);"> Tất các mạng</a>
-                    </label>
-                    {% for item in nm %}
-                        <label id="tF{{item.id }}" onclick="telcoFilter({{item.id }})"><i class="ic-checklist"></i>
-                            <a href="javascript:void(0);" class="prevent"> {{ item.title }}</a>
-                    </label>
-                    {% endfor %}
-                </div>
-            </li>
-            <li class="frange" onclick="showFilter('listPriceFilter');var objDiv = document.getElementById('listPriceFilter');objDiv.scrollTop = objDiv.scrollHeight;" style=" ; "> <span class="criteria"><span class="hide480">Khoảng </span>Giá</span>
-                <div id="listPriceFilter" class="listprice" style="display: none;">
-                    <button type="button" class="closefilter"><i class="ic-closefilter"></i>
-                    </button>
-                    <label id="pF0" onclick="priceFilter(0);" class="all check"><i class="ic-checklist"></i>
-                        <a href="javascript:void(0);"> Tất cả mức giá</a>
-                    </label>
-                      {% for item in stg %}
-                    <label id="pF{{ item.id }}" onclick="priceFilter('{{ item.id }}');"><i class="ic-checklist"></i>
-                        <a href="javascript:javascript:void(0);" class="prevent"> {{ item.title }} </a>
-                    </label>
-                    {% endfor %}
+<form id="dang-bai" action="{% url 'timkiem:timkiem_ajax' %}" method="get">
+<div class="box">
+    <select id="nhamang" name="nhamang">
+        <option value="">Nhà mạng</option>
+        <option>-----</option>
+         {% for item in nm %}
+            <option id="{{ item.id }}" {% if request.GET.nhamang == item.title %} selected {% else %} {% endif %}>{{ item.title }}</option>
+        {% endfor %}
+    </select>
 
-                </div>
-            </li>
-            <li class="frange" onclick="showFilter('listSortFilter')"> <span class="criteria">Sắp xếp </span>
-                <div id="listSortFilter" class="listprice" style="display: none;">
-                    <button type="button" class="closefilter"><i class="ic-closefilter"></i>
-                    </button>
-                    <label id="sF" onclick="sortFilter(0)" class="all check"><i class="ic-checklist"></i><a href="javascript:void(0);"> Ngẫu nhiên</a>
-                    </label>
-                    <label id="sF1" onclick="sortFilter(1)"><i class="ic-checklist"></i><a href="javascript:void(0);" class="prevent"> Giá thấp đến cao</a>
-                    </label>
-                    <label id="sF2" onclick="sortFilter(2)"><i class="ic-checklist"></i><a href="javascript:void(0);" class="prevent"> Giá cao đến thấp</a>
-                    </label>
-                    <label id="sF3" onclick="sortFilter(3)"><i class="ic-checklist"></i><a href="javascript:void(0);" class="prevent"> Số đẹp giá tốt </a>
-                    </label>
-                    <label id="sF4" onclick="sortFilter(4)"><i class="ic-checklist"></i><a href="javascript:void(0);" class="prevent"> Số mới cập nhật </a>
-                    </label>
-                </div>
-            </li>
-</ul>
-            <div class="choosedfilter">
+    <select id="loaisim" name="loai">
+        <option value="">Loại sim</option>
+        <option>-----</option>
+        {% for item in stl %}
+            <option id="{{ item.id }}" {% if request.GET.loai == item.title %} selected {% else %} {% endif %}>{{ item.title }}</option>
+        {% endfor %}
+    </select>
+    <select id="mucgia" name="mucgia">
+        <option value="">Khoảng giá</option>
+        {% for item in stg %}
+            <option id="{{ item.id }}"{% if request.GET.mucgia == item.title %} selected {% else %} {% endif %}>{{ item.title }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit" id="btn_timkiem">TIM</button>
+</div>
+</form>
+  <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous">
+</script>
+<link rel="stylesheet" href="../../../../../static/css/ketqua.css">
+{#<script type="text/javascript" src="/static/home/timkiem.js"></script>#}
+<script>
+    $(document).ready(function () {
+        var csrfToken = $("input[name=csrfmiddlewaretoken]").val();
 
-                <a id="choosedfilter" class="reset" href="javascript:resetFilter();">Xóa tất cả<i class="ic-clearfil"></i></a>
-            </div>
-        <table id="contentdanhsachsim" width="100%" border="0" cellpadding="8" cellspacing="0" bgcolor="#CCCCCC" style="">
-            <tbody>
-                <tr>
-                    <td id="lblLocdanhsachsim" width="0%" align="right" valign="middle" bgcolor="#FFFF99"></td>
-                    <td width="100%" align="left" valign="middle" bgcolor="#FFFF99">
-                        <form style=" margin-bottom: 0px; " id="filter_form" name="filter_form" method="get" action="{% url 'timkiem:timkiem' %}?do=filter">
+        $(".box").on('click','#btn_timkiem',function() {
+            var serializedData = $(".box").serialize();
+            $.ajax({
+                url : '/tim-kiem/ajax/?so=96',
+                data : serializedData,
+                type : 'get',
+                dataType:'json',
+                success : function (data) {
+                    $("#table-body").append(data.html)
+                },
+            })
+        })
 
-                            <select name="gia" id="gia" style="width:22%" onchange="r();">
-                                <option value="">Mức giá</option>
-                                {% for item in stg %}
-                                <option value="{{ item.id }}" {% if item.id == sim.LoaiGia.id %} selected {% endif %}>{{ item.title }}</option>
-                                {% endfor %}
-                            </select> &nbsp;
-
-
-                            <select name="mang" id="mang" style="width:22%" onchange="r();">
-                                <option value="">Mạng</option>
-                                 {% for item in nm %}
-                                <option value="{{ item.id }}">{{ item.title }}</option>
-                                {% endfor %}
-
-                                <!--<option value="6">Sfone</option> <option value="7">Máy bàn</option>-->
-                            </select>&nbsp;
-                            <select name="sapxep_gia" id="sapxep_gia" style="width:22%" onchange="r();">
-                                <option value="">Sắp xếp</option>
-                                <option value="1">Giá thấp đến cao</option>
-                                <option value="2">Giá cao đến thấp</option>
-                                <option value="3">Số đẹp giá tốt</option>
-                                <option value="4">Số mới cập nhật</option>
-                            </select>
-                            <select name="tragop_filter" id="tragop_filter" style="width:22%" onchange="r();">
-                                <option value="">Tất cả</option>
-                                <option value="1">Hỗ trợ trả góp</option>
-                            </select>
-                            <input type="submit" value="Submit" class="sm">
-                        </form>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-
-  <style>
-            @media (max-width: 480px) {
-                .filter li {
-                    position: initial
-                }
-                .filter li .listprice {
-                    width: auto;
-                    left: 10px;
-                    right: 10px
-                }
-                #listlengthFilter:before,
-                #listlengthFilter:after {
-                    left: 5%
-                }
-                #listTelcoFilter:before,
-                #listTelcoFilter:after {
-                    left: 30%
-                }
-                #listPriceFilter:before,
-                #listPriceFilter:after {
-                    left: 55%
-                }
-                #listSortFilter:before,
-                #listSortFilter:after {
-                    left: 85%
-                }
-                .product-w60 {
-                    width: 100%
-                }
-                .product-w40 {
-                    width: 100%
-                }
-                .tblsim-res2 tr,
-                .bancanbiet tr {
-                    height: 39px
-                }
-                .tblsim-res2 tbody tr:first-child,
-                .bancanbiet tbody tr:first-child {
-                    height: 33px
-                }
-                .tblsim-res2 .simso {
-                    text-align: center;
-                    padding: 0;
-                    float: none
-                }
-                .bancanbiet tr a {
-                    font-size: 15px
-                }
-                .bancanbiet tr .news2 a:link {
-                    font-size: 15px
-                }
-                .page,
-                .page.active {
-                    padding: 2px 4px!important;
-                    font-size: 14px!important
-                }
-            }
-
-            .tblsim-res2 {
-                background: #ccc;
-                width: 100%
-            }
-
-            .tblsim-res2 tr {
-                background: #fff;
-                vertical-align: middle;
-                text-align: center
-            }
-
-            .tblsim-res2 tr:nth-child(even) {
-                background-color: #f9f9f9
-            }
-
-            .tblsim-res2 tr:hover {
-                background-color: #e7ffca
-            }
-
-            .tblsim-res2 tr {
-                height: 39px!important
-            }
-
-
-  input.sm {
-    display: block;
-    color: white;
-    border: 2px solid #4c6f54ad;
-    background: #182f33;
-    padding: 3px;
-    margin: 5px 40px 1px 0px;
-    float: right;
-}
-
-        </style>
+    })
+</script>

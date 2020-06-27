@@ -78,6 +78,7 @@ def simtheogia(request, slug):
             "hd": hd,
             "stl": stl,
             "sns": sns,
+            "stg": stg,
             "nm": nm,
             }
     return render(request, 'simso/category/sim-theo-gia.html', Data)

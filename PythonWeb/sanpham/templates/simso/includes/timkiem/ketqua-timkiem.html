@@ -1,24 +1,19 @@
-+{% extends 'base.html' %}
-
+{% extends 'base.html' %}
 {% block index %}
-
 {% load static %}
 {% load humanize %}
-
     <article>
         <!----from tim kiem--->
         {% include 'tim-kiem.html' %}
         <!--- end tim kiem-->
-
-        <center><img alt="Loading" src="https://simthanglong.vn/images/filter-loader.gif" name="loading_div" width="95" height="15" border="0" id="loading_div" style="display:none">
+        <center>
+            <img alt="Loading" src="https://simthanglong.vn/images/filter-loader.gif" name="loading_div" width="95" height="15" border="0" id="loading_div" style="display:none">
         </center>
-        <!--<a class="desktop-hide" href="/sim-dep-tra-gop"><img style="width:100%;padding-top:5px" border="0" alt="Sim số đẹp" src="//static.simthanglong.vn/images/sim-dep-tra-gop-0-phan-tram.jpg"></a>-->
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tbody>
                 <tr>
                     <td valign="middle">
                         <h1>Danh sách sim {{ sns1.title }}</h1>
-                        <!--<label><a class="criteria" style=" color: #288ad6; " href="javascript:tragopFilter()"><i id="active-tragop" class="ic-checkbox"></i>Hỗ trợ trả góp</a></label>-->
                     </td>
                     <td align="left" valign="middle"><img alt="Loading" src="https://simthanglong.vn/images/filter-loader.gif" name="img_filter" width="95" height="15" border="0" id="img_filter" style="display:none">
                     </td>
@@ -45,12 +40,11 @@
                     </th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="table-body">
              {% if not sp %}
 		        Không tìm thấy sim nào
 		        {% else %}
             {% for sim in sp %}
-
                 <tr>
                     <td class="hide480"><span class="sott">1</span>
                     </td>
@@ -68,22 +62,10 @@
                     <td class=""><span class="news2 btn-mua" ><a href="{% url 'sanpham:sanpham' sim.slug %}" style="color: white">Mua sim</a> </span>
                     </td>
                 </tr>
-
             {% endfor %}
             {% endif %}
             </tbody>
         </table>
-
-        <div class="pagination" align="center"> <span class="page active">1</span>
-        <a href="sim-theo-gia/duoi-500-nghin-p2.html" title="Đến trang 2" class="page">2</a>
-        <a href="sim-theo-gia/duoi-500-nghin-p2.html" title="Đến trang tiếp" class="page">Tiếp »</a>
-        <br>
-        <br>
-       </div>
-
-
-        <br>
-
     </article>
 
 {% endblock %}
