@@ -53,7 +53,7 @@ def timkiem_nangcao(request):
                 sp = sp.filter(Q(SoSim__icontains=sosim))
 
     context = {
-        "sp": sp,
+        "sanpham": sp,
         "ns": ns,
         "nhamang": nhamang,
         "loai": loai,
@@ -62,10 +62,10 @@ def timkiem_nangcao(request):
         "stg": stg,
         "nm": nm,
     }
-    # data = dict()
-    # data['html'] = render_to_string('includes/timkiem/showtimkiem.html', {'context': context}, request=request)
-    # return JsonResponse(data)
-    return render(request, 'includes/timkiem/ketqua-timkiem.html', context)
+    data = dict()
+    data['html'] = render_to_string('includes/timkiem/showtimkiem.html', context, request=request)
+    return JsonResponse(data,status=200)
+    # return render(request, 'includes/timkiem/ketqua-timkiem.html', context)
 
 def timkiem(request):
     sp = SanPham.objects.filter(DaBan=False)

@@ -1,6 +1,7 @@
+{% load humanize %}
 <form id="dang-bai" action="{% url 'timkiem:timkiem_ajax' %}" method="get">
-<div class="box">
-    <select id="nhamang" name="nhamang">
+<div class="box" id="box">
+    <select id="nhamang" name="nhamang" onchange="Loadajax()">
         <option value="">Nhà mạng</option>
         <option>-----</option>
          {% for item in nm %}
@@ -8,23 +9,29 @@
         {% endfor %}
     </select>
 
-    <select id="loaisim" name="loai">
+    <select id="loai" name="loai" onchange="Loadajax()">
         <option value="">Loại sim</option>
         <option>-----</option>
         {% for item in stl %}
             <option id="{{ item.id }}" {% if request.GET.loai == item.title %} selected {% else %} {% endif %}>{{ item.title }}</option>
         {% endfor %}
     </select>
-    <select id="mucgia" name="mucgia">
+    <select id="mucgia" name="mucgia" onchange="Loadajax()">
         <option value="">Khoảng giá</option>
         {% for item in stg %}
             <option id="{{ item.id }}"{% if request.GET.mucgia == item.title %} selected {% else %} {% endif %}>{{ item.title }}</option>
         {% endfor %}
     </select>
-    <button type="submit" id="btn_timkiem">TIM</button>
+    <select id="namsinh" name="namsinh" onchange="Loadajax()">
+        <option value="">Năm sinh</option>
+        {% for item in sns %}
+            <option id="{{ item.id }}"{% if request.GET.namsinh == item.title %} selected {% else %} {% endif %}>{{ item.title }}</option>
+        {% endfor %}
+    </select>
+    <button type="button" id="btn_timkiem" style="display: none"></button>
 </div>
 </form>
-  <script
+<script
   src="https://code.jquery.com/jquery-1.12.4.min.js"
   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
   crossorigin="anonymous">
@@ -32,21 +39,24 @@
 <link rel="stylesheet" href="../../../../../static/css/ketqua.css">
 {#<script type="text/javascript" src="/static/home/timkiem.js"></script>#}
 <script>
-    $(document).ready(function () {
-        var csrfToken = $("input[name=csrfmiddlewaretoken]").val();
-
-        $(".box").on('click','#btn_timkiem',function() {
+    function Loadajax(){
             var serializedData = $(".box").serialize();
+            var nhamang = document.getElementById("nhamang").value
+            var loai = document.getElementById("loai").value
+            var mucgia = document.getElementById("mucgia").value
+            var namsinh = document.getElementById("namsinh").value
             $.ajax({
-                url : '/tim-kiem/ajax/?so=96',
+                url : '/tim-kiem/ajax/?nhamang='+ nhamang +'&loai='+ loai +'&mucgia=' + mucgia + '&namsinh' + namsinh,
                 data : serializedData,
                 type : 'get',
                 dataType:'json',
-                success : function (data) {
-                    $("#table-body").append(data.html)
+                timeout: '1000',
+                success : function (html) {
+                    $("#table-body").html(html.html)
                 },
             })
-        })
 
-    })
+            //end ajax
+    }
+    // auto load
 </script>

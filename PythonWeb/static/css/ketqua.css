@@ -128,3 +128,11 @@
     margin: 5px 40px 1px 0px;
     float: right;
 }
+img#img_filter {
+    padding-left: 240px;
+    padding-top: 20px;
+    position: absolute;
+    display: none;
+    width:95px;
+     height:15px;
+}
