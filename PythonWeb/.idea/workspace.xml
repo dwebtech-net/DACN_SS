@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ca1d334-84fd-4cd7-831a-18506e67a625" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/css/ketqua.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/timkiem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/quanly/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/quanly/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/quanly/page/mang/them.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/quanly/page/mang/them.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-gia.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-gia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-loai.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-loai.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-mang.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-mang.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/ketqua-timkiem.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/ketqua-timkiem.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/timkiem-md.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/showtimkiem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/showtimkiem.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/showtimkiem.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/timkiem-nangcao.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/timkiem-nangcao.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/timkiem/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/timkiem/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/ketqua.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/ketqua.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/script.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/home/script.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/timkiem/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/timkiem/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,19 +38,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/home/timkiem.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/timkiem/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="39" lean-forward="true" selection-start-line="38" selection-start-column="25" selection-end-line="39" />
+            <state relative-caret-position="-497">
+              <caret line="38" column="47" lean-forward="true" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -62,38 +49,41 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/timkiem-nangcao.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/home/script.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+            <state relative-caret-position="132">
+              <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phongthuy/models.py">
+        <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/showtimkiem.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
+            <state relative-caret-position="816">
+              <caret line="48" column="39" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-mang.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="13">
+              <caret line="21" column="119" selection-start-line="21" selection-start-column="119" selection-end-line="21" selection-end-column="119" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="n#for#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/sub/kiem.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/footer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5391" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/ketqua-timkiem.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="45" column="26" lean-forward="true" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+            <state relative-caret-position="209">
+              <caret line="87" column="77" selection-start-line="87" selection-start-column="77" selection-end-line="87" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -134,9 +124,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/DauGia/views.py" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/page-daugia/detail-daugia.html" />
-        <option value="$PROJECT_DIR$/sanpham/templates/quanly/inc/topbar.html" />
         <option value="$PROJECT_DIR$/hoadon/admin.py" />
         <option value="$PROJECT_DIR$/hoadon/models.py" />
         <option value="$PROJECT_DIR$/sanpham/urls.py" />
@@ -175,16 +162,19 @@
         <option value="$PROJECT_DIR$/timkiem/urls.py" />
         <option value="$PROJECT_DIR$/sanpham/templates/quanly/base.html" />
         <option value="$PROJECT_DIR$/sanpham/views.py" />
-        <option value="$PROJECT_DIR$/static/css/ketqua.css" />
-        <option value="$PROJECT_DIR$/sanpham/templates/quanly/page/mang/them.html" />
         <option value="$PROJECT_DIR$/static/home/timkiem.js" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/category/sim-nam-sinh.html" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-gia.html" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-loai.html" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/showtimkiem.html" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/ketqua-timkiem.html" />
+        <option value="$PROJECT_DIR$/sanpham/templates/quanly/page/mang/them.html" />
         <option value="$PROJECT_DIR$/timkiem/views.py" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/ketqua-timkiem.html" />
+        <option value="$PROJECT_DIR$/static/css/ketqua.css" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/timkiem-nangcao.html" />
+        <option value="$PROJECT_DIR$/static/home/script.min.js" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/showtimkiem.html" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-mang.html" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/footer.html" />
       </list>
     </option>
   </component>
@@ -200,7 +190,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,11 +200,6 @@
             <path>
               <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="phongthuy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
               <item name="sanpham" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -223,21 +207,6 @@
               <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
               <item name="sanpham" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="sanpham" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="quanly" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="sanpham" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="quanly" type="462c0819:PsiDirectoryNode" />
-              <item name="inc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
@@ -257,80 +226,13 @@
             <path>
               <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="sanpham" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="simso" type="462c0819:PsiDirectoryNode" />
-              <item name="detail-sim" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="sanpham" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="simso" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="sanpham" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="simso" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
-              <item name="timkiem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="sanpham" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="simso" type="462c0819:PsiDirectoryNode" />
-              <item name="news" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="sanpham" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="simso" type="462c0819:PsiDirectoryNode" />
-              <item name="page-daugia" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="sanpham" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="simso" type="462c0819:PsiDirectoryNode" />
-              <item name="page-user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="sanpham" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="simso" type="462c0819:PsiDirectoryNode" />
-              <item name="sub" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
               <item name="timkiem" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -350,17 +252,17 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\static\js" />
+      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\static" />
+      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\sanpham\templates" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\DACN_SS\DACN_SS\PythonWeb\quantri\views" />
       <recent name="F:\DACN_SS\DACN_SS\PythonWeb\sanpham\templates\quanly\page" />
       <recent name="F:\DACN_SS\DACN_SS\PythonWeb\sanpham\templates\quanly\page\mang" />
       <recent name="F:\DACN_SS\DACN_SS\PythonWeb\quantri\froms" />
       <recent name="F:\DACN_SS\DACN_SS\PythonWeb\quantri" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\static\js" />
-      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\static" />
-      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\sanpham\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -451,12 +353,13 @@
       <workItem from="1592897888853" duration="3239000" />
       <workItem from="1592920996888" duration="2053000" />
       <workItem from="1593079615988" duration="886000" />
-      <workItem from="1593248915024" duration="20039000" />
+      <workItem from="1593248915024" duration="20184000" />
+      <workItem from="1593328597296" duration="8914000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189747000" />
+    <option name="totallyTimeSpent" value="198806000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -471,7 +374,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23903178" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24281392" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -525,20 +428,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/inc/menu-pc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="27" column="75" selection-start-line="27" selection-start-column="75" selection-end-line="27" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sanpham/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -662,13 +551,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/page/loaisim/them.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="73" column="10" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/timkiem/timkiem_indexes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -686,13 +568,6 @@
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/home/script.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-457">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -730,20 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/ketqua.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="86" selection-start-line="86" selection-end-line="86" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sanpham/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -767,20 +628,6 @@
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/page/mang/them.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/page/mang/sua.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -811,16 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quantri/views/mang.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="65" column="82" selection-start-line="65" selection-start-column="78" selection-end-line="65" selection-end-column="82" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/category/sim-nam-sinh.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
@@ -842,25 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/showtimkiem.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/home/timkiem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/sub/kiem.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5391" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phongthuy/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -871,36 +689,121 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/sub/kiem.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/phongthuy/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
+        <state>
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/home/timkiem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/page/loaisim/them.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="44" column="10" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/page/mang/them.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="74" column="22" lean-forward="true" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/page/mang/sua.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/inc/topbar.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/ketqua-timkiem.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="45" column="26" lean-forward="true" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+        <state relative-caret-position="102">
+          <caret line="45" column="26" lean-forward="true" selection-start-line="42" selection-start-column="12" selection-end-line="45" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/ketqua.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="136" column="17" selection-start-line="136" selection-start-column="17" selection-end-line="136" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/timkiem-nangcao.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quantri/views/mang.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="42" column="75" selection-start-line="42" selection-start-column="65" selection-end-line="42" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/timkiem/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="39" lean-forward="true" selection-start-line="38" selection-start-column="25" selection-end-line="39" />
+        <state relative-caret-position="-497">
+          <caret line="38" column="47" lean-forward="true" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/timkiem-nangcao.html">
+    <entry file="file://$PROJECT_DIR$/static/home/script.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        <state relative-caret-position="132">
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/showtimkiem.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="39" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-mang.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="21" column="119" selection-start-line="21" selection-start-column="119" selection-end-line="21" selection-end-column="119" />
+          <folding>
+            <element signature="n#for#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="87" column="77" selection-start-line="87" selection-start-column="77" selection-end-line="87" selection-end-column="77" />
         </state>
       </provider>
     </entry>

@@ -46,7 +46,7 @@
 		        {% else %}
             {% for sim in sp %}
                 <tr>
-                    <td class="hide480"><span class="sott">1</span>
+                    <td class="hide480"><span class="sott">{{ forloop.counter }}</span>
                     </td>
                     <td><span class="simso"><a href="{% url 'sanpham:sanpham' sim.slug %}"><span>{{ sim.SoSim }}</span>
                         </a>
