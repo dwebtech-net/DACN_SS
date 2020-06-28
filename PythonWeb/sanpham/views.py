@@ -4,6 +4,7 @@ from .models import SanPham, SimTheoLoai, SimNamSinh, NhaMang, SimTheoGia
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from hoadon.models import HoaDon
 from itertools import chain
+from django.db.models import Q
 
 # Create your views here.
 def index(request):
@@ -36,9 +37,10 @@ def index(request):
 def sanpham(request, slug):
     # Lấy dữ liệu từ database
     sanpham = SanPham.objects.get(slug=slug, DaBan=False)
-    # sim1 = SanPham.objects.filter(Mang=sanpham.Mang).order_by('luotxem')[:1]
-    # sim2 = SanPham.objects.filter(NamSinh=sanpham.NamSinh).order_by('luotxem')[:1]
-    # result_list = sorted(chain(page_list, article_list, post_list),key=lambda instance: instance.date_created)
+    sim1 = SanPham.objects.filter(Mang=sanpham.Mang).exclude(id=sanpham.id).order_by('-luotxem')[0:5]
+    sim2 = SanPham.objects.filter(NamSinh=sanpham.NamSinh).exclude(id=sanpham.id).exclude(id__in=[i.id for i in sim1]).order_by('-luotxem')[0:5]
+    sim3 = SanPham.objects.filter(LoaiGia=sanpham.LoaiGia).exclude(id=sanpham.id).exclude(id__in=[i.id for i in sim1]).exclude(id__in=[i.id for i in sim2]).order_by('-luotxem')[0:5]
+    result_list = sorted(chain(sim1, sim2, sim3), key=lambda instance: instance.luotxem, reverse=True)[0:5]
    
     sanpham.luotxem += 1
     sanpham.save()
@@ -51,7 +53,7 @@ def sanpham(request, slug):
 
     Data = {'sanpham': sanpham,
             "hd": hd,
-            "sim": sim,
+            "sim": result_list,
             "stl": stl,
             "stg": stg,
             "sns": sns,

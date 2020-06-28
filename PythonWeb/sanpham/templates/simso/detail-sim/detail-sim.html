@@ -71,26 +71,27 @@
             </div>
         </div>
         <br>
-{% for a in sim %}
-    {{ a }}
-    {% endfor %}
-
-{#        {% with sanpham|similar_objects as goi %}#}
-{#            {% if goi %}#}
-{#                <h2>Other users also liked:</h2>#}
-{#                <ul>#}
-{#                r#}
-{#                {% for a in goi %}#}
-{#                    <li><a href="">{{ a }}</a></li>#}
-{#                {% endfor %}#}
-{#                </ul>#}
-{#            {% endif %}#}
-{#        {% endwith %}#}
-
-
-
-
-
+        <div class="container-home">
+            <div class="photo-grid clearfix">
+                <div style=" background: #fff; padding: 5px; ">
+                    <h1>Sim gợi ý</h1>
+                </div>
+                <ul class="clearfix sim-moi">
+                    {% for sanpham in sim %}
+                        <li id="sim-moi" style="display: block;">
+                            <div style=" padding: 2px; ">
+                                <a href="{% url 'sanpham:sanpham' sanpham.slug %}">
+                                    <div class="simcard">
+                                        <div class="nha-mang-{{ sanpham.Mang| lower }} spritestlvn"></div>
+                                        <div class="so-sim-home">{{ sanpham.SoSim }}</div>{{ sanpham.Gia|intcomma }}₫ </div>
+                                </a>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
         <div align="center"><strong>&lt;&lt; <a href="javascript:history.back(-1)">Về trang trước</a> </strong></div>
 
         <script>
