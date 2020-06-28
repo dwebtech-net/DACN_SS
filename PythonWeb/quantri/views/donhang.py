@@ -20,44 +20,46 @@ def Quyen404(request):
 @login_required
 def UpdateDonHang(request, id):
     obj = get_object_or_404(HoaDon, id=id)
+    hoadon = HoaDon.objects.get(id=id)
     form = DonHangForm(request.POST or None, instance=obj)
 
     if form.is_valid():
         obj = form.save(commit=False)
         obj.save()
         messages.success(request, "Cập nhật thông tin sim thành công")
-        context = {'form': form}
-        return render(request, 'quanly/page/them-san-pham.html', context)
-
+        context = {'form': form,
+                   'hoadon':hoadon,}
+        return render(request, 'quanly/page/don-hang.html', context)
     else:
         context = {'form': form,
+                   'hoadon': hoadon,
                    'error': 'Có gì đó sai sai'}
-        return render(request, 'quanly/page/them-san-pham.html', context)
+        return render(request, 'quanly/page/don-hang.html', context)
 
-class DanhSachSanPham(ListView):
-    model = SanPham
+class DanhSachDonHang(ListView):
+    model = HoaDon
     paginate_by = 20  # if pagination is desired
-    template_name = 'quanly/page/danh-sach-san-pham.html'
-    queryset = SanPham.objects.filter(DaBan=False)
-    context_object_name = 'sanpham'
+    template_name = 'quanly/page/danh-sach-don-hang.html'
+    queryset = HoaDon.objects.filter(GiaoHang=False)
+    context_object_name = 'donhang'
     extra_context = {
-        'title': 'Danh sách sim',
-        'item' : 'Danh sách sim'
+        'title': 'Danh sách đơn hàng',
+        'item' : 'Danh sách đơn hàng'
     }
     def get_context_data(self, **kwargs):
         data = super().get_context_data(**kwargs)
-        data['sp_daban'] = SanPham.objects.filter(DaBan=True)
+        data['dagiao'] = HoaDon.objects.filter(GiaoHang=True)
         return data
 
-class XoaSanPham(SuccessMessageMixin,DeleteView):
+class XoaDonHang(SuccessMessageMixin,DeleteView):
     template_name = 'quanly/page/xoa-post.html'
     success_message = "Xoá thành công!"
     success_url = reverse_lazy('quantri:Danh-sach-san-pham')
     extra_context = {
-        'title': 'Xoá sim',
-        'item': 'Xoá sim'
+        'title': 'Xoá đơn hàng',
+        'item': 'Xoá đơn hàng'
     }
 
     def get_object(self):
         id_ = self.kwargs.get("id")
-        return get_object_or_404(SanPham, id=id_)
+        return get_object_or_404(HoaDon, id=id_)
