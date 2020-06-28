@@ -45,10 +45,24 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="side-menu-inbox.html" class="side-menu">
+                        <a class="side-menu">
                             <div class="side-menu__icon"> <i data-feather="inbox"></i> </div>
-                            <div class="side-menu__title"> Inbox </div>
+                            <div class="side-menu__title"> Cấu hình <i data-feather="chevron-down" class="side-menu__sub-icon"></i></div>
                         </a>
+                        <ul class="">
+                            <li>
+                                <a href="{%  url 'quantri:cau-hinh-trang' %}" class="side-menu">
+                                    <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                    <div class="side-menu__title"> Cấu hình trang </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{%  url 'quantri:cau-hinh-seo' %}" class="side-menu">
+                                    <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                    <div class="side-menu__title"> Cấu hình SEO </div>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         <a href="side-menu-file-manager.html" class="side-menu">

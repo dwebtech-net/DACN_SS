@@ -3,6 +3,7 @@ from quantri.views.loaisim import *
 from quantri.views.main import *
 from quantri.views.mang import *
 from quantri.views.sanpham import *
+from quantri.views.cauhinh import *
 
 app_name = 'quantri'
 urlpatterns = [
@@ -21,4 +22,8 @@ urlpatterns = [
     # loai sim
     path('loai/them/',ThemLoaiSim.as_view(),name='Them-loai'),
     path('loai/them/<id>',Sualoaisim,name='Sua-loai'),
+
+    #cau hinh
+    path('cau-hinh/cau-hinh-trang/',SuaCauHinhTrang,name='cau-hinh-trang'),
+    path('cau-hinh/cau-hinh-seo/',SuaCauHinhSEO,name='cau-hinh-seo'),
 ]

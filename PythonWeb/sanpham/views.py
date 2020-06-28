@@ -3,6 +3,7 @@ from django.shortcuts import render
 from .models import SanPham, SimTheoLoai, SimNamSinh, NhaMang, SimTheoGia
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from hoadon.models import HoaDon
+from itertools import chain
 
 # Create your views here.
 def index(request):
@@ -35,7 +36,10 @@ def index(request):
 def sanpham(request, slug):
     # Lấy dữ liệu từ database
     sanpham = SanPham.objects.get(slug=slug, DaBan=False)
-    sim = SanPham.objects.all()
+    # sim1 = SanPham.objects.filter(Mang=sanpham.Mang).order_by('luotxem')[:1]
+    # sim2 = SanPham.objects.filter(NamSinh=sanpham.NamSinh).order_by('luotxem')[:1]
+    # result_list = sorted(chain(page_list, article_list, post_list),key=lambda instance: instance.date_created)
+   
     sanpham.luotxem += 1
     sanpham.save()
 
