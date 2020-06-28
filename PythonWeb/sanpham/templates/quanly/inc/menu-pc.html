@@ -71,10 +71,24 @@
                         </a>
                     </li>
                     <li>
-                        <a href="side-menu-point-of-sale.html" class="side-menu">
+                        <a class="side-menu">
                             <div class="side-menu__icon"> <i data-feather="credit-card"></i> </div>
-                            <div class="side-menu__title"> Point of Sale </div>
+                            <div class="side-menu__title"> Tin tức <i data-feather="chevron-down" class="side-menu__sub-icon"></i></div>
                         </a>
+                        <ul class="">
+                            <li>
+                                <a href="{% url 'quantri:danh-sach-loai-tin-tuc' %}" class="side-menu">
+                                    <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                    <div class="side-menu__title"> Danh sách loại tin tức </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'quantri:danh-sach-tin-tuc' %}" class="side-menu">
+                                    <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                    <div class="side-menu__title"> Danh sách tin tức </div>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         <a href="side-menu-chat.html" class="side-menu">
