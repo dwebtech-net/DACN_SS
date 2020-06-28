@@ -51,7 +51,7 @@ def sanpham(request, slug):
 
     Data = {'sanpham': sanpham,
             "hd": hd,
-            "sim": sim,
+            # "sim": sim,
             "stl": stl,
             "stg": stg,
             "sns": sns,
