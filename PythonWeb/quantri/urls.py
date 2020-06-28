@@ -1,4 +1,5 @@
 from django.urls import path, re_path
+from quantri.views.donhang import *
 from quantri.views.loaisim import *
 from quantri.views.main import *
 from quantri.views.mang import *
@@ -36,4 +37,9 @@ urlpatterns = [
     path('tin-tuc/danh-sach-tin-tuc/',DanhSachTinTuc.as_view(),name='danh-sach-tin-tuc'),
     path('tin-tuc/danh-sach-tin-tuc/them-moi/',ThemTinTuc.as_view(),name='them-tin-tuc'),
     path('tin-tuc/danh-sach-tin-tuc/sua/<id>',SuaTinTuc,name='sua-tin-tuc'),
+    
+    #don hang
+    path('donhang',DanhSachDonHang.as_view(),name='danh-sach-don-hang'),
+    path('donhang/<id>',UpdateDonHang,name='cap-nhat-don-hang'),
+    path('donhang/<id>',XoaDonHang.as_view(),name='cap-nhat-don-hang'),
 ]

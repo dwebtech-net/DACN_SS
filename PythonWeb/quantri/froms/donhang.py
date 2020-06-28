@@ -20,6 +20,7 @@ class DonHangForm(forms.ModelForm):
                 'placeholder': 'Địa chỉ',
                 'required': False
             }),
+
             'SDT': forms.NumberInput(attrs={
                 'class': 'input w-full border mt-2',
                 'placeholder': 'Nhập số điện thoại',
