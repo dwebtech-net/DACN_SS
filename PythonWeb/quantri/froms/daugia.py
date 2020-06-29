@@ -1,6 +1,5 @@
 from gettext import gettext
 from django import forms
-from django.forms import DateTimeField
 
 from DauGia.models import DauGia
 from sanpham.models import SanPham, SIM_CHOICES
@@ -13,7 +12,6 @@ class ThemDauGiaForm(forms.ModelForm):
         exclude = ['DuongDan','GiaHienTai','NguoiDauGiaHienTai']
         # labels = {
         # }
-        # NgayHetHan = DateTimeField(input_formats=["%Y-%m-%d %H:%M:%S"])
         widgets = {
             'luotxem': forms.NumberInput(attrs={
                 'class': 'input w-full border mt-2',
@@ -48,9 +46,8 @@ class ThemDauGiaForm(forms.ModelForm):
             #     'required': False
             # }),
             'NgayHetHan': forms.DateTimeInput(attrs={
-                'class': 'input w-56 border block mx-auto',
+                'class': 'datepicker input w-56 border block mx-auto',
                 'required': False,
                 'data-timepicker': 'true',
-                'type': 'datetime-local'
             }),
         }
