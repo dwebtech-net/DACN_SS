@@ -302,7 +302,7 @@ class nguhanh(models.Model):
         verbose_name_plural = 'Ngũ hành'
 
 class namsinh(models.Model):
-    namsinh = models.CharField(max_length=4, verbose_name='Năm sinh',unique=True)
+    namsinh = models.CharField( max_length=5,verbose_name='Năm sinh',unique=True)
     nguhanh_ns = models.ForeignKey(nguhanh,null=False,on_delete=models.CASCADE,verbose_name='Thuộc mệnh')
  
     def __str__(self):

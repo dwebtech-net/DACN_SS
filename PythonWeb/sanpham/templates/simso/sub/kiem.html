@@ -328,14 +328,14 @@
 {#								<li><strong>Năm Can Chi</strong>: Ất Mão</li>#}
                                <li><strong>Mệnh cung sinh</strong>: <b style="color: blue">{% for s in data_ns %} {% if s.namsinh == nam %} {{ s.nguhanh_ns.tuongsinh }} {% endif %} {% endfor %}</b></li>
 								<li><strong>Mệnh cung khắc</strong>: <b style="color: red">{% for s in data_ns %} {% if s.namsinh == nam %} {{ s.nguhanh_ns.tuongkhac }} {% endif %} {% endfor %}</b></li>
-								<li><strong>Con Giáp</strong>: Đắc Đạo Chi Thố - Thỏ đắc đạo</li>
+								<li><strong>Tâm pháp</strong>: Thành Tâm Đắc Đạo</li>
                            </ul>
                         </div>
                      </div>
 Kết quả:
  </br>
 - Quý khách mệnh "<b style="color: red">{% for s in data_ns %}
-    {% if s.namsinh == nam %}
+    {% if s.namsinh == request.GET.namsinh %}
         {{ s.nguhanh_ns }}
     {% endif %} {% endfor %}</b>" sinh  " <b style="color: blue">{% for s in data_ns %} {% if s.namsinh == nam %} {{ s.nguhanh_ns.tuongsinh }} {% endif %} {% endfor %}</b>" và mang vận "Khắc - {% for s in data_ns %} {% if s.namsinh == nam %}{{ s.nguhanh_ns.tuongkhac }}{% endif %} {% endfor %}", quý khách nên sử dụng các số điện thoại mệnh "<b style="color: #13c700">{% for s in data_ns %} {% if s.namsinh == nam %}{{ s.nguhanh_ns.tuongsinh }}{% endif %} {% endfor %}</b> " và mang "Cân bằng" vận!
 <br>
