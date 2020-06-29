@@ -16,7 +16,7 @@ def Quyen404(request):
     return render(request, 'quanly/page/404-user.html', data)
 
 
-class ThemSanPham(SuccessMessageMixin,CreateView):
+class Themdaugia(SuccessMessageMixin,CreateView):
     model = SanPham
     form_class = ThemSanPhamForm
     template_name = 'quanly/page/them-san-pham.html'
@@ -56,7 +56,7 @@ def SuaSanPham(request, id):
 
 class DanhSachSanPham(ListView):
     model = SanPham
-    paginate_by = 200  # if pagination is desired
+    # paginate_by = 20  # if pagination is desired
     template_name = 'quanly/page/danh-sach-san-pham.html'
     queryset = SanPham.objects.filter(DaBan=False)
     context_object_name = 'sanpham'

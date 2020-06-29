@@ -24,46 +24,46 @@
         <!-- Tat ca  -->
         <div class="tab-content">
             <div class="tab-content__pane active" id="all">
-                        <div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
-                                <table class="table table-report -mt-2">
+                       <div class="intro-y datatable-wrapper box p-5 mt-5">
+                           <table class="table table-report table-report--bordered display datatable w-full">
                                     <thead>
                                         <tr>
-                                            <th class="whitespace-no-wrap">Số sim</th>
-                                            <th class="whitespace-no-wrap">Giá</th>
-                                            <th class="whitespace-no-wrap">Nhà mạng</th>
-                                            <th class="text-center whitespace-no-wrap">Lượt xem</th>
-                                            <th class="text-center whitespace-no-wrap">Tác vụ</th>
+                                            <th class="border-b-2 whitespace-no-wrap">Số sim</th>
+                                            <th class="border-b-2 text-center whitespace-no-wrap">Giá</th>
+                                            <th class="border-b-2 text-center whitespace-no-wrap">Nhà mạng</th>
+                                            <th class="border-b-2 text-center whitespace-no-wrap">Lượt xem</th>
+                                            <th class="border-b-2 text-center whitespace-no-wrap">Tác vụ</th>
                                         </tr>
                                     </thead>
-                                    {%  for d in sanpham %}
                                     <tbody>
-                                        <tr class="intro-x">
+                                    {%  for d in sanpham %}
+                                        <tr class="border-b">
                                             <td>
                                                 <a href="{% url 'sanpham:sanpham' d.slug %}"target="_blank" class="font-medium whitespace-no-wrap">{{ d.SoSim }}</a>
                                                 <div class="text-gray-600 text-xs whitespace-no-wrap"> Ngày nhập {{ d.NgayNhap|date:'d/m/yy' }}</div>
                                             </td>
-                                            <td class="w-40">
+                                            <td class="text-center border-b">
                                                 <p>{{ d.Gia|intcomma }} vnđ</p>
                                             </td>
-                                            <td class="w-40">
+                                            <td class="text-center border-b">
                                                  <div class="flex items-center justify-center text-theme-9">
                                                      <div class="nha-mang-{{ d.Mang|slugify }} spritestlvn"></div>
                                                  </div>
                                             </td>
-                                            <td class="w-40">
+                                            <td class="text-center border-b">
                                                  <div class="flex items-center justify-center text-theme-9">
                                                      <i data-feather="eye" class="w-4 h-4 mr-2"></i>{{ d.luotxem }} </div>
                                             </td>
                                             <td class="table-report__action w-56">
                                                 <div class="flex justify-center items-center">
                                                     <a class="flex items-center mr-3" href="{% url 'quantri:Sua-san-pham' d.id %}" target="_blank"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Sửa </a>
-                                                    <a class="flex items-center text-theme-6" href="/" target="_blank"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Xoá </a>
+                                                    <a class="flex items-center text-theme-6" href="{% url 'quantri:xoa-san-pham' d.id %}" target="_blank"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Xoá </a>
                                                 </div>
                                             </td>
                                         </tr>
-
+                                        {% endfor %}
                                     </tbody>
-                                    {% endfor %}
+
                                 </table>
                             </div>
             </div>
