@@ -50,4 +50,9 @@ class ThemDauGiaForm(forms.ModelForm):
                 'required': False,
                 'data-timepicker': 'true',
             }),
+            'DaDauGia': forms.CheckboxInput(attrs={
+                'class': 'input input--switch border',
+                'required': False
+            }),
         }
+    

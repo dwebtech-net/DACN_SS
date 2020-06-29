@@ -157,7 +157,7 @@ def checkcode(request):
             user.is_active = True
             user.save()
             login(request, user)
-            return redirect('sanpham:simso')
+            return redirect('sanpham:home')
         else:
             error = "Mã xác thực không đúng!!!"
     return render(request, 'simso/page-user/confirm.html', Data)
@@ -188,7 +188,7 @@ def activate(request, uidb64, token):
         user.is_active = True
         user.save()
         login(request, user)
-        return redirect('sanpham:simso')
+        return redirect('sanpham:home')
     else:
         return render(request, 'simso/page-user/error.html', Data)
 

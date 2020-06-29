@@ -23,12 +23,14 @@ class Themdaugia(SuccessMessageMixin,CreateView):
     form_class = ThemDauGiaForm
     template_name = 'quanly/page/daugia/them-dau-gia.html'
     success_url = reverse_lazy('quantri:danh-sach-dau-gia')
-    success_message = "Thêm dau gia thành công!"
+    success_message = "Thêm đấu giá thành công!"
     context_object_name = 'daugia'
     extra_context = {
         'class_tp': 'active',
-        'item': 'Thêm dau gia mới'
+        'title': 'Thêm đấu giá mới',
+        'item': 'Thêm đấu giá mới'
     }
+    
 # Kiem tra quyen truy cap - duc
     @method_decorator(login_required(login_url=reverse_lazy('user:dangnhap')))
     def dispatch(self, request, *args, **kwargs):
@@ -52,41 +54,45 @@ def Suadaugia(request, id):
     if form.is_valid():
         daugia = form.save(commit=False)
         daugia.save()
-        messages.success(request, "Cập nhật thông tin sim thành công")
+        messages.success(request, "Cập nhật thông tin đấu giá thành công")
         context = {'form': form,
-                   'daugia':daugia,}
+                   'daugia':daugia,
+                   'title': 'Thêm đấu giá mới',
+                    'item': 'Thêm đấu giá mới'}
         return render(request, 'quanly/page/daugia/them-dau-gia.html', context)
 
     else:
         context = {'form': form,
                    'daugia':daugia,
-                   'error': 'Có gì đó sai sai'}
+                   'error': 'Có gì đó sai sai',
+                   'title': 'Thêm đấu giá mới',
+                    'item': 'Thêm đấu giá mới'}
         return render(request, 'quanly/page/daugia/them-dau-gia.html', context)
 
 class DanhSachDauGia(ListView):
-    model = SanPham
+    model = DauGia
     # paginate_by = 20  # if pagination is desired
-    template_name = 'quanly/page/danh-sach-san-pham.html'
-    queryset = SanPham.objects.filter(DaBan=False)
-    context_object_name = 'sanpham'
+    template_name = 'quanly/page/daugia/danh-sach-dau-gia.html'
+    queryset = DauGia.objects.filter(DaDauGia=False)
+    context_object_name = 'daugia'
     extra_context = {
-        'title': 'Danh sách sim',
-        'item' : 'Danh sách sim'
+        'title': 'Danh sách sim đấu giá',
+        'item' : 'Danh sách sim đấu giá'
     }
     def get_context_data(self, **kwargs):
         data = super().get_context_data(**kwargs)
-        data['sp_daban'] = SanPham.objects.filter(DaBan=True)
+        data['sp_dadaugia'] = DauGia.objects.filter(DaDauGia=True)
         return data
 
 class Xoadaugia(SuccessMessageMixin,DeleteView):
     template_name = 'quanly/page/xoa-post.html'
     success_message = "Xoá thành công!"
-    success_url = reverse_lazy('quantri:Danh-sach-san-pham')
+    success_url = reverse_lazy('quantri:danh-sach-dau-gia')
     extra_context = {
-        'title': 'Xoá sim',
-        'item': 'Xoá sim'
+        'title': 'Xoá đấu giá',
+        'item': 'Xoá đấu giá'
     }
 
     def get_object(self):
         id_ = self.kwargs.get("id")
-        return get_object_or_404(SanPham, id=id_)
+        return get_object_or_404(DauGia, id=id_)
