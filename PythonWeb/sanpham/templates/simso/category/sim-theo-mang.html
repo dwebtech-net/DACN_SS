@@ -67,31 +67,47 @@
             </tbody>
         </table>
 
-        <div class="pagination" style="list-style-type:none;" align="center">
+        <ul class="pagination" style="list-style: none;">
+
             {% if sanpham.has_previous %}
-                <a class="pagination-action" href="?page=1">&laquo;</a>
-                <a class="pagination-action" href="?page={{ sanpham.previous_page_number }}">&lsaquo;</a>
+                <li><a class="pagination-action" href="?page={{ sanpham.previous_page_number }}"><i class="fa fa-chevron-left" aria-hidden="true"></i></a></li>
+            {% else %}
+                <li class="pagination-action disabled"><span><i class="fa fa-chevron-left" aria-hidden="true"></i></span></li>
             {% endif %}
+            
+            {% if sanpham.number|add:'-4' > 1 %}
+                <li><a class="pagination-number" href="?page={{ sanpham.number|add:'-5' }}">&hellip;</a></li>
+            {% endif %}
+            
             {% for i in sanpham.paginator.page_range %}
                 {% if sanpham.number == i %}
-                    <span class="pagination-number pagination-current">{{ i }} <span class="sr-only">(current)</span></span>
-                {% else %}
-                    <a class="pagination-number" href="?page={{ i }}">{{ i }}</a>
+                    <li class="pagination-number pagination-current active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                {% elif i > sanpham.number|add:'-5' and i < sanpham.number|add:'5' %}
+                    <li><a class="pagination-number" href="?page={{ i }}">{{ i }}</a></li>
                 {% endif %}
             {% endfor %}
-            {% if sanpham.has_next %}
-                 <a class="pagination-action" href="?page={{ sanpham.next_page_number }}">&rsaquo;</a>
-                 <a class="pagination-action" href="?page={{ sanpham.paginator.num_pages }}">&raquo;</a>
+            
+            {% if sanpham.paginator.num_pages > sanpham.number|add:'4' %}
+                <li><a class="pagination-number" href="?page={{ sanpham.number|add:'5' }}">&hellip;</a></li>
             {% endif %}
-        </div>
+            
+            {% if sanpham.has_next %}
+                <li><a class="pagination-action" href="?page={{ sanpham.next_page_number }}"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+            {% else %}
+                <li class="pagination-action disabled"><span><i class="fa fa-chevron-right" aria-hidden="true"></i></span></li>
+            {% endif %}
+            
+        </ul>
     </article>
 <style>
         .pagination {
-            text-align: center;
             margin-top: 1em;
         }
 
         .pagination-number {
+            display: block;
+            float: left;
+            margin: 0 0.1em;
             padding: 0.5em 0.8em;
             border-radius: 2px;
             color: #fff;
@@ -99,6 +115,7 @@
         }
 
         .pagination-number:hover, .pagination-current {
+            text-decoration: none;
             background-color: #0080DA;
             border: solid 0.5px;
             padding: 0.5em 0.8em;
@@ -106,8 +123,9 @@
         }
 
         .pagination-action {
+            float: left;
             margin: 0 0.1em;
-            display: inline-block;
+            display: block;
             padding: 0.5em 0.5em;
             color: #0080DA;
             font-size: 1.3em;
