@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ca1d334-84fd-4cd7-831a-18506e67a625" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sanpham/templates/quanly/page/daugia/them-dau-gia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DauGia/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/DauGia/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DauGia/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DauGia/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/sitetree/templates/sitetree/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/sitetree/templates/sitetree/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/sitetree/templates/sitetree/tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/sitetree/templates/sitetree/tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quantri/froms/daugia.py" beforeDir="false" afterPath="$PROJECT_DIR$/quantri/froms/daugia.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quantri/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/quantri/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quantri/views/daugia.py" beforeDir="false" afterPath="$PROJECT_DIR$/quantri/views/daugia.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/page-daugia/detail-daugia.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/page-daugia/detail-daugia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/page-user/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/page-user/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/home/css-main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/home/css-main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/templates/quanly/inc/menu-mobile.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/quanly/inc/menu-mobile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/templates/quanly/inc/topbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/quanly/inc/topbar.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,61 +29,7 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6403941">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/page/daugia/them-dau-gia.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="226">
-                  <caret line="28" column="67" lean-forward="true" selection-start-line="28" selection-start-column="67" selection-end-line="28" selection-end-column="67" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/quantri/froms/daugia.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="414">
-                  <caret line="54" column="14" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
-                  <folding>
-                    <element signature="e#0#27#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/DauGia/models.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="134">
-                  <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-                  <folding>
-                    <element signature="e#0#28#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/quantri/views/daugia.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="629">
-                  <caret line="60" column="32" lean-forward="true" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
-                  <folding>
-                    <element signature="e#0#35#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -137,8 +70,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sanpham/templates/quanly/page/loaisim/sua.html" />
-        <option value="$PROJECT_DIR$/timkiem/urls.py" />
         <option value="$PROJECT_DIR$/sanpham/templates/quanly/base.html" />
         <option value="$PROJECT_DIR$/static/home/timkiem.js" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/category/sim-nam-sinh.html" />
@@ -188,6 +119,8 @@
         <option value="$PROJECT_DIR$/sanpham/templates/quanly/page/daugia/them-dau-gia.html" />
         <option value="$PROJECT_DIR$/DauGia/models.py" />
         <option value="$PROJECT_DIR$/quantri/froms/daugia.py" />
+        <option value="$PROJECT_DIR$/sanpham/templates/quanly/inc/menu-mobile.html" />
+        <option value="$PROJECT_DIR$/sanpham/templates/quanly/inc/topbar.html" />
       </list>
     </option>
   </component>
@@ -213,70 +146,11 @@
             <path>
               <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="DauGia" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="sanpham" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (env) &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (env) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="b5f07198:RTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (env) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="b5f07198:RTreeStructureProvider$1" />
-              <item name="sitetree" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (env) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="env" type="b5f07198:RTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (env) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="env" type="b5f07198:RTreeStructureProvider$1" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (env) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="env" type="b5f07198:RTreeStructureProvider$1" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (env) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="env" type="b5f07198:RTreeStructureProvider$1" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="sitetree" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -406,12 +280,12 @@
       <workItem from="1593248915024" duration="20184000" />
       <workItem from="1593328597296" duration="18981000" />
       <workItem from="1593415418692" duration="7971000" />
-      <workItem from="1593423937481" duration="14838000" />
+      <workItem from="1593423937481" duration="16766000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="231682000" />
+    <option name="totallyTimeSpent" value="233610000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -423,15 +297,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.14372164" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.35627836" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.049099836" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.049099836" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -480,30 +353,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/main.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/page/loaisim/them.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/page/mang/them.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" column="14" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/page/tintuc/danh-muc-tin-tuc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="36" column="82" lean-forward="true" selection-start-line="36" selection-start-column="82" selection-end-line="36" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quantri/views/tintuc.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1938">
@@ -775,16 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quantri/views/daugia.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="60" column="32" lean-forward="true" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DauGia/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -814,20 +653,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DauGia/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PythonWeb/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
           <caret line="162" column="44" lean-forward="true" selection-start-line="162" selection-start-column="44" selection-end-line="162" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quantri/froms/daugia.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="54" column="14" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -838,13 +677,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quantri/froms/daugia.py">
+    <entry file="file://$PROJECT_DIR$/DauGia/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="54" column="14" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
+        <state relative-caret-position="134">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quantri/views/daugia.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="60" column="32" lean-forward="true" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templatetags/category.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/inc/menu-mobile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/inc/topbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="61" column="74" lean-forward="true" selection-start-line="61" selection-start-column="74" selection-end-line="61" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/inc/menu-pc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="74" column="86" selection-start-line="74" selection-start-column="75" selection-end-line="74" selection-end-column="86" />
         </state>
       </provider>
     </entry>
