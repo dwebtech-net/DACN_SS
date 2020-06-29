@@ -73,7 +73,7 @@ def Sualoaisim(request, id):
 class Xoaloaisim(SuccessMessageMixin, DeleteView):
     template_name = 'quanly/page/xoa-post.html'
     success_message = "Xoá thành công phòng!"
-    success_url = reverse_lazy('phong:Danh-sach-phong')
+    success_url = reverse_lazy('quantri:Them-loai')
     extra_context = {
         'title': 'Xoá sim',
         'item': 'Xoá sim'
@@ -82,11 +82,5 @@ class Xoaloaisim(SuccessMessageMixin, DeleteView):
         id_ = self.kwargs.get("id")
         return get_object_or_404(SimTheoLoai, id=id_)
 
-    def post(self, request, *args, **kwargs):
-        form = ThemLoaiSimForm(request.POST)
-        if form.is_valid():
-            new_data = form.save()
-            return JsonResponse({'loaisim':model_to_dict(new_data)},status=200)
-        else:
-            return redirect('quantri:Them-loaisim')
+
 

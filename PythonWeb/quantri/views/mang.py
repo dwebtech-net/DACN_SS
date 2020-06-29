@@ -74,10 +74,10 @@ def Suamang(request, id):
 class XoaMang(SuccessMessageMixin, DeleteView):
     template_name = 'quanly/page/xoa-post.html'
     success_message = "Xoá thành công phòng!"
-    success_url = reverse_lazy('phong:Danh-sach-phong')
+    success_url = reverse_lazy('quantri:Them-mang')
     extra_context = {
-        'title': 'Xoá phòng',
-        'item': 'Xoá phòng'
+        'title': 'Xoá nhà mạng',
+        'item': 'Xoá nhà mạng'
     }
 
     def get_object(self):

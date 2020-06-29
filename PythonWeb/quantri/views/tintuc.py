@@ -72,7 +72,7 @@ class ThemTinTuc(SuccessMessageMixin,CreateView):
         'title': 'Thêm tin tức mới',
         'item': 'Thêm tin tức mới'
     }
-# Kiem tra quyen truy cap - Bao nhi
+# Kiem tra quyen truy cap - duc
     @method_decorator(login_required(login_url=reverse_lazy('user:dangnhap')))
     def dispatch(self, request, *args, **kwargs):
         if not self.request.user.is_authenticated:
@@ -133,10 +133,10 @@ class DanhSachLoaiTinTuc(ListView):
 class XoaDanhMucTinTuc(SuccessMessageMixin,DeleteView):
     template_name = 'quanly/page/xoa-post.html'
     success_message = "Xoá thành công!"
-    success_url = reverse_lazy('quantri:Danh-sach-san-pham')
+    success_url = reverse_lazy('quantri:danh-sach-loai-tin-tuc')
     extra_context = {
-        'title': 'Xoá sim',
-        'item': 'Xoá sim'
+        'title': 'Xoá danh mục',
+        'item': 'Xoá  danh mục'
     }
 
     def get_object(self):
@@ -146,10 +146,10 @@ class XoaDanhMucTinTuc(SuccessMessageMixin,DeleteView):
 class XoaTinTuc(SuccessMessageMixin,DeleteView):
     template_name = 'quanly/page/xoa-post.html'
     success_message = "Xoá thành công!"
-    success_url = reverse_lazy('quantri:Danh-sach-san-pham')
+    success_url = reverse_lazy('quantri:danh-sach-tin-tuc')
     extra_context = {
-        'title': 'Xoá sim',
-        'item': 'Xoá sim'
+        'title': 'Xoá tin',
+        'item': 'Xoá tin'
     }
 
     def get_object(self):

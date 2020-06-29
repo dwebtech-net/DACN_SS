@@ -54,7 +54,7 @@ class DanhSachDonHang(ListView):
 class XoaDonHang(SuccessMessageMixin,DeleteView):
     template_name = 'quanly/page/xoa-post.html'
     success_message = "Xoá thành công!"
-    success_url = reverse_lazy('quantri:Danh-sach-san-pham')
+    success_url = reverse_lazy('quantri:danh-sach-don-hang')
     extra_context = {
         'title': 'Xoá đơn hàng',
         'item': 'Xoá đơn hàng'

@@ -13,6 +13,7 @@ class DauGia(models.Model):
     GiaHienTai = models.FloatField(default=0, verbose_name='Giá hiện tại')
     NguoiDauGiaHienTai = models.ForeignKey(CustomerUser, on_delete=models.CASCADE, verbose_name='Người đấu giá hiện tại', null=True, blank= True)
     DuongDan = models.SlugField(max_length=100, null=False, default='')
+    luotxem = models.IntegerField(default='1')
     DaDauGia = models.BooleanField(default=False, verbose_name='Đã đấu giá')
 
     def __str__(self):

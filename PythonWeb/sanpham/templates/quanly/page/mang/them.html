@@ -35,7 +35,7 @@
                                             <td class="table-report__action w-56">
                                                 <div class="flex justify-center items-center">
                                                     <a class="flex items-center mr-3 edit" data-id="{{ d.id }}"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Sửa </a>
-                                                    <a class="flex items-center text-theme-6" href="/" target="_blank"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Xoá </a>
+                                                    <a class="flex items-center text-theme-6" href="{% url 'quantri:xoa-mang' d.id %}" target="_blank"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Xoá </a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -48,11 +48,14 @@
 </div>
         <!-- END: Form Layout -->
 </div>
-
+  <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous">
+     </script>
 <script>
     $(document).ready(function () {
         var csrfToken = $("input[name=csrfmiddlewaretoken]").val();
-
         $("#dang-bai").on('click','#btn_dang_bai',function() {
             var serializedData = $("#dang-bai").serialize();
             $.ajax({

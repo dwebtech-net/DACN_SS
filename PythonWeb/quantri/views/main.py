@@ -16,6 +16,7 @@ def main(request):
       sim = SanPham.objects.all()
       hoadon = HoaDon.objects.all()
       tongtien = HoaDon.objects.filter(ThanhToan=True).aggregate(Sum('TongTien'))['TongTien__sum']
+      # import pdb;pdb.set_trace()
    else:
       return redirect('sanpham:home')
 
