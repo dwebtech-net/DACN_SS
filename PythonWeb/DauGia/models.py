@@ -8,9 +8,9 @@ from PythonWeb.utils import get_unique_slug
 class DauGia(models.Model):
     Sim = models.OneToOneField(SanPham, on_delete=models.CASCADE, verbose_name='Sim đấu giá', unique=True)
     NgayHetHan = models.DateTimeField(verbose_name='Ngày hết hạn')
-    GiaMuaLuon = models.FloatField(verbose_name='Giá mua luôn')
-    GiaToiThieu = models.FloatField(default=0, verbose_name='Giá tối thiểu')
-    GiaHienTai = models.FloatField(default=0, verbose_name='Giá hiện tại')
+    GiaMuaLuon = models.IntegerField(verbose_name='Giá mua luôn')
+    GiaToiThieu = models.IntegerField(default=0, verbose_name='Giá tối thiểu')
+    GiaHienTai = models.IntegerField(default=0, verbose_name='Giá hiện tại')
     NguoiDauGiaHienTai = models.ForeignKey(CustomerUser, on_delete=models.CASCADE, verbose_name='Người đấu giá hiện tại', null=True, blank= True)
     DuongDan = models.SlugField(max_length=100, null=False, default='')
     luotxem = models.IntegerField(default='1')

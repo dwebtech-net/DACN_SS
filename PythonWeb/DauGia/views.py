@@ -1,4 +1,7 @@
+from django.http import Http404
 from django.shortcuts import render, redirect
+from django.urls import reverse
+
 from sanpham.models import SimNamSinh, SimTheoGia, SimTheoLoai, NhaMang
 from hoadon.models import HoaDon
 import operator
@@ -45,7 +48,10 @@ def chitietdaugia(request, DuongDan):
     if request.user.is_authenticated == False:
         return redirect('/user/dang-nhap/')
     # Lấy dữ liệu từ database
-    daugia = DauGia.objects.get(DuongDan=DuongDan, NgayHetHan__gte=date.today())
+    try:
+        daugia = DauGia.objects.get(DuongDan=DuongDan, NgayHetHan__gte=date.today())
+    except DauGia.DoesNotExist:
+        return redirect('DauGia:DauGia')
 
     stl = SimTheoLoai.objects.all()
     sns = SimNamSinh.objects.all()

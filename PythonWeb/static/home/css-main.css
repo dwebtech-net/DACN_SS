@@ -2527,6 +2527,6 @@ label#id_lastname {
 #image.s-vietnamobile {
     background-image: url(img/s-vnm.png);
 }
-#image.s-mobiphone {
+#image.s-mobiphone,#image.s-mobifone {
     background-image: url(img/s-mobi.png);
 }

@@ -25,7 +25,7 @@
             {% else %}
               {% if daugia.GiaMuaLuon > daugia.GiaHienTai %}
                 <label style=" width: 120px; text-align: left; ">Giá mua luôn: </label><strong><font
-                  size="3">{{ daugia.GiaMuaLuon|intcomma }}₫</font></strong><br>
+                  size="3">{{ daugia.GiaMuaLuon|intcomma}}₫</font></strong><br>
                 <form id="mualuon_form" name="mualuon_form" method="post" action="{% url 'DauGia:mualuon' daugia.DuongDan %}" class="form">
                   {% csrf_token %}
                   <input type="hidden" name="DuongDan" value="{{daugia.DuongDan}}"/>
@@ -35,12 +35,14 @@
               {% if daugia.NguoiDauGiaHienTai is None %}
                 <label style=" width: 200px; text-align: left; ">Chưa có người đấu giá</label>
               {% else %}
-                <label style=" width: 120px; text-align: left; ">Người mua hiện tại: </label><strong><font
-                  size="3">{{ daugia.NguoiDauGiaHienTai }}</font></strong><br>
-                  <label style=" width: 120px; text-align: left; ">Giá tăng tối thiểu: </label><strong><font
-                    size="3">{{ daugia.GiaToiThieu }}</font></strong><br>
-                <label style=" width: 120px; text-align: left; ">Giá hiện tại: </label><strong><font
-                  size="3">{{ daugia.GiaHienTai|intcomma }}₫</font></strong><br>
+{#                  <label style=" width: 120px; text-align: left; ">Giá mua luôn: </label><strong><font#}
+{#                  size="3">{{ daugia.GiaMuaLuon|intcomma}}₫</font></strong><br>#}
+                <label style=" width: 120px; text-align: left; ">Người mua hiện tại: </label><strong>
+                  <font size="3">{{ daugia.NguoiDauGiaHienTai }}</font></strong><br>
+                  <label style=" width: 120px; text-align: left; ">Giá tăng tối thiểu: </label><strong>
+                  <font size="3">{{ daugia.GiaToiThieu|intcomma }}</font></strong><br>
+                <label style=" width: 120px; text-align: left; ">Giá hiện tại: </label><strong>
+                  <font size="3">{{ daugia.GiaHienTai|intcomma }}₫</font></strong><br>
               {% endif %}
               <h3 style="color:red;">{{msg}}</h3>
                 {% if daugia.DaDauGia == False %}
@@ -92,6 +94,7 @@
     {
       document.getElementById("countdown").innerHTML = " Đấu giá đã kết thúc";
       document.getElementById("countdown").style.color = "red";
+      document.getElementById("daugia_form").style.display = "none";
     }
     else
     {
@@ -116,6 +119,7 @@
           clearInterval(x);
           document.getElementById("countdown").innerHTML = " Hết thời gian";
           document.getElementById("countdown").style.color = "red";
+          document.getElementById("daugia_form").style.display = "none";
         }
       }, 1000);
     }
@@ -178,7 +182,7 @@
   }
   ul
   {
-    width: 80%;
+    width: 100%;
     display: relative;
   }
   li

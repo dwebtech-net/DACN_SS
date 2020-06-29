@@ -1,4 +1,6 @@
 from django.urls import path, re_path
+
+from quantri.views.daugia import *
 from quantri.views.donhang import *
 from quantri.views.loaisim import *
 from quantri.views.main import *
@@ -8,6 +10,7 @@ from quantri.views.cauhinh import *
 from quantri.views.tintuc import *
 
 app_name = 'quantri'
+
 urlpatterns = [
     path('', main, name='main'),
     path('error', Quyen404, name='Quyen-truy-cap'),
@@ -17,7 +20,6 @@ urlpatterns = [
     path('sanpham/sua/<id>',SuaSanPham,name='Sua-san-pham'),
     path('sanpham/danh-sach',DanhSachSanPham.as_view(),name='Danh-sach-san-pham'),
     path('sanpham/xoa/<id>',XoaSanPham.as_view(),name='xoa-san-pham'),
-
 
     # nha mang
     path('mang/them/',ThemMang.as_view(),name='Them-mang'),
@@ -48,4 +50,10 @@ urlpatterns = [
     path('donhang',DanhSachDonHang.as_view(),name='danh-sach-don-hang'),
     path('donhang/<id>',UpdateDonHang,name='cap-nhat-don-hang'),
     path('donhang/xoa/<id>',XoaDonHang.as_view(),name='xoa-don-hang'),
+
+    # dau gia
+    path('daugia',DanhSachDauGia.as_view(),name='danh-sach-dau-gia'),
+    path('daugia/them/',Themdaugia.as_view(),name='them-dau-gia'),
+    path('daugia/sua/<id>',Suadaugia,name='sua-dau-gia'),
+    path('daugia/xoa/<id>',Xoadaugia.as_view(),name='xoa-dau-gia'),
 ]

@@ -1,5 +1,5 @@
 from django.db.models.aggregates import Max
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import SanPham, SimTheoLoai, SimNamSinh, NhaMang, SimTheoGia
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from hoadon.models import HoaDon
@@ -36,7 +36,11 @@ def index(request):
 
 def sanpham(request, slug):
     # Lấy dữ liệu từ database
-    sanpham = SanPham.objects.get(slug=slug, DaBan=False)
+    try:
+        sanpham = SanPham.objects.get(slug=slug, DaBan=False)
+    except SanPham.DoesNotExist:
+        return redirect('sanpham:home')
+
     sim1 = SanPham.objects.filter(Mang=sanpham.Mang).exclude(id=sanpham.id).order_by('-luotxem')[0:5]
     sim2 = SanPham.objects.filter(NamSinh=sanpham.NamSinh).exclude(id=sanpham.id).exclude(id__in=[i.id for i in sim1]).order_by('-luotxem')[0:5]
     sim3 = SanPham.objects.filter(LoaiGia=sanpham.LoaiGia).exclude(id=sanpham.id).exclude(id__in=[i.id for i in sim1]).exclude(id__in=[i.id for i in sim2]).order_by('-luotxem')[0:5]
