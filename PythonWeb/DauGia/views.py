@@ -80,48 +80,66 @@ def chitietdaugia(request, DuongDan):
     return render(request, 'simso/page-daugia/detail-daugia.html', Data)
 
 def mualuon(request, DuongDan):
+    stl = SimTheoLoai.objects.all()
+    sns = SimNamSinh.objects.all()
+    nm = NhaMang.objects.all()
+    stg = SimTheoGia.objects.all()
+    hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
+
     if request.method == 'POST':
         daugia = DauGia.objects.filter(DuongDan=request.POST.get('DuongDan'))[0]
-        daugia.GiaHienTai = daugia.GiaMuaLuon
-        daugia.NguoiDauGiaHienTai = request.user
-        daugia.DaDauGia = True
-        daugia.save()
+        if daugia.DaDauGia:
+            message = "Đã có người mua sim này"
+            Data = {
+                'daugia': daugia,
+                "hd": hd,
+                "stl": stl,
+                "sns": sns,
+                "nm": nm,
+                'msg1': message,
+            }
+            return render(request, 'simso/page-daugia/detail-daugia.html', Data)
+        else:
+            daugia.GiaHienTai = daugia.GiaMuaLuon
+            daugia.NguoiDauGiaHienTai = request.user
+            daugia.DaDauGia = True
+            daugia.save()
 
-        #Cập nhật thông tin sản phẩm
-        try:
-            sanpham = SanPham.objects.get(id=daugia.Sim.id)
-            sanpham.DaBan = True
-            sanpham.save()
-        except SanPham.DoesNotExist:
-            return redirect('DauGia:DauGia')
+            #Cập nhật thông tin sản phẩm
+            try:
+                sanpham = SanPham.objects.get(id=daugia.Sim.id)
+                sanpham.DaBan = True
+                sanpham.save()
+            except SanPham.DoesNotExist:
+                return redirect('DauGia:DauGia')
 
-        #Gửi thông tin hóa đơn cho người dùng và admin
-        user = request.user
-        mail_subject = '[Sim Đức Lộc] Thông tin đấu giá.'
-        message = render_to_string('simso/page-daugia/thongtindaugia.html', {
-            'user': user,
-            'DauGia': daugia,
-        })
-        to_email = user.email
-        email = EmailMessage(
-            mail_subject, message, to=[to_email]
-        )
-        email.content_subtype = 'html'
-        email.mixed_subtype = 'related'
-        email.send()
+            #Gửi thông tin hóa đơn cho người dùng và admin
+            user = request.user
+            mail_subject = '[Sim Đức Lộc] Thông tin đấu giá.'
+            message = render_to_string('simso/page-daugia/thongtindaugia.html', {
+                'user': user,
+                'DauGia': daugia,
+            })
+            to_email = user.email
+            email = EmailMessage(
+                mail_subject, message, to=[to_email]
+            )
+            email.content_subtype = 'html'
+            email.mixed_subtype = 'related'
+            email.send()
 
 
-        mail_subject_admin = 'Đấu giá kết thúc.'
-        message_admin = render_to_string('simso/page-daugia/thongtindaugiaadmin.html', {
-            'User': user,
-            'DauGia': daugia,
-        })
-        to_email_admins = CustomerUser.objects.get(is_superuser=True).email
-        email_admin = EmailMessage(
-            mail_subject_admin, message_admin, to=[to_email_admins]
-        )
-        email_admin.content_subtype = 'html'
-        email_admin.mixed_subtype = 'related'
-        email_admin.send()
+            mail_subject_admin = 'Đấu giá kết thúc.'
+            message_admin = render_to_string('simso/page-daugia/thongtindaugiaadmin.html', {
+                'User': user,
+                'DauGia': daugia,
+            })
+            to_email_admins = CustomerUser.objects.get(is_superuser=True).email
+            email_admin = EmailMessage(
+                mail_subject_admin, message_admin, to=[to_email_admins]
+            )
+            email_admin.content_subtype = 'html'
+            email_admin.mixed_subtype = 'related'
+            email_admin.send()
 
-        return redirect('DauGia:chitietdaugia', daugia.DuongDan)
+            return redirect('DauGia:chitietdaugia', daugia.DuongDan)

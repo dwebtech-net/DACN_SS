@@ -4,6 +4,7 @@ from django.db.models import Q
 from django.template.loader import render_to_string
 
 from sanpham.models import SimTheoGia ,NhaMang, SimTheoLoai , SimNamSinh ,SanPham
+from hoadon.models import HoaDon
 
 def timkiem_nangcao(request):
     sp = SanPham.objects.filter(DaBan=False)
@@ -68,6 +69,11 @@ def timkiem_nangcao(request):
     # return render(request, 'includes/timkiem/ketqua-timkiem.html', context)
 
 def timkiem(request):
+    stl = SimTheoLoai.objects.all()
+    sns = SimNamSinh.objects.all()
+    nm = NhaMang.objects.all()
+    stg = SimTheoGia.objects.all()
+    hd = HoaDon.objects.order_by('-NgayDatHang')[0:5]
     sp = SanPham.objects.filter(DaBan=False)
 # tim theo so simmmm
     sosim = request.GET.get('so')
@@ -84,5 +90,10 @@ def timkiem(request):
 
     context = {
         "sp": sp,
+        "stl": stl,
+        "sns": sns,
+        "nm": nm,
+        "stg": stg,
+        "hd": hd,
     }
     return render(request, 'includes/timkiem/ketqua-timkiem.html', context)

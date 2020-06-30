@@ -13,10 +13,13 @@
             <label style=" width: 100%; text-align: left; "></label>
             <label style=" width: auto; text-align: left; ">Thời gian: </label><strong><font
               id="countdown" size="2"></font></strong><br>
+            <label style=" width: 120px; text-align: left; ">Giá tăng tối thiểu: </label><strong>
+            <font size="3">{{ daugia.GiaToiThieu|intcomma }}</font></strong><br>
             {% if daugia.DaDauGia %}
               {% if daugia.NguoiDauGiaHienTai is None %}
                 <label style=" width: 120px; text-align: left; ">Chưa có người đấu giá</label>
               {% else %}
+                <h3 style="color:red;">{{msg1}}</h3>
                 <label style=" width: 120px; text-align: left; ">Người đã mua: </label><strong><font
                   size="3">{{ daugia.NguoiDauGiaHienTai }}</font></strong><br>
                 <label style=" width: 120px; text-align: left; ">Với mức giá: </label><strong><font
@@ -39,8 +42,7 @@
 {#                  size="3">{{ daugia.GiaMuaLuon|intcomma}}₫</font></strong><br>#}
                 <label style=" width: 120px; text-align: left; ">Người mua hiện tại: </label><strong>
                   <font size="3">{{ daugia.NguoiDauGiaHienTai }}</font></strong><br>
-                  <label style=" width: 120px; text-align: left; ">Giá tăng tối thiểu: </label><strong>
-                  <font size="3">{{ daugia.GiaToiThieu|intcomma }}</font></strong><br>
+                  
                 <label style=" width: 120px; text-align: left; ">Giá hiện tại: </label><strong>
                   <font size="3">{{ daugia.GiaHienTai|intcomma }}₫</font></strong><br>
               {% endif %}
