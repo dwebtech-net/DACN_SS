@@ -2,7 +2,7 @@ from django.http import Http404
 from django.shortcuts import render, redirect
 from django.urls import reverse
 
-from sanpham.models import SimNamSinh, SimTheoGia, SimTheoLoai, NhaMang
+from sanpham.models import SimNamSinh, SimTheoGia, SimTheoLoai, NhaMang, SanPham
 from hoadon.models import HoaDon
 import operator
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -87,9 +87,16 @@ def mualuon(request, DuongDan):
         daugia.DaDauGia = True
         daugia.save()
 
+        #Cập nhật thông tin sản phẩm
+        try:
+            sanpham = SanPham.objects.get(id=daugia.Sim.id)
+            sanpham.DaBan = True
+            sanpham.save()
+        except SanPham.DoesNotExist:
+            return redirect('DauGia:DauGia')
+
         #Gửi thông tin hóa đơn cho người dùng và admin
         user = request.user
-        import pdb; pdb.set_trace()
         mail_subject = '[Sim Đức Lộc] Thông tin đấu giá.'
         message = render_to_string('simso/page-daugia/thongtindaugia.html', {
             'user': user,

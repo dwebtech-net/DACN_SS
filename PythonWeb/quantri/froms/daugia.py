@@ -1,5 +1,6 @@
 from gettext import gettext
 from django import forms
+from django.shortcuts import redirect
 
 from DauGia.models import DauGia
 from sanpham.models import SanPham, SIM_CHOICES
@@ -55,4 +56,20 @@ class ThemDauGiaForm(forms.ModelForm):
                 'required': False
             }),
         }
+    def save(self, commit=True):
+        if self.cleaned_data['DaDauGia']:
+            try:
+                sanpham = SanPham.objects.get(id=self.cleaned_data['Sim'].id)
+                sanpham.DaBan = True
+                sanpham.save()
+            except SanPham.DoesNotExist:
+                return redirect('quantri:them-dau-gia')
+        else:
+            try:
+                sanpham = SanPham.objects.get(id=self.cleaned_data['Sim'].id)
+                sanpham.DaBan = False
+                sanpham.save()
+            except SanPham.DoesNotExist:
+                return redirect('quantri:them-dau-gia')
+        return super(ThemDauGiaForm, self).save(commit=False)
     

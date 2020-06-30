@@ -1,6 +1,7 @@
 {% extends 'quanly/main.html' %}
 
 {% block main %}
+{% load humanize %}
 <div class="content">
     {% include 'quanly/inc/topbar.html' %}
        <!-- END: Top Bar -->
@@ -68,6 +69,8 @@
                                        Chưa có người đấu giá
                                     {% else %}
                                      Người đấu giá cao nhất: <b>{{ daugia.NguoiDauGiaHienTai.get_full_name }}</b>
+                                     <br>
+                                     Với mức giá là: <b>{{ daugia.GiaHienTai|intcomma }} vnđ</b>
                                     {% endif %}
                                 </div>
                             </div>
