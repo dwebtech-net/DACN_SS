@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ca1d334-84fd-4cd7-831a-18506e67a625" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/OneSignalSDKUpdaterWorker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OneSignalSDKWorker.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phongthuy/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/phongthuy/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/quanly/inc/menu-pc.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/quanly/inc/menu-pc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/sub/kiem.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/sub/kiem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/footer.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,41 +33,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quantri/froms/daugia.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/sub/kiem.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="330" column="52" selection-start-line="330" selection-start-column="52" selection-end-line="330" selection-end-column="52" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#article#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#div#1;n#article#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phongthuy/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="41" column="88" selection-start-line="41" selection-start-column="72" selection-end-line="41" selection-end-column="88" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phongthuy/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-10">
-              <caret line="288" lean-forward="true" selection-start-line="288" selection-end-line="288" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/OneSignalSDKWorker.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -110,7 +91,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-gia.html" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-loai.html" />
         <option value="$PROJECT_DIR$/timkiem/views.py" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/ketqua-timkiem.html" />
@@ -161,6 +141,7 @@
         <option value="$PROJECT_DIR$/phongthuy/views.py" />
         <option value="$PROJECT_DIR$/phongthuy/models.py" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/sub/kiem.html" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
       </list>
     </option>
   </component>
@@ -176,7 +157,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -187,33 +167,7 @@
             <path>
               <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="phongthuy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="sanpham" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="sanpham" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="sanpham" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="simso" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="sanpham" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="simso" type="462c0819:PsiDirectoryNode" />
-              <item name="sub" type="462c0819:PsiDirectoryNode" />
+              <item name="OneSignal-Web-SDK-HTTPS-Integration-Files" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
@@ -223,13 +177,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sanpham/templates/quanly/page/daugia" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -242,17 +197,17 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\sanpham\templates\quanly\page\daugia" />
-      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\quantri\froms" />
-      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\quantri\views" />
-      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\sanpham\templates\quanly\page" />
-      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\sanpham\templates\quanly\page\mang" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\DACN_SS\DACN_SS\PythonWeb\static\js" />
       <recent name="F:\DACN_SS\DACN_SS\PythonWeb\static" />
       <recent name="F:\DACN_SS\DACN_SS\PythonWeb\sanpham\templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\DACN_SS\DACN_SS\PythonWeb" />
+      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\sanpham\templates\quanly\page\daugia" />
+      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\quantri\froms" />
+      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\quantri\views" />
+      <recent name="F:\DACN_SS\DACN_SS\PythonWeb\sanpham\templates\quanly\page" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -348,12 +303,15 @@
       <workItem from="1593415418692" duration="7971000" />
       <workItem from="1593423937481" duration="18103000" />
       <workItem from="1593447174336" duration="139000" />
-      <workItem from="1593451036440" duration="3226000" />
+      <workItem from="1593451036440" duration="3733000" />
+      <workItem from="1593461472524" duration="1787000" />
+      <workItem from="1593486741665" duration="663000" />
+      <workItem from="1593505192616" duration="1176000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="238312000" />
+    <option name="totallyTimeSpent" value="242445000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -365,15 +323,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.27231467" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.18154311" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.42062193" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.42062193" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -382,7 +339,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.33387887" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49848714" visible="true" weight="0.19639935" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49848714" weight="0.44517186" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -422,24 +379,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/css/font-sum.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19025" selection-start-column="19025" selection-end-column="19025" />
-          <folding>
-            <element signature="e#10342#10599#1" expanded="true" />
-            <element signature="e#10907#11164#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/quanly/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="109" selection-start-line="4" selection-start-column="109" selection-end-line="4" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quantri/froms/donhang.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
@@ -738,16 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quantri/froms/daugia.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DauGia/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -774,12 +703,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phongthuy/models.py">
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/sub/kiem.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="288" lean-forward="true" selection-start-line="288" selection-end-line="288" />
+        <state relative-caret-position="192">
+          <caret line="330" column="52" selection-start-line="330" selection-start-column="52" selection-end-line="330" selection-end-column="52" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#article#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#div#1;n#article#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -794,16 +724,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/sub/kiem.html">
+    <entry file="file://$PROJECT_DIR$/phongthuy/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="330" column="52" selection-start-line="330" selection-start-column="52" selection-end-line="330" selection-end-column="52" />
+        <state relative-caret-position="-10">
+          <caret line="288" lean-forward="true" selection-start-line="288" selection-end-line="288" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#article#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#div#1;n#article#0;n#!!top" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-995" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quantri/froms/daugia.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OneSignalSDKWorker.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

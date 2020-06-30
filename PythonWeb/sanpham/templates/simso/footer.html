@@ -84,6 +84,19 @@
             <div></div> {{ st.sdt2 }} </a>
     </div>
 {% endfor %}
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "9e057787-00a5-45cd-821c-fe960c922891",
+      notifyButton: {
+        enable: true,
+      },
+      allowLocalhostAsSecureOrigin: true,
+    });
+  });
+</script>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
 <script defer type="text/javascript" src="/static/home/loadpage.js"></script>
 <script defer type="text/javascript" src="{% static 'home/script.min.js' %}"></script>
