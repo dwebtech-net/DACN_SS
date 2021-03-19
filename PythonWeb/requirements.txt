@@ -30,7 +30,7 @@ django-scheduler==0.9.3
 django-sitetree==1.14.0
 django-summernote==0.8.11.4
 django-taggit==1.1.0
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 et-xmlfile==1.0.1
 icalendar==4.0.4
 idna==2.8
